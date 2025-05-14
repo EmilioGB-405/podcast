@@ -1,0 +1,98 @@
+html{
+    overflow-x: hidden;
+}
+
+
+*:root{
+    --electric-blue-color:#1E90FF;
+    --sliver-text-color:#F1F5F9;
+}
+
+.text, .title{
+    color: var(--sliver-text-color);
+}
+
+
+.text{
+    font-family: "Rubik", sans-serif;
+}
+.title{
+     font-family: "Orbitron", sans-serif;
+     font-weight:500;
+     line-height:1.8;
+     font-size:1.5em;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#010206;
+    padding:1em;
+}
+
+header{
+
+}
+
+.grid{
+    display:grid;
+    grid-template-rows:25%, 50%, 25%;
+
+}
+
+.button{
+    background-color: aquamarine;
+}
+
+.flex{
+    display:flex;
+    flex-direction: row;
+}
+#nav{
+    justify-content: space-between;
+    position: relative;
+}
+
+input{
+    display:none;
+}
+#burgerMenu{
+   
+    flex-direction:column;
+    gap:0.5em;
+}
+
+#burgerMenu div{
+    background-color:var(--electric-blue-color);
+    width: 3.314rem;
+    height: 0.408rem;
+}
+#nav-responsive{
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 80%;
+    transition-duration: .25s;
+    z-index: 1;
+    background-color: #325bfd;
+    
+}
+ul:has(li){
+   text-decoration:none;
+    
+}
+
+/* li:has(a){
+ 
+} */
+
+ #burgerMenu:checked ~ #nav-responsive{
+    left: 0;
+} 
+h1{
+    text-align: center;
+}
