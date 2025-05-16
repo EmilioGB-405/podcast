@@ -31,7 +31,36 @@
              
         </canvas> -->
         <h1 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. A</h1>
-        <button class="button" type="button">Listen now</button>
+        <button class="button flex" type="button"> <div class="flex"><p class="text"></p>Listen now</div> </button>
     </header>
+    <main>
+        <section id="episodes" class="grid">
+            <div class="card grid">
+                <picture>
+                    <source srcset="img/episodeThirtyThreeCell.jpg" media="(max-width: 900px)">
+                    <source srcset="img/episodeThirtyThree.jpg" media="(min-width: 950px)">
+                    <img src="img/episodeThirtyThree.jpg" alt="iepisode thirty-three">
+                </picture>
+                <div class="cardContent border grid">
+                    <h3 class="title">Episode 33</h3>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                    <button class="circleButton border flex" type="button"><img class="flip-horizontal" src="icon/arrow.png" alt="arrow button"></button>
+                </div>
+            </div>
+            <div class="card grid">
+                <picture>
+                    <source srcset="img/episodeThirtyTwoCell.jpg" media="(max-width: 900px)">
+                    <source srcset="img/episodeThirtyTwo.jpg" media="(min-width: 950px)">
+                    <img src="img/episodeThirtyTwo.jpg" alt="iepisode thirty-two">
+                </picture>
+                <div class="cardContent border grid">
+                    <h3 class="title">Episode 32</h3>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                    <button class="circleButton border flex" type="button"><img class="flip-horizontal" src="icon/arrow.png" alt=" arrow button"></button>
+                </div>
+            </div>
+             <button class="button flex" type="button"> <div class="flex"><p class="text"></p>See more</div> </button>
+        </section>
+    </main>
 </body>
 </html>
