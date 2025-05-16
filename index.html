@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" type="module" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <header class="grid grid-row">
         <nav id="nav" class="flex">
-            <a href="#"><img src="img/Podcast.png" alt="Logo de pagina web"></a>
+            <a class="logo" href="#"><img src="img/Podcast.png" alt="Logo de pagina web"></a>
             <input type="checkbox" name="Menu" id="responsiveMenu" placeholder="menu">
             <label for="responsiveMenu" id="burgerMenu" class="flex">
                 <div id="bar"></div>
@@ -27,9 +28,9 @@
                 </ul>
             </nav>
         </nav>
-     <!--    <canvas>
-             
-        </canvas> -->
+        <canvas id="myCanvas" width="400px">
+
+        </canvas>
         <h1 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. A</h1>
         <button class="button" type="button">Listen now</button>
     </header>

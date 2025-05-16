@@ -40,6 +40,7 @@ header{
     height: 150lvw;
     grid-template-rows: repeat(4 , 1fr);
     gap: 1em;
+    position: relative;
 }
 
 .grid{
@@ -74,7 +75,7 @@ input{
 #burgerMenu{
     flex-direction:column;
     gap:0.5em;
-    z-index: 2;
+    z-index: 3;
 }
 
 #burgerMenu div{
@@ -95,6 +96,7 @@ input{
     backdrop-filter: blur(10px);
     align-items: end;
     justify-content: center;
+    z-index: 2;
 }
 #nav-responsive ul{
     flex-direction: column;
@@ -131,9 +133,22 @@ li a{
 h1{
     text-align: center;
     grid-row:3/4;
+    z-index: 1;
+}
+h1, header .button, .logo{
+    z-index: 1;
 }
 header .button{
     justify-self: center;
     grid-row:4/5;
     align-self: center;
+
 }
+
+#myCanvas{
+    position:absolute;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+}
+
