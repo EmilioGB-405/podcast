@@ -54,6 +54,7 @@ header{
     height: 150lvw;
     grid-template-rows: repeat(4 , 1fr);
     gap: 1em;
+    position: relative;
 }
 
 .grid{
@@ -98,7 +99,7 @@ input{
 #burgerMenu{
     flex-direction:column;
     gap:0.5em;
-    z-index: 2;
+    z-index: 3;
 }
 
 #burgerMenu div{
@@ -119,6 +120,7 @@ input{
     backdrop-filter: blur(10px);
     align-items: end;
     justify-content: center;
+    z-index: 2;
 }
 #nav-responsive ul{
     flex-direction: column;
@@ -155,12 +157,26 @@ li a{
 h1{
     text-align: center;
     grid-row:3/4;
+    z-index: 1;
+}
+h1, header .button, .logo{
+    z-index: 1;
 }
 header .button{
     justify-self: center;
     grid-row:4/5;
     align-self: center;
+
 }
+
+#myCanvas{
+    position:absolute;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+}
+
+
 section{
     padding: 4em 0;
 }
@@ -189,26 +205,4 @@ section{
 .circleButton img{
     width: 2em;
     height: auto;
-}
-#aboutUs{
-    gap: 1em;
-}
-#comments .flex{
-    padding: 1.5em 0;
-    width: 100%;
-    overflow-x: scroll;
-    justify-content: start;
-    gap: 1em;
-}
-#cardContentComments .card{
-    padding: 1em;
-    min-width: 20em; /* Ancho mínimo de cada elemento */
-}
-#cardContentComments .card h3{
-    padding: 1.3em  0 0.5em 0;
-}
-#cardContentComments .card p{
-    font-size: 0.8rem;
-    padding: 0 0 1em 0;
-    line-height: 2.3;
 }
