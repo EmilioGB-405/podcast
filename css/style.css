@@ -190,3 +190,25 @@ section{
     width: 2em;
     height: auto;
 }
+#aboutUs{
+    gap: 1em;
+}
+#comments .flex{
+    padding: 1.5em 0;
+    width: 100%;
+    overflow-x: scroll;
+    justify-content: start;
+    gap: 1em;
+}
+#cardContentComments .card{
+    padding: 1em;
+    min-width: 20em; /* Ancho mínimo de cada elemento */
+}
+#cardContentComments .card h3{
+    padding: 1.3em  0 0.5em 0;
+}
+#cardContentComments .card p{
+    font-size: 0.8rem;
+    padding: 0 0 1em 0;
+    line-height: 2.3;
+}
