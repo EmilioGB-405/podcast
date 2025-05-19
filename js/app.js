@@ -44,6 +44,8 @@ const light = new THREE.DirectionalLight(0xffffff, 1);
 light.position.set(2,2,5);
 scene.add(light);
 
+scene.background = new THREE.Color('#010206');
+
 window.addEventListener('resize', ()=>{
     camara.aspect = window.innerWidth / window.innerHeight;
     camara.updateProjectionMatrix();
