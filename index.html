@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js" type="module" defer></script>
+    <script src="js/app1.js" type="module" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -32,7 +33,7 @@
 
         </canvas>
         <h1 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. A</h1>
-        <button class="button flex" type="button"> <div class="flex"><p class="text"></p>Listen now</div> </button>
+        <button class="button flex" type="button"> <div class="flex"><p class="text">Listen now</p></div></button>
     </header>
     <main>
         <section id="episodes" class="grid">
@@ -60,7 +61,7 @@
                     <button class="circleButton border flex" type="button"><img class="flip-horizontal" src="icon/arrow.png" alt=" arrow button"></button>
                 </div>
             </div>
-             <button class="button flex" type="button"> <div class="flex"><p class="text"></p>See more</div> </button>
+             <button class="button flex" type="button"> <div class="flex"><p class="text">See more</p></div> </button>
         </section>
         <section class="grid" id="aboutUs">
             <h2 class="title">What's the podcast about?</h2>
@@ -101,15 +102,16 @@
     </main>
     <footer class="grid">
         <a class="logo" href="#"><img src="img/Podcast.png" alt="Logo de pagina web"></a>
-        <input type="email">
-       <button class="button flex" type="button"> <div class="flex"><p class="text"></p>subcribe</div></button>
+        <input type="email" name="email-footer" id="email-podcast" placeholder="Email" class="text">
+        <label for="email-podcast"></label>
+       <button class="button flex" type="button"> <div class="flex button--grey"><p class="text">subcribe</p></div></button>
        <div id="img-container">
-            <img src="icon/facebook.png" alt="icon de la red social facebook">
-            <img src="icon/Reddit.png" alt="icon de la red social Reddit">
-            <img src="icon/Spotify.png" alt="icon de la red social Spotify">
-            <img src="icon/Youtube.png" alt="icon de la red social Youtube">
-            <img src="icon/Discord.png" alt="icon de la red social Discord">
-            <img src="icon/Tiktok.png" alt="icon de la red social Tiktok">
+            <img src="icon/facebook.png" alt="icon de la red social facebook" class="icons">
+            <img src="icon/Reddit.png" alt="icon de la red social Reddit" class="icons">
+            <img src="icon/Spotify.png" alt="icon de la red social Spotify" class="icons">
+            <img src="icon/Youtube.png" alt="icon de la red social Youtube" class="icons">
+            <img src="icon/Discord.png" alt="icon de la red social Discord" class="icons">
+            <img src="icon/Tiktok.png" alt="icon de la red social Tiktok" class="icons">
        </div>
        <ul class="ul-footer">
                     <li><a href="#" class="text">Home</a></li>
