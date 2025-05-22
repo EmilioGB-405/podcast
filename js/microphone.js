@@ -24,4 +24,4 @@ holograma.load('/img/hologramamicrophone.glb', (gltf)=>{
 
 });
 
-export{holograma}
+export{holograma};
