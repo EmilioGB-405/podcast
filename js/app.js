@@ -3,8 +3,7 @@
 
 import * as THREE from 'three';
 
-/* import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'; */
-
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 const scene = new THREE.Scene();
 
@@ -16,7 +15,7 @@ camara.position.z =3;
 const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas')});
 renderer.setSize(window.innerWidth, window.innerHeight);
 /* document.body.appendChild(renderer.domElement) */
- 
+
 const light = new THREE.DirectionalLight(0xffffff, 1);
 light.position.set(2,2,5);
 scene.add(light);
@@ -29,4 +28,4 @@ window.addEventListener('resize', ()=>{
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-export{camara, scene, renderer}
+export{camara, scene, renderer};
