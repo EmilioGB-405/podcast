@@ -50,7 +50,7 @@ body{
 
 header{
     height: auto;
-    grid-template-rows: repeat(4 , 1fr);
+    grid-template-rows: repeat(4 , auto);
     gap: 1em;
     position: relative;
 }
@@ -185,7 +185,7 @@ header .button{
 
 #myCanvas{
     position:absolute;
-    grid-row: 4/5;
+    grid-row: 5;
     align-self: center;
     justify-self: center;
 }
@@ -271,7 +271,7 @@ footer #img-container{
     
 }
 
-footer #email-podcast{
+ #email-podcast{
     display:block;
     height:6em;
     width:19.5em;
@@ -295,6 +295,10 @@ footer .button{
     place-self:center;
 }
 
+.icons{
+    width:2.5em;
+    height:2.5em;
+}
 footer ul{
     flex-direction:initial;
     place-self:center;
