@@ -50,8 +50,8 @@ body{
 }
 
 header{
-    height: auto;
-    grid-template-rows: repeat(4 , 1fr);
+    height: 150lvw;
+    grid-template-rows: repeat(4 , auto);
     gap: 1em;
     position: relative;
 }
@@ -96,7 +96,7 @@ header, main{
 #nav{
     justify-content: space-between;
     position: relative;
-    padding: 2.3em 0; 
+    padding: 1em 0 3.5em 0; 
     
 }
 
@@ -280,6 +280,7 @@ footer ul{
 }
 @media(width >= 750px){
     header {
+        height: auto;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(4, auto);
     }
@@ -387,7 +388,7 @@ footer ul{
         font-size: 1px;
     } */
     .text {
-        font-size: 20px;
+        font-size: 13px;
     }
    #cardContentComments .card:nth-child(1){
         transform:  translate3d(-145px, 0, 0) scale(0.8) rotatey(2deg);
@@ -430,7 +431,7 @@ footer ul{
         font-size: 3rem;
     }
     .text{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .cardContent {
@@ -452,5 +453,8 @@ footer ul{
     }
     .cardSlider .title {
         font-size: 2.4rem;
+    }
+    .button{
+        justify-self: start;
     }
 }
