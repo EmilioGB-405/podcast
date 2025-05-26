@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js" type="module" defer></script>
-    <script src="js/app1.js" type="module" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -29,15 +28,15 @@
                 </ul>
             </nav>
         </nav>
-        <canvas id="myCanvas" width="400px">
+        <canvas id="myCanvas" width="400" height="200">
 
         </canvas>
         <h1 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. A</h1>
-        <button class="button flex" type="button"> <div class="flex"><p class="text">Listen now</p></div></button>
+        <button class="button flex" type="button"> <div class="flex"><p class="text"></p>Listen now</div> </button>
     </header>
     <main>
         <section id="episodes" class="grid">
-            <div class="card grid">
+            <div class="card grid flip-img">
                 <picture>
                     <source srcset="img/episodeThirtyThreeCell.jpg" media="(max-width: 900px)">
                     <source srcset="img/episodeThirtyThree.jpg" media="(min-width: 950px)">
@@ -70,7 +69,7 @@
         <section class="grid" id="comments">
             <h2 class="title">Comments</h2>
             <div id="cardContentComments" class="flex">
-                <div class="card border">
+                <div class="card border cardSlider card-left" id="cardOne">
                     <picture>
                         <source srcset="img/IgnacioGómezCell.jpg" media="(max-width: 900px)">
                         <source srcset="img/IgnacioGómez.jpg" media="(min-width: 950px)">
@@ -79,7 +78,7 @@
                     <h3 class="title">Ignacio Gómez</h3>
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-                 <div class="card border">
+                 <div class="card border cardSlider card-center" id="cardTwo">
                     <picture>
                         <source srcset="img/IgnacioGómezCell.jpg" media="(max-width: 900px)">
                         <source srcset="img/IgnacioGómez.jpg" media="(min-width: 950px)">
@@ -88,7 +87,7 @@
                     <h3 class="title">Ignacio Gómez</h3>
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-                 <div class="card border">
+                 <div class="card border cardSlider card-right" id="cardThree">
                     <picture>
                         <source srcset="img/IgnacioGómezCell.jpg" media="(max-width: 900px)">
                         <source srcset="img/IgnacioGómez.jpg" media="(min-width: 950px)">
@@ -98,13 +97,14 @@
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
+            <button type="button" id="left" class="buttonSlider"><img src="icon/arrow.png" alt="left slider button"></button>
+            <button id="right" type="button" class="buttonSlider flip-horizontal"><img src="icon/arrow.png" alt="right slider button"></button>
         </section>
     </main>
     <footer class="grid">
         <a class="logo" href="#"><img src="img/Podcast.png" alt="Logo de pagina web"></a>
-        <input type="email" name="email-footer" id="email-podcast" placeholder="Email" class="text">
-        <label for="email-podcast"></label>
-       <button class="button flex" type="button"> <div class="flex button--grey"><p class="text">subcribe</p></div></button>
+        <input type="email">
+       <button class="button flex" type="button"> <div class="flex"><p class="text"></p>subcribe</div></button>
        <div id="img-container">
             <img src="icon/facebook.png" alt="icon de la red social facebook" class="icons">
             <img src="icon/Reddit.png" alt="icon de la red social Reddit" class="icons">
