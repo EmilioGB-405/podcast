@@ -1,3 +1,5 @@
+
+
 const left = document.querySelector('#left');
   const right = document.querySelector('#right');
 
@@ -26,3 +28,5 @@ const left = document.querySelector('#left');
     document.querySelector('#cardContentComments').prepend(cards[cards.length - 1]);
     updateCardClasses();
   });
+
+  export{left,right,updateCardClasses};
