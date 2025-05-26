@@ -439,7 +439,10 @@ footer ul{
        width: 100%;
     }
     #episodes .card picture img{
-        height: 24lvw;
+        height: 26lvw;
+    }
+    #episodes .card .title{
+        align-self: end;
     }
     .cardSlider{
         width: 40%;
