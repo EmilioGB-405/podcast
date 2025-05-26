@@ -18,11 +18,15 @@ html, body{
     font-family: "Rubik", sans-serif;
     line-height: 1.5;
     font-size: 1rem;
+    font-size: 1rem;
+    font-size: 1rem;
+    font-size: 1rem;
+    font-size: 1rem;
 }
-.title{
-     font-family: "Orbitron", sans-serif;
-     font-weight:500;
-     line-height:1.8;
+      font-size:clamp(1.5rem, 3vw, 3rem)
+      font-size:clamp(1.5rem, 3vw, 3rem)
+      font-size:clamp(1.5rem, 3vw, 3rem)
+      font-size:clamp(1.5rem, 3vw, 3rem)
       font-size:clamp(1.5rem, 3vw, 3rem)
 }
 .flip-horizontal{
@@ -49,14 +53,10 @@ body{
     background-color:#010206;
 }
 
-header{
     height: auto;
-    grid-template-rows: repeat(4 , 1fr);
-    gap: 1em;
-    position: relative;
     overflow: hidden;
-}
-
+    overflow: hidden;
+    overflow: hidden;
 header, main{
     padding:2em;
 }
@@ -95,6 +95,10 @@ header, main{
 #nav{
     justify-content: space-between;
     position: relative;
+    padding: 2.3em 0; 
+    padding: 2.3em 0; 
+    padding: 2.3em 0; 
+    padding: 2.3em 0; 
     padding: 2.3em 0; 
     
 }
@@ -155,18 +159,14 @@ li a{
     #bar1{
         opacity:0;
     } 
-    #bar2{
-        transform:rotate(-35deg);
-    }
-}   
 header .title{
     font-size:clamp(1.5rem, 3vw, 2.5rem)
 }
-h1{
-    text-align: center;
-    grid-row:3/4;
-    z-index: 1;
+header .title{
+    font-size:clamp(1.5rem, 3vw, 2.5rem)
 }
+    z-index: 1;
+    font-size:clamp(1.5rem, 3vw, 2.5rem)
 h1, header .button, .logo{
     z-index: 1;
 }
@@ -206,13 +206,13 @@ section{
 .cardContent{
     padding: 1em;
 }
-.circleButton{
+    width: 3em;
     background-color: transparent;
-    border-radius: 100%;
+    width: 3em;
     padding: 0.5em;
-    justify-self: end;
+    width: 3em;
     align-self: center;
-}
+    width: 3em;
 .circleButton img{
     width: 3em;
     height: auto;
@@ -227,19 +227,45 @@ section{
     gap: 1em;
     scroll-behavior:smooth;
 }
-#cardContentComments .card{
+   /*  font-size:clamp(0.8rem, 2vw, 1.3rem); */
     padding: 1em;
     min-width: 17em; /* Ancho mínimo de cada elemento */
+#cardContentComments .card img{
+    height: auto;
+}
+.buttonSlider{
+    display: none;
 }
 #cardContentComments .card h3{
+#cardContentComments .card img{
+    height: auto;
+}
+.buttonSlider{
+    display: none;
     padding: 1.3em  0 0.5em 0;
 }
+#cardContentComments .card img{
+    height: auto;
+footer .button div {
+    background-color: #64748B;
+}
+.buttonSlider{
+    display: none;
 #cardContentComments .card p{
-   /*  font-size:clamp(0.8rem, 2vw, 1.3rem); */
+}
+#cardContentComments .card img{
+    height: auto;
+footer .button div {
+    background-color: #64748B;
+}
+.buttonSlider{
+    display: none;
     padding: 0 0 1em 0;
 }
 #cardContentComments .card img{
     height: auto;
+footer .button div {
+    background-color: #64748B;
 }
 .buttonSlider{
     display: none;
@@ -247,7 +273,9 @@ section{
 
 footer{
    width:100lvw;
-   height:100%;
+footer .button div {
+    background-color: #64748B;
+}
    background-color:#64748B;
    box-sizing: border-box;
    gap:2em;
@@ -278,21 +306,3 @@ footer #email-podcast{
 
 #email-podcast::placeholder{
     font-family: "Rubik", sans-serif;
-    font-size:large;
-    color:var(--sliver-text-color);
-}
-
-footer .logo{
-    place-self:center;
-}
-
-footer .button{
-    place-self:center;
-}
-
-footer ul{
-    flex-direction:initial;
-    place-self:center;
-    list-style:none;
-    text-align: center;
-}
