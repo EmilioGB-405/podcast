@@ -62,7 +62,9 @@ header p{
 header, main{
     padding:2em;
 }
-
+.blue-wrapper{
+    display: none;
+}
 .grid{
     display:grid;
 }
@@ -357,6 +359,7 @@ footer ul{
     header p{
         display:block;
     }
+
     #episodes .card{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -457,8 +460,77 @@ footer ul{
     header .title{
         font-size: 3rem;
     }
+    
+    header{
+        grid-template-rows: repeat(6, auto);
+        gap: 0;
+    }
+    header .blue-wrapper{
+        grid-row:6/7;
+        grid-column:1/2;
+    }
+    header .blue-wrapper_right{
+        grid-row:2/3;
+        grid-column:3/4;
+        transform:rotate(-180deg);
+    }
+    .blue-wrapper{
+        
+        display: block;
+        z-index: 1;
+       
+    }
+    .blue-wrapper_vertical{
+        width:2px;
+        height:6em;
+        background-color: var(--electric-blue-color);
+        
+    }
+       .blue-wrapper_horizontal{
+        width:30em;
+        height:2px;
+
+        background-color: var(--electric-blue-color);
+        
+    }
+
+    h1{
+        grid-row:2/3;
+    }
+    h1{
+        padding: 1em 0 0 1em;
+    }
+    #firstText, #secondText{
+        padding: 0 2.2em 0 2.2em;
+    } 
+    #firstText{
+        grid-row:4/5;
+        width: 88%;
+    }
+
+    #secondText{
+        grid-row:5/6;
+        width: 80%;
+    }
+
+    header .button{
+        grid-row:6/7;
+        margin: 1em 2.2em 0 2.2em;
+    }
+    .blue-wrapper_right{
+        z-index:1;
+        
+        align-self: start;
+    }
+    .blue-wrapper_right .blue-wrapper_vertical{
+        height: 10em;
+    }
+    
     .text{
         font-size: 1.2rem;
+    }
+    #myCanvas{
+        grid-row: 3;
     }
 
     .cardContent {
@@ -466,6 +538,40 @@ footer ul{
        height: 24lvw; 
        width: 100%;
     }
+
+    #episode .card-container, .card-container_second {
+        display: flex;
+        flex-direction: column;
+    }
+
+  .card-container .blue-wrapper{
+        transform:rotate(180deg);
+        transform:scaleY(-1);
+    }
+
+    .card-container_second .blue-wrapper_right{
+        transform:scaleX(-1);
+        align-self:end;
+    }
+
+
+
+
+    /* #episodes .blue-wrapper{
+        grid-column:1;
+        transform:rotate(-30deg);
+        transform:scaleY(-1);
+        justify-self: left;
+    
+    }
+
+    #episodes .blue-wrapper_right{
+        grid-column:4;
+        grid-row:5/6;
+        transform:rotate(-90deg);
+        justify-self:end;
+    } */
+
     #episodes .card picture img{
         height: 26lvw;
     }
