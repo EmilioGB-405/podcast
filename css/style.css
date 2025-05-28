@@ -559,22 +559,47 @@ footer ul{
        width: 100%;
     }
 
-    #episode .card-container, .card-container_second {
-        display: flex;
-        flex-direction: column;
+    #episode .card-container .card-container_second {
+       /*  display: flex;
+        flex-direction: column; */ 
+        position: relative;
     }
+
+.card-container .card {
+    padding: 1.5em 0;
+}
+  
 
   .card-container .blue-wrapper{
         transform:rotate(180deg);
         transform:scaleY(-1);
+        position: absolute;
     }
 
-    .card-container_second .blue-wrapper_right{
+    .card-container .blue-wrapper .blue-wrapper_horizontal{
+        padding-right:20em;
+    }
+
+
+    .card-container_second .card .blue-wrapper_right{
         transform:scaleX(-1);
-        align-self:end;
+        position: absolute; 
+        margin-bottom: 1em;
+        right: 2.5%;
     }
 
 
+
+    
+
+    #episodes .card{
+        padding-left:2em;
+        padding-right:2em;
+    }
+
+    #episodes .button{
+        justify-self:center;
+    }
 
 
     /* #episodes .blue-wrapper{
