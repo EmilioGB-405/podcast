@@ -449,6 +449,53 @@ footer ul{
     #left{
         grid-column: 1/2;
     }
+    footer{
+        grid-template-columns: repeat(3, 40% 28% 32%);
+        grid-template-rows: repeat(3, 33%);
+        place-content: stretch;
+        gap: 1.5em;
+        padding: 5em 9em;
+    }
+    footer .logo{
+        grid-row: 1/2;
+        grid-column: 1/4;
+        
+    }
+    #email-podcast{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        place-self: start;
+        width: 100%;
+        height: 4em;
+    }
+    footer .button{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-self: start;
+    }
+    footer #img-container{
+        grid-row: 3/4;
+        align-self: start;
+    }
+    footer .logo, footer .button, footer #img-container{
+        justify-self: start;
+
+    }
+    .ul-footer{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        gap: 0.5em;
+        grid-row: 2/3;
+        grid-column: 3/4;
+        flex-wrap: wrap;
+        height: 100%;
+        flex-direction: row;
+        justify-self: end;
+        width: 100%;
+       /*  gap: 1em; */
+    }
+    
 }
 
 @media(width >= 1200px){
