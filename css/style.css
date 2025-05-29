@@ -371,8 +371,8 @@ footer ul{
     .flip-img picture {
         grid-column: 2/3;
     }
-    .flip-img .cardContent{
-        grid-row: 1;
+    .flip-img .line{
+        grid-row: 1/2;
     }
     .cardContent{
         gap: 0.3em;
@@ -452,6 +452,53 @@ footer ul{
     #left{
         grid-column: 1/2;
     }
+    footer{
+        grid-template-columns: repeat(3, 40% 28% 32%);
+        grid-template-rows: repeat(3, 33%);
+        place-content: stretch;
+        gap: 1.5em;
+        padding: 5em;
+    }
+    footer .logo{
+        grid-row: 1/2;
+        grid-column: 1/4;
+        
+    }
+    #email-podcast{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        place-self: start;
+        width: 100%;
+        height: 4em;
+    }
+    footer .button{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-self: start;
+    }
+    footer #img-container{
+        grid-row: 3/4;
+        align-self: start;
+    }
+    footer .logo, footer .button, footer #img-container{
+        justify-self: start;
+
+    }
+    .ul-footer{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        gap: 0.5em;
+        grid-row: 2/3;
+        grid-column: 3/4;
+        flex-wrap: wrap;
+        height: 100%;
+        flex-direction: row;
+        justify-self: end;
+        width: 100%;
+       /*  gap: 1em; */
+    }
+    
 }
 
 @media(width >= 1200px){
@@ -558,65 +605,20 @@ footer ul{
        height: 24lvw; 
        width: 100%;
     }
-
-    /* #episode .card-container .card-container_second {
-        display: flex;
-        flex-direction: column; 
-        position: relative;
+    .line, .lineTwo{
+        padding: 1em;
     }
-
-.card-container .card {
-    padding: 1.5em 0;
-}
-  
-
-  .card-container .blue-wrapper{
-        transform:rotate(180deg);
-        transform:scaleY(-1);
-        position: absolute;
+    .line{
+        border-top: 2px solid var(--electric-blue-color);
+        border-left: 2px solid var(--electric-blue-color);
+        box-shadow: -2px -2px 5px 0px rgba(80,165,249,0.75);
     }
-
-    .card-container .blue-wrapper .blue-wrapper_horizontal{
-        padding-right:20em;
+    .lineTwo {
+        border-bottom: 2px solid var(--electric-blue-color);
+        border-right: 2px solid var(--electric-blue-color);
+         box-shadow: 2px 2px 5px 0px rgba(80,165,249,0.75);
+        
     }
-
-
-    .card-container_second .card .blue-wrapper_right{
-        transform:scaleX(-1);
-        position: absolute; 
-        margin-bottom: 1em;
-        right: 2.5%;
-    }
-
-
-
-    
-
-    #episodes .card{
-        padding-left:2em;
-        padding-right:2em;
-    }
-
-    #episodes .button{
-        justify-self:center;
-    }
- */
-
-    /* #episodes .blue-wrapper{
-        grid-column:1;
-        transform:rotate(-30deg);
-        transform:scaleY(-1);
-        justify-self: left;
-    
-    }
-
-    #episodes .blue-wrapper_right{
-        grid-column:4;
-        grid-row:5/6;
-        transform:rotate(-90deg);
-        justify-self:end;
-    } */
-
     #episodes .card picture img{
         height: 26lvw;
     }
