@@ -368,8 +368,8 @@ footer ul{
     .flip-img picture {
         grid-column: 2/3;
     }
-    .flip-img .cardContent{
-        grid-row: 1;
+    .flip-img .line{
+        grid-row: 1/2;
     }
     .cardContent{
         gap: 0.3em;
@@ -454,7 +454,7 @@ footer ul{
         grid-template-rows: repeat(3, 33%);
         place-content: stretch;
         gap: 1.5em;
-        padding: 5em 9em;
+        padding: 5em;
     }
     footer .logo{
         grid-row: 1/2;
@@ -531,6 +531,20 @@ footer ul{
     grid-template-rows: repeat(3, auto);
        height: 24lvw; 
        width: 100%;
+    }
+    .line, .lineTwo{
+        padding: 1em;
+    }
+    .line{
+        border-top: 2px solid var(--electric-blue-color);
+        border-left: 2px solid var(--electric-blue-color);
+        box-shadow: -2px -2px 5px 0px rgba(80,165,249,0.75);
+    }
+    .lineTwo {
+        border-bottom: 2px solid var(--electric-blue-color);
+        border-right: 2px solid var(--electric-blue-color);
+         box-shadow: 2px 2px 5px 0px rgba(80,165,249,0.75);
+        
     }
     #episodes .card picture img{
         height: 26lvw;
