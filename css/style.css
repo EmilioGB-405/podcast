@@ -342,7 +342,7 @@ footer ul{
         justify-self: self-end;
         align-self: self-end;
         text-align: end;
-        width: 70%;
+        width: 50%;
     }
     
     header .button{
@@ -366,7 +366,7 @@ footer ul{
         grid-template-columns: repeat(2, 1fr);
     }
     #episodes .card picture img{
-        height: 39lvw;
+        height: 32lvw;
     }
     .flip-img picture {
         grid-column: 2/3;
