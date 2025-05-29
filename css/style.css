@@ -376,7 +376,7 @@ footer ul{
     }
     .cardContent{
         gap: 0.3em;
-        
+        height: 32lvw;
     }
     #aboutUs {
         grid-template-columns: repeat(3, 1fr);
