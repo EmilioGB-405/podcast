@@ -559,9 +559,9 @@ footer ul{
        width: 100%;
     }
 
-    #episode .card-container .card-container_second {
-       /*  display: flex;
-        flex-direction: column; */ 
+    /* #episode .card-container .card-container_second {
+        display: flex;
+        flex-direction: column; 
         position: relative;
     }
 
@@ -600,7 +600,7 @@ footer ul{
     #episodes .button{
         justify-self:center;
     }
-
+ */
 
     /* #episodes .blue-wrapper{
         grid-column:1;
