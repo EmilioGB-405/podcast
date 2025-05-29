@@ -529,6 +529,9 @@ footer ul{
         z-index: 1;
        
     }
+    .button:hover{
+        width:5em;
+    }
     .blue-wrapper_vertical{
         width:2px;
         height:6em;
