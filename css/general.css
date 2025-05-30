@@ -1,0 +1,326 @@
+html, body{
+    overflow-x: hidden;
+}
+
+
+*:root{
+    --electric-blue-color:#1E90FF;
+    --sliver-text-color:#F1F5F9;
+}
+
+.text, .title{
+    color: var(--sliver-text-color);
+}
+
+
+.text{
+    font-family: "Rubik", sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+.title{
+     font-family: "Orbitron", sans-serif;
+     font-weight:500;
+     line-height:1.8;
+      font-size:clamp(1.5rem, 3vw, 3rem)
+}
+.flip-horizontal{
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph; /*IE*/
+    filter: fliph; /*IE*/
+}
+.border{
+     border: 1px solid var(--electric-blue-color);
+}
+.border{
+    box-shadow: 0px 1px 9px 0px rgba(80,165,249,0.75);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#010206;
+}
+header, main{
+    padding:2em;
+}
+
+.grid{
+    display:grid;
+}
+
+.button{
+
+    border: none;
+    width: 10em;
+    height: 3.3em;
+    font-size: 1em;
+    clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+    background-color: var(--electric-blue-color);
+}
+.button, .button div{
+    align-items: center;
+    justify-content: center;
+}
+.button div{
+    background-color: #010206;
+    clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+    width: 97%;
+    height: 90%;
+    color: var(--sliver-text-color);
+    font-weight: 600;
+}
+
+
+.flex{
+    display:flex;
+    flex-direction: row;
+}
+#nav{
+    justify-content: space-between;
+    position: relative;
+    padding: 1em 0 3.5em 0; 
+    
+}
+
+input{
+    display:none;
+}
+#burgerMenu{
+    flex-direction:column;
+    gap:0.5em;
+    z-index: 3;
+}
+
+#burgerMenu div{
+    background-color:var(--electric-blue-color);
+    width: 3.314rem;
+    height: 0.408rem;
+    transition: all .5s;
+    transform-origin:left;
+}
+#nav-responsive{
+    position: absolute;
+    right: -150%;
+    top: 0;
+    width: 100%;
+    transition-duration: .25s;
+    z-index: 1;
+    background-color: #020b2e90;
+    backdrop-filter: blur(10px);
+    align-items: end;
+    justify-content: center;
+    z-index: 2;
+}
+#nav-responsive ul{
+    flex-direction: column;
+    padding: 4em 0;
+    gap: 1em;
+}
+#nav-responsive ul li{
+    list-style: none;
+    text-align: center;
+}
+li a{
+   text-decoration:none;
+    font-size: 1.5rem;
+}
+
+ #responsiveMenu:checked ~ #nav-responsive{
+    right: 0;
+} 
+
+
+
+#responsiveMenu:checked ~ #burgerMenu{
+    #bar{
+        transform:rotate(31deg);
+    } 
+    #bar1{
+        opacity:0;
+    } 
+    #bar2{
+        transform:rotate(-35deg);
+    }
+}   
+
+section{
+    padding: 4em 0;
+}
+
+.card{
+    gap: 1.5em;
+}
+.card img{
+    width: 100%;
+    height: 59lvw;
+    object-fit: cover;
+
+}
+.cardContent{
+    padding: 1em;
+}
+.circleButton{
+    background-color: transparent;
+    border-radius: 100%;
+    padding: 0.5em;
+    justify-self: end;
+    align-self: center;
+}
+.circleButton img{
+    width: 3em;
+    height: auto;
+}
+footer{
+   width:100%;
+   height:100%;
+   background-color:#64748B;
+   box-sizing: border-box;
+   gap:2em;
+   padding:2.5em;
+   place-content:center;
+}
+footer .button div {
+    background-color: #64748B;
+}
+footer #img-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow:row wrap;
+    gap:2.5em;
+    place-content:center;
+    
+}
+
+ #email-podcast{
+    display:block;
+    height:6em;
+    width:19.5em;
+    place-self:center;
+    padding:1em;
+    border: solid 0.25em var(--electric-blue-color);
+    background-color: #64748B;
+}
+
+#email-podcast::placeholder{
+    font-family: "Rubik", sans-serif;
+    font-size:large;
+    color:var(--sliver-text-color);
+}
+
+footer .logo{
+    place-self:center;
+}
+
+footer .button{
+    place-self:center;
+}
+
+.icons{
+    width:2.5em;
+    height:2.5em;
+}
+footer ul{
+    flex-direction:initial;
+    place-self:center;
+    list-style:none;
+    text-align: center;
+}
+
+@media(width >= 750px){
+    footer{
+        grid-template-columns: repeat(3, 40% 28% 32%);
+        grid-template-rows: repeat(3, 33%);
+        place-content: stretch;
+        gap: 1.5em;
+        padding: 5em;
+    }
+    footer .logo{
+        grid-row: 1/2;
+        grid-column: 1/4;
+        
+    }
+    #email-podcast{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        place-self: start;
+        width: 100%;
+        height: 4em;
+    }
+    footer .button{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-self: start;
+    }
+    footer #img-container{
+        grid-row: 3/4;
+        align-self: start;
+    }
+    footer .logo, footer .button, footer #img-container{
+        justify-self: start;
+
+    }
+    .ul-footer{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        gap: 0.5em;
+        grid-row: 2/3;
+        grid-column: 3/4;
+        flex-wrap: wrap;
+        height: 100%;
+        flex-direction: row;
+        justify-self: end;
+        width: 100%;
+       /*  gap: 1em; */
+    }
+}
+
+@media(width >= 1200px){
+    header, main{
+        max-width: 1485px;
+        margin: auto;
+    }
+     #nav{
+        position: static;
+    }
+    #burgerMenu{
+        display: none;
+    }
+    #nav-responsive{
+    position: static;
+    background-color: transparent;
+    width: 100%;
+    justify-content: end;
+    align-items: start;
+}
+#nav-responsive ul{
+    padding: 0;
+    flex-direction: row;
+    gap: 3em;
+}
+    .cardContent {
+    grid-template-rows: repeat(3, auto);
+       height: 24lvw; 
+       width: 100%;
+    }
+    .line, .lineTwo{
+        padding: 1em;
+    }
+    .line{
+        border-top: 2px solid var(--electric-blue-color);
+        border-left: 2px solid var(--electric-blue-color);
+        box-shadow: -2px -2px 5px 0px rgba(80,165,249,0.75);
+    }
+    .lineTwo {
+        border-bottom: 2px solid var(--electric-blue-color);
+        border-right: 2px solid var(--electric-blue-color);
+         box-shadow: 2px 2px 5px 0px rgba(80,165,249,0.75);
+        
+    }
+}
