@@ -152,7 +152,10 @@ li a{
 section{
     padding: 4em 0;
 }
-
+#episodes{
+    gap: 2em;
+    justify-items: center;
+}
 .card{
     gap: 1.5em;
 }
@@ -233,6 +236,25 @@ footer ul{
 }
 
 @media(width >= 750px){
+    .card{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #episodes .card picture img{
+        height: 32lvw;
+    }
+    .flip-img picture {
+        grid-column: 2/3;
+    }
+    .flip-img .line{
+        grid-row: 1/2;
+    }
+    .cardContent{
+        gap: 0.3em;
+        height: 32lvw;
+    }
+    .text {
+        font-size: 13px;
+    }
     footer{
         grid-template-columns: repeat(3, 40% 28% 32%);
         grid-template-rows: repeat(3, 33%);
@@ -322,5 +344,11 @@ footer ul{
         border-right: 2px solid var(--electric-blue-color);
          box-shadow: 2px 2px 5px 0px rgba(80,165,249,0.75);
         
+    }
+     #episodes .card picture img{
+        height: 26lvw;
+    }
+    #episodes .card .title{
+        align-self: end;
     }
 }
