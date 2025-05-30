@@ -1,0 +1,15 @@
+h1{
+    text-align: left;
+    justify-self: left;
+}
+.arrow{
+    background: transparent;
+    border: none;
+}
+.arrow img{
+    width: 2.4em;
+    height: auto;
+}
+#contentNumber{
+    gap: 1em;
+}
