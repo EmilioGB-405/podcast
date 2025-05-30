@@ -309,6 +309,16 @@ footer ul{
     list-style:none;
     text-align: center;
 }
+
+.blue-wrapper{
+    display:none;
+}
+
+.blue-wrapper_right{
+    display:none;
+}
+
+
 @media(width >= 750px){
     header {
         height: auto;
@@ -519,6 +529,7 @@ footer ul{
         grid-column:1/2;
     }
     header .blue-wrapper_right{
+        display: block;
         grid-row:2/3;
         grid-column:3/4;
         transform:rotate(-180deg);
