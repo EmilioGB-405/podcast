@@ -79,7 +79,7 @@ header, main{
 
 .flex{
     display:flex;
-    flex-direction: row;
+
 }
 #nav{
     justify-content: space-between;
@@ -88,7 +88,7 @@ header, main{
     
 }
 
-input{
+ #responsiveMenu{
     display:none;
 }
 #burgerMenu{
@@ -231,7 +231,7 @@ footer ul{
     list-style:none;
     text-align: center;
 }
-
+/* version tablet */
 @media(width >= 750px){
     footer{
         grid-template-columns: repeat(3, 40% 28% 32%);
@@ -280,7 +280,7 @@ footer ul{
        /*  gap: 1em; */
     }
 }
-
+/* version desktop */
 @media(width >= 1200px){
     header, main{
         max-width: 1485px;

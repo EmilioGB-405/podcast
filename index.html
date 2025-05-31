@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/general.css">
-    <script src="js/main.js" type="module"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/general.css">
+  <script src="js/main.js" type="module"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <title>Document</title>
 </head>
 <body>
     <header class="grid grid-row">
-        <nav id="nav" class="flex">
-            <a class="logo" href="../index.html"><img src="img/Podcast.png" alt="Logo de pagina web"></a>
-            <input type="checkbox" name="Menu" id="responsiveMenu" placeholder="menu">
-            <label for="responsiveMenu" id="burgerMenu" class="flex">
-                <div id="bar"></div>
-                <div id="bar1"></div>
-                <div id="bar2"></div>
-            </label>
+           <nav id="nav" class="flex">
+    <a class="logo" href="../index.html">
+      <img src="../img/Podcast.png" alt="Logo de pagina web">
+    </a>
+    <input type="checkbox" name="Menu" id="responsiveMenu" placeholder="menu">
+    <label for="responsiveMenu" id="burgerMenu" class="flex">
+      <div id="bar"></div>
+      <div id="bar1"></div>
+      <div id="bar2"></div>
+    </label>
             <nav id="nav-responsive" class="flex">
                 <ul class="flex">
                     <li><a href="#" class="text">Home</a></li>
-                    <li><a href="html/episodes.html" class="text">Episode</a></li>
+                    <li><a href="#" class="text">Episode</a></li>
                     <li><a href="#" class="text">About</a></li>
                     <li><a href="html/contact.html" class="text">Contact</a></li>
                     <li><a href="#" class="text">Blog</a></li>
@@ -30,7 +32,6 @@
             </nav>
         </nav>
         <canvas id="myCanvas" width="400" height="200">
-
         </canvas>
         <div class="blue-wrapper ">
             <div class="blue-wrapper_vertical borderWrapper"></div>
@@ -43,7 +44,11 @@
         <h1 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. A</h1>
           <p class="text" id="firstText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
         <p class="text" id="secondText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-        <button class="button flex" type="button"> <div class="flex"><p class="text"></p>Listen now</div> </button>
+        <button class="button flex" type="button"> 
+            <div class="flex">
+                <p class="text">Listen now</p>
+            </div>
+        </button>
     </header>
     <main>
         <section id="episodes" class="grid">
