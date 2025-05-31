@@ -161,7 +161,7 @@ section{
 }
 .card img{
     width: 100%;
-    height: 59lvw;
+    height: 27lvh;
     object-fit: cover;
 
 }
@@ -300,6 +300,14 @@ footer ul{
         justify-self: end;
         width: 100%;
        /*  gap: 1em; */
+    }
+    .card img{
+        height: 80lvh;
+    }
+    .circleButton img{
+    width: 2.5em;
+    height: auto;
+
     }
 }
 
