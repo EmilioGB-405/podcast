@@ -45,11 +45,41 @@
     <main>
         <section id="episodes" class="grid">
             <div id="formContent">
-                <div id="contentBotton" class="flex">
+                <div id="contentBotton" class="grid">
                     <h1 class="title">Episode</h1>
-                    <img src="../icon/slider.png" alt="icon silder">
+                    <input type="checkbox" id="filterButton" name="filter">
+                    <label class="flex" for="filterButton"><img src="../icon/slider.png" alt="icon silder"></label>
+                    
+                    <div id="filter-container" class="grid">
+                        <select class="text border"  id="year" title="year">
+                            <option class="text" disabled selected>Year</option>
+                            <option class="text" value="2025">2025</option>
+                            <option class="text" value="2024">2024</option>
+                            <option class="text" value="2023">2023</option>
+                        </select>
+                        <select  class="text border"  name="category" id="category" title="category">
+                            <option class="text" disabled selected>Category</option>
+                            <option class="text" value="Artifical Inteligent">Artifical Inteligent</option>
+                            <option class="text" value="Cybersecurity">Cybersecurity</option>
+                            <option class="text" value="Quantum">Quantum technology</option>
+                            <option class="text" value="Economy">Economy</option>
+                        </select>
+                        <select  class="text border"  name="guest" id="guest" title="guest">
+                            <option class="text" disabled selected>Guest</option>
+                            <option class="text" value="Rauch">Guillermo Rauch</option>
+                            <option class="text" value="Evan">Evan You</option>
+                            <option class="text" value="Kent">Kent C. Dodds</option>
+                            <option class="text" value="Daniel">Daniel Gross</option>
+                            <option class="text" value="Sarah">Sarah Drasner</option>
+                        </select>
+                        <select   class="text border"  name="popular" id="popular" title="popular">
+                            <option class="text" disabled selected>Most popular</option>
+                            <option value="Top 10">Top 10</option>
+                            <option value="Trending">Trending</option>
+                        </select>
+                    </div>
                 </div>
-                <label for="search"><input type="text" id="search"></label>
+                <label id="searchContent" for="search" class="border"><input type="text" id="search" class="text"  placeholder="search"><img src="../icon/Search.png" alt="icon to search"></label>
             </div>
             
             <div class="card grid flip-img">
