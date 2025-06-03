@@ -52,6 +52,12 @@ header, main{
 
 .grid{
     display:grid;
+    width: 100%;
+    
+}
+section{
+    width: 100%;
+    margin: auto;
 }
 
 .button{
@@ -302,7 +308,7 @@ footer ul{
        /*  gap: 1em; */
     }
     .card img{
-        height: 80lvh;
+        height: 335px;
     }
     .circleButton img{
     width: 2.5em;
@@ -359,4 +365,13 @@ footer ul{
     #episodes .card .title{
         align-self: end;
     }
+    .card img{
+        height: 560px;
+    }
+    .circleButton img{
+    width: 2.5em;
+    height: auto;
+
+    }
+   
 }

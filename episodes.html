@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/episodes.css">
+     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Episodes</title>
 </head>
 <body>
@@ -20,8 +21,8 @@
             <nav id="nav-responsive" class="flex">
                 <ul class="flex">
                     <li><a href="../index.html" class="text">Home</a></li>
-                    <li><a href="html/episodes.html" class="text">Episode</a></li>
-                    <li><a href="#" class="text">About</a></li>
+                    <li><a href="/episodes.html" class="text">Episode</a></li>
+                    <li><a href="/about.html" class="text">About</a></li>
                     <li><a href="#" class="text">Contact</a></li>
                     <li><a href="#" class="text">Blog</a></li>
                 </ul>
@@ -44,13 +45,20 @@
     </header>
     <main>
         <section id="episodes" class="grid">
-            <div id="formContent">
-                <div id="contentBotton" class="grid">
+           <div id="formContent" class="grid">
                     <h1 class="title">Episode</h1>
                     <input type="checkbox" id="filterButton" name="filter">
-                    <label class="flex" for="filterButton"><img src="../icon/slider.png" alt="icon silder"></label>
-                    
-                    <div id="filter-container" class="grid">
+                    <label class="flex" for="filterButton" id="filter-btn"><img src="../icon/slider.png" alt="icon silder"></label>
+     
+                <div id="filter-container" class="grid">
+                        <div class="blue-wrapper">
+                            <div class="blue-wrapper_vertical borderWrapper border"></div>
+                            <div class="blue-wrapper_horizontal borderWrapper border"></div>
+                        </div>
+                        <div class="blue-wrapper_right">
+                            <div class="blue-wrapper_vertical border"></div>
+                            <div class="blue-wrapper_horizontal border"></div>
+                        </div>
                         <select class="text border"  id="year" title="year">
                             <option class="text" disabled selected>Year</option>
                             <option class="text" value="2025">2025</option>
@@ -77,11 +85,9 @@
                             <option value="Top 10">Top 10</option>
                             <option value="Trending">Trending</option>
                         </select>
-                    </div>
                 </div>
                 <label id="searchContent" for="search" class="border"><input type="text" id="search" class="text"  placeholder="search"><img src="../icon/Search.png" alt="icon to search"></label>
             </div>
-            
             <div class="card grid flip-img">
                 <picture>
                     <source srcset="../img/episodeThirtyThreeCell.jpg" media="(max-width: 900px)">

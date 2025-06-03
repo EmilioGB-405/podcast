@@ -1,0 +1,14 @@
+ main{
+    padding: 0 2em;
+}
+header{
+    padding: 2em 2em 0 2em;
+}
+#history{
+    padding: 0 ;
+} 
+#head{
+    position: fixed;
+    width: 100%;
+    height: auto;
+}

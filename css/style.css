@@ -228,19 +228,6 @@ main{
     /* .button:hover{
         width:5em;
     } */
-    .blue-wrapper_vertical{
-        width:2px;
-        height:6em;
-        background-color: var(--electric-blue-color);
-        
-    }
-       .blue-wrapper_horizontal{
-        width:30em;
-        height:2px;
-
-        background-color: var(--electric-blue-color);
-        
-    }
 
     h1{
         grid-row:2/3;
