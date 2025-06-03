@@ -1,5 +1,37 @@
 .border_news{
     display:grid;
-    height:15em;
-    padding:1em ;
+    padding: 0.5em 5em ;
+    box-shadow:none;
+    text-align:justify;
+    place-content:center;
+}
+
+main{
+    /* place-content:center; */
+}
+
+.cardNewsContent{
+    flex-wrap: nowrap;
+    overflow:scroll;
+    width:auto;
+    scroll-snap-type:x mandatory;
+    
+}
+
+.card_news{
+    width:100%;
+    left:0;
+    object-fit:cover;
+    scroll-snap-align:center;
+    align-self:center;
+    margin:0 2em;
+}
+
+.card_news  img{
+    object-fit:cover;
+    width:100%;
+}
+
+button{
+    display:none;
 }
