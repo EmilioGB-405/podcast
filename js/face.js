@@ -7,10 +7,10 @@ import {scene,camara,renderer} from "./app";
 
 const holograma = new GLTFLoader()
 
-holograma.load("/img/hologramamicrophone.glb",(gltf)=>{
+holograma.load("/img/hologramaface.glb",(gltf)=>{
     const model = gltf.scene;
     scene.add(model);
-    model.scale.set(4.5,4.5,4.5)
+    model.scale.set(7.5,7.5,7.5)
     model.rotation.y=Math.PI 
     
     const animate =()=>{
