@@ -1,25 +1,25 @@
 .border_news{
     display:grid;
-    padding: 0.5em 5em ;
+    padding:0.5em  5em ;
     box-shadow:none;
-    text-align:justify;
-    place-content:center;
+    /* text-align:justify; */
+   /*  place-content:center; */
 }
-
-main{
-    /* place-content:center; */
+.card_news{
+    height:30em;
+    width:30em;
+    
 }
-
 .cardNewsContent{
-    flex-wrap: nowrap;
     overflow:scroll;
     width:auto;
+    height:100lvh;
     scroll-snap-type:x mandatory;
+    overflow-y:hidden;
     
 }
 
-.card_news{
-    width:100%;
+.card_news {
     left:0;
     object-fit:cover;
     scroll-snap-align:center;
@@ -34,4 +34,15 @@ main{
 
 button{
     display:none;
+}
+
+@media(width > 750px){
+    
+    section .circuloButton{
+        display:grid;
+        place-items:center;
+    }
+    button{
+        display:block;
+    }
 }
