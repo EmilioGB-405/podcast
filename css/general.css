@@ -241,6 +241,9 @@ footer ul{
     list-style:none;
     text-align: center;
 }
+button{
+    cursor: pointer;
+}
 
 @media(width >= 750px){
     .card{

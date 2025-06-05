@@ -18,6 +18,8 @@ h1{
 }
 #contentNumber .numbers{
  font-size: 1.3em;
+ background-color: transparent;
+ border: none;
 }
 #formContent{
      position: relative;
