@@ -127,6 +127,9 @@ label img{
         width: 3em;
         height: 3em;
     }
+    .blue-wrapper_right, .blue-wrapper{
+        display: block;
+    }
     .blue-wrapper_right{
         transform: scaleX(-1);
         justify-self: end;

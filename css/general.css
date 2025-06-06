@@ -244,6 +244,9 @@ footer ul{
 button{
     cursor: pointer;
 }
+.blue-wrapper_right, .blue-wrapper{
+ display: none;
+}
 
 @media(width >= 750px){
     .card{
