@@ -326,6 +326,7 @@ button{
 
 @media(width >= 1200px){
     header, main{
+        width: 100%;
         max-width: 1485px;
         margin: auto;
     }
@@ -373,7 +374,7 @@ button{
         align-self: end;
     }
     .card img{
-        height: 560px;
+        height: 36lvw;
     }
     .circleButton img{
     width: 2.5em;
