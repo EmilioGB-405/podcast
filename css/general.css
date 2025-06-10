@@ -265,9 +265,7 @@ button{
         gap: 0.3em;
         height: 32lvw;
     }
-    .text {
-        font-size: 13px;
-    }
+    
     footer{
         grid-template-columns: repeat(3, 40% 28% 32%);
         grid-template-rows: repeat(3, 33%);
@@ -332,6 +330,12 @@ button{
     }
      #nav{
         position: static;
+    }
+    #nav .text{
+        font-size: 1rem;
+    }
+    .text {
+        font-size: 1.5rem;
     }
     #burgerMenu{
         display: none;
