@@ -32,20 +32,19 @@
     <main >
         <section class="grid" id="News_relevant">
             <h2 class="title">News relevant</h2>
-            <div  class="flex cardNewsContent" id="new_relevant">
+            <div id="new_relevant">
                 <div class="card_news  cardSlider">
                     <picture >
                         <source srcset="./img/episodeOneCell.jpg" media="(max-width: 900px)">
                         <source srcset="./img/episodeOne.jpg" media="(min-width: 950px)">
                         <img src="./img/episodeOne.jpg" alt="iepisode thirty-two">
                     </picture>
-                
-                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                         <button type="button" id="left" class="buttonSlider circleButton border"><img src="icon/arrow.png" alt="left slider button"></button>
-                         <button id="right" type="button" class="buttonSlider flip-horizontal circleButton border"><img src="icon/arrow.png" alt="right slider button"></button>
-                    </div>
+                </div>
+                <div class="border border_news" id="boder_news-relevant">
+                    <h3 class="title title_news">Ignacio Gómez</h3>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button type="button" id="left" class="buttonSlider circleButton border button_relevant "><img src="icon/arrow.png" alt="left slider button"></button>
+                    <button id="right" type="button" class="buttonSlider flip-horizontal circleButton border button_relevant "><img src="icon/arrow.png" alt="right slider button"></button>
                 </div>
                 <!--  <div class="card_news  cardSlider">
                     <picture>
@@ -108,9 +107,7 @@
          <!-- Artificial intenligent section starts here -->
         <section class="grid">
             <h2 class="title">Artificial Intenligent</h2>
-            <div class="cardNewsContent_border">
-
-            </div>
+             <div class="cardNewsContent_border"></div>
             <div  class="flex cardNewsContent ">
                 <div class="card_news  cardSlider" >
                     <picture>
@@ -179,13 +176,16 @@
                     </div>
                 </div>
             </div>
-             <button type="button" id="left" class="buttonSlider circleButton border"><img src="icon/arrow.png" alt="left slider button"></button>
-            <button id="right" type="button" class="buttonSlider flip-horizontal circleButton border"><img src="icon/arrow.png" alt="right slider button"></button>
+            <div class="button-container flex">
+                <button type="button" id="left" class="buttonSlider circleButton border"><img src="icon/arrow.png" alt="left slider button"></button>
+                <button id="right" type="button" class="buttonSlider flip-horizontal circleButton border"><img src="icon/arrow.png" alt="right slider button"></button>
+            </div>
         </section>
         <!-- Artificial inteligent ends here -->
          <!-- Cybersecurity section starts here -->
         <section class="grid">
             <h2 class="title">Cybersecurity</h2>
+            <div class="cardNewsContent_border"></div>
            <div  class="flex cardNewsContent ">
                 <div class="card_news  cardSlider" >
                     <picture>
@@ -254,13 +254,16 @@
                     </div>
                 </div>
             </div>
-             <button type="button" id="left" class="buttonSlider circleButton border"><img src="icon/arrow.png" alt="left slider button"></button>
-            <button id="right" type="button" class="buttonSlider flip-horizontal circleButton border"><img src="icon/arrow.png" alt="right slider button"></button>
+            <div class="button-container flex">
+                <button type="button" id="left" class="buttonSlider circleButton border"><img src="icon/arrow.png" alt="left slider button"></button>
+                <button id="right" type="button" class="buttonSlider flip-horizontal circleButton border"><img src="icon/arrow.png" alt="right slider button"></button>
+            </div>
         </section>
         <!-- Cybersecurity section ends here -->
          <!-- Quantum technology section starts here -->
         <section class="grid">
             <h2 class="title">Quantum Technology</h2>
+            <div class="cardNewsContent_border"></div>
             <div  class="flex cardNewsContent ">
                 <div class="card_news  cardSlider">
                     <picture>
@@ -329,13 +332,16 @@
                     </div>
                 </div>
             </div>
-             <button type="button" id="left" class="buttonSlider circleButton border"><img src="icon/arrow.png" alt="left slider button"></button>
-            <button id="right" type="button" class="buttonSlider flip-horizontal circleButton border"><img src="icon/arrow.png" alt="right slider button"></button>
+            <div class="button-container flex">
+                <button type="button" id="left" class="buttonSlider circleButton border"><img src="icon/arrow.png" alt="left slider button"></button>
+                <button id="right" type="button" class="buttonSlider flip-horizontal circleButton border"><img src="icon/arrow.png" alt="right slider button"></button>
+            </div>
         </section>
         <!-- Quantum technology section ends here -->
          <!-- Economy section starts here -->
         <section class="grid">
             <h2 class="title">Economy</h2>
+            <div class="cardNewsContent_border"></div>
             <div  class="flex cardNewsContent ">
                 <div class="card_news   cardSlider">
                     <picture>
@@ -404,8 +410,10 @@
                     </div>
                 </div>
             </div>
-             <button type="button" id="left" class="buttonSlider circleButton border"><img src="icon/arrow.png" alt="left slider button"></button>
-            <button id="right" type="button" class="buttonSlider flip-horizontal circleButton border"><img src="icon/arrow.png" alt="right slider button"></button>
+            <div class="button-container flex">
+                <button type="button" id="left" class="buttonSlider circleButton border"><img src="icon/arrow.png" alt="left slider button"></button>
+                <button id="right" type="button" class="buttonSlider flip-horizontal circleButton border"><img src="icon/arrow.png" alt="right slider button"></button>
+            </div>
         </section>
         <!-- Economy section ends here -->
     </main>
