@@ -367,4 +367,21 @@ left.addEventListener('click', () => {
     numberValue--;
     console.log;
     numbersIndex();
-})
+});
+let search = document.querySelector('#search');
+search.addEventListener('input', (e) =>{
+    let numberEpisdoe = e.target.value
+   
+    if (numberEpisdoe) {
+         episodes.forEach(episode => {
+            if (episode.number.toLocaleLowerCase() == numberEpisdoe.toLocaleLowerCase()) {
+                console.log(episode.number);
+                
+            }
+         })     
+    }  
+            
+    
+    
+});
+ 

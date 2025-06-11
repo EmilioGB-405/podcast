@@ -52,7 +52,6 @@ header, main{
 
 .grid{
     display:grid;
-    width: 100%;
     
 }
 section{
@@ -313,7 +312,7 @@ button{
        /*  gap: 1em; */
     }
     .card img{
-        height: 335px;
+        height: 100%;
     }
     .circleButton img{
     width: 2.5em;
@@ -324,8 +323,8 @@ button{
 
 @media(width >= 1200px){
     header, main{
-        width: 100%;
-        max-width: 1485px;
+        width: 90%;
+        /* max-width: 1485px; */
         margin: auto;
     }
      #nav{
@@ -335,7 +334,7 @@ button{
         font-size: 1rem;
     }
     .text {
-        font-size: 1.5rem;
+        font-size: 1.4lvw;
     }
     #burgerMenu{
         display: none;
@@ -378,7 +377,7 @@ button{
         align-self: end;
     }
     .card img{
-        height: 36lvw;
+        height: 100%;
     }
     .circleButton img{
     width: 2.5em;

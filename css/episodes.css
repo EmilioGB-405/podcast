@@ -89,6 +89,9 @@ label img{
     font-size: 1em;
     width: 100%;
 }
+.filtro{
+    display: none;
+}
 @media(width >= 750px){
     header .line .cardContent{
         height: 100%;
