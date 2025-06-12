@@ -29,4 +29,8 @@ const left = document.querySelector('#left');
     updateCardClasses();
   });
 
-  export{left,right,updateCardClasses};
+/*   export let slideElements = {
+    left:left,
+    right:right,
+    updateCardClasses
+  }; */

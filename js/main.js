@@ -1,24 +1,10 @@
-import {scene,camara,renderer} from "./app";
-import{holograma}from "./microphone";
-import{left,right,updateCardClasses}from"./slider"
-console.log(holograma,scene,camara,renderer)
+
+/* import{holograma}from "./microphone.js";
+/* import{slideElements}from"./slider.js" */
+/* console.log(holograma) */
 
 
-/* let webPages = [
-    {
-        pageName:"index",
-        dir:"./index.html",
-        getModule: ""
-    },
-    {
-        pageName:"contact",
-        dir:"./contact.html"
-    },
-    {
-        pageName:"blog",
-        dir:"./blog.html",
-    }
-]; */
+
 
 
 
