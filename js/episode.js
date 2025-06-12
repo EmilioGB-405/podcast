@@ -376,7 +376,29 @@ search.addEventListener('input', (e) =>{
          episodes.forEach(episode => {
             if (episode.number.toLocaleLowerCase() == numberEpisdoe.toLocaleLowerCase()) {
                 console.log(episode.number);
-                
+                     Array.from(cards).forEach((card, index) => {
+       
+        card.style.display = ""; // Asegura que se muestre si hay contenido
+
+        const imagenCell = card.querySelector(".imagenCell");
+        const imagenCompu = card.querySelector(".imagenCompu");
+        const img = card.querySelector("img");
+        const title = card.querySelector(".title");
+        const text = card.querySelector(".text");
+
+        imagenCell.srcset = episode.imgCell;
+        imagenCompu.srcset = episode.img;
+        img.src = episode.img;
+        img.alt = episode.imageAlt || "";
+
+        title.textContent = episode.number;
+        text.textContent = episode.information;
+       if (index !== 0) {
+        card.remove();
+        }
+    });
+  
+               
             }
          })     
     }  
