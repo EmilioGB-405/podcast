@@ -1,10 +1,13 @@
 .cardNewsContent{
     padding: 1.5em 0;
-    width: 100lvw;
     overflow-x: scroll;
+    width:100%;
     justify-content: start;
     gap: 1em;
     scroll-behavior:smooth;
+    position:relative;
+    scroll-snap-align:center;
+    
 }
 
 .border{
