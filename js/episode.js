@@ -1,5 +1,6 @@
 'use strict'
-let episodes = [
+let global ={
+    episodes: [
         {
             number: "Episode 1",
             tittle: "",
@@ -264,11 +265,11 @@ let episodes = [
             imgCell: "img/episodeThirtyThreeCell.jpg",
             year: "2025"
         }
-];
-let reversedEpisodes = episodes.reverse();
-
-const cards = document.querySelectorAll("#episodes .card");
-
+],
+cardLoad: function () {
+   const reversedEpisodes = [...this.episodes].reverse();
+    const cards = document.querySelectorAll("#episodes .card");
+    
 Array.from(cards).forEach((card, index) => {
   const episode = reversedEpisodes[index];
   if (!episode) return; // Evita errores si hay más tarjetas que datos
@@ -283,19 +284,40 @@ Array.from(cards).forEach((card, index) => {
   imagenCompu.srcset = episode.img;
   img.src = episode.img; // fallback
   img.alt = episode.imageAlt;
-
-  title.textContent = episode.number;
-  text.textContent = episode.information;
-
+    title.textContent = episode.number;
+    text.textContent = episode.information;
+    console.log()
  
-});
+        });
+    },
+    numberValue: 0,
+    numberIndex: function () {
+        let numbers = document.querySelectorAll('.numbers')
+       numbers[this.numberValue].style.color = "#1E90FF"; 
+    },
+    rightButton: function () {
+         let right = document.querySelector('#right');
+         right.addEventListener('click', () => {
+           
+            numbers[this.numberValue].style.color = "";
+            this.numberValue++;
+            this.numberIndex();
+            this.cardLoad();
+             const reversedEpisodes = [...this.episodes].reverse();
+    // Check if there are more episodes to show
+         })
+    }
+ 
+}
+
+
 let numbers = document.querySelectorAll('.numbers');
 console.log(numbers)
 
-let right = document.querySelector('#right');
 
 
-let i = 0; // Mueve esto fuera del event listener para mantener el índice global
+
+/* let i = 0; // Mueve esto fuera del event listener para mantener el índice global
 let numberValue = 0;
 function numbersIndex () {
     numbers[numberValue].style.color = "#1E90FF";
@@ -405,5 +427,9 @@ search.addEventListener('input', (e) =>{
             
     
     
+}); */
+ document.addEventListener('DOMContentLoaded', () => {
+    global.cardLoad();
+    global.numberIndex();
+    global.rightButton();
 });
- 

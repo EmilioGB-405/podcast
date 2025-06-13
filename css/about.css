@@ -54,6 +54,9 @@ footer{
         padding: 2em 13em;
         text-align: center;
     } 
+    #myCanvas{
+        left: 50%;
+    }
 }
 
 @media(width >= 1200px){
@@ -63,5 +66,8 @@ footer{
 
      #Objective p:nth-child(2){
         padding: 0 25em 0 0;
+     }
+     header{
+        height: auto;
      }
 }

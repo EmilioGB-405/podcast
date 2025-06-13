@@ -22,7 +22,7 @@ html, body{
      font-family: "Orbitron", sans-serif;
      font-weight:500;
      line-height:1.8;
-      font-size:clamp(1.5rem, 3vw, 3rem)
+      font-size: 2rem;
 }
 .flip-horizontal{
     -moz-transform: scaleX(-1);
@@ -327,6 +327,9 @@ button{
         /* max-width: 1485px; */
         margin: auto;
     }
+    header{
+    height: 100lvh;
+    }
      #nav{
         position: static;
     }
@@ -334,7 +337,7 @@ button{
         font-size: 1rem;
     }
     .text {
-        font-size: 1.4lvw;
+        font-size: 1.3rem;
     }
     #burgerMenu{
         display: none;
