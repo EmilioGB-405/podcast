@@ -1,11 +1,11 @@
 
 
 const left = document.querySelector('#left');
-  const right = document.querySelector('#right');
+const right = document.querySelector('#right');
 
   function updateCardClasses() {
     const cards = document.querySelectorAll('.cardSlider');
-
+   
     cards.forEach(card => {
       card.classList.remove('card-left', 'card-center', 'card-right');
     });
