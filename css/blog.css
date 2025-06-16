@@ -106,10 +106,12 @@
 
     .cardNewsContent{
         scrollbar-width:none;
-        overflow-x:hidden;
+       
     }
+    
 
     .cardNewsContent .card_news picture img{
         width:31rem;
+        
     }
 }

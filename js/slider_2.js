@@ -1,6 +1,43 @@
 "use strict"
 
-let currentSlide = 0;
+
+
+let counterSlider = 1;
+
+slider(counterSlider);
+
+
+function buttonSlider(){
+    slider(counterSlider += 1)
+}
+
+function slider(n){
+    let slides =document.querySelectorAll('.cardNewsContent');
+    if(n > slides.length){ counterSlider = 1}
+    if(n < 1){counterSlider = slides.length}
+   
+    slides.forEach(cards=>{
+        console.log(cards)
+        cards.style.transform = `translate(${n*100})`
+    })
+    
+    
+};
+
+
+/* 
+function slideBotton(n){
+    slider(slideBotton += n)
+} */
+
+
+
+
+
+
+
+
+/* let currentSlide = 0;
 const left = document.querySelector('.buttonSlider_left');
 const right = document.querySelector('.buttonSlider_right');
 
@@ -10,34 +47,50 @@ console.log(right)
 function Slider (n){
 
     let cards = document.querySelectorAll(".cardNewsContent"); 
-
-  /*   let cardsChildre = cards.children
-    console.log(cardsChildre) */
-    console.log(cards)
+  
+    console.log(cards.length)
+    for (let i = 0; i < cards.length; i++) {
+        let val = cards[i];
+            console.log(val)
+            v
+       left.addEventListener('click', ()=>{
+            
+       })
+    }
     
-    cards.forEach(card =>{
-
-         card.style.transform = `translateX(-${n * 100}%)`;
-            /* console.log(card.childNodes)
-            for (let cards = 0; index < array.length; index++) {
-                
-                
-            } */
-    });
-    currentSlide = n
+    
+    
+   currentSlide = n 
 }
 Slider()
 
-/* left.addEventListener('click', () =>{
+left.addEventListener('click', () =>{
     Slider(currentSlide -1)
 })
+
+console.log(left)
 
 right.addEventListener('click', ()=>{
     Slider(currentSlide + 1)
 }) */
 
-
+/* console.log(right)
+cards.forEach(card =>{
+        card.style.transform = `translate(-${n * 100}%);`
+       
+    }); */
 
 
 /* console.log(cards) */
 /* console.log(cardSlider) */
+ /*  console.log(card.children)
+         card.style.transform = `translateX(-${n * 100}%)`; */
+
+/*   let cardsChildre = cards.children
+    console.log(cardsChildre) */
+
+    /* for(i = 0; i < slides.length; i++){
+        let val = slides[i]
+        console.log(val)
+        val.style.transform = `translate(${n * 100})`;
+    } */
