@@ -266,27 +266,41 @@ let global ={
             year: "2025"
         }
 ],
+i:0,
+page:6,
 cardLoad: function () {
    const reversedEpisodes = [...this.episodes].reverse();
     const cards = document.querySelectorAll("#episodes .card");
     
 Array.from(cards).forEach((card, index) => {
-  const episode = reversedEpisodes[index];
-  if (!episode) return; // Evita errores si hay más tarjetas que datos
+  const episodeIndexInReversed =   this.i + index;
 
-  const imagenCell = card.querySelector(".imagenCell");
-  const imagenCompu = card.querySelector(".imagenCompu");
-  const img = card.querySelector("img");
-  const title = card.querySelector(".title");
-  const text = card.querySelector(".text");
+            if (reversedEpisodes[episodeIndexInReversed]) {
+                const episode = reversedEpisodes[episodeIndexInReversed]; // Obtenemos el episodio correcto
 
-  imagenCell.srcset = episode.imgCell;
-  imagenCompu.srcset = episode.img;
-  img.src = episode.img; // fallback
-  img.alt = episode.imageAlt;
-    title.textContent = episode.number;
-    text.textContent = episode.information;
-    console.log()
+                const imagenCell = card.querySelector(".imagenCell"); // Usar querySelector para un solo elemento
+                const imagenCompu = card.querySelector(".imagenCompu"); // Usar querySelector para un solo elemento
+                const img = card.querySelector("img");
+                const title = card.querySelector(".title");
+                const text = card.querySelector(".text");
+                        
+                img.src = episode.img;
+                        // Usar 'tittle' ya que 'imageAlt' no está en tus datos
+                img.alt = episode.tittle || episode.number;
+                        // Puedes combinar el número y el título para el texto
+                title.textContent = episode.number;
+                text.textContent = episode.information;
+                        
+                        // Asegúrate de que los elementos <source> existan antes de asignar srcset
+                if (imagenCell) imagenCell.srcset = episode.imgCell;
+                if (imagenCompu) imagenCompu.srcset = episode.img;
+
+            } else {
+                        // Si no hay más episodios para esta tarjeta, la oculta
+                card.style.display = 'none';
+            }
+
+  
  
         });
     },
@@ -298,16 +312,34 @@ Array.from(cards).forEach((card, index) => {
     rightButton: function () {
          let right = document.querySelector('#right');
          right.addEventListener('click', () => {
-           
+           const totalEpisodes = this.episodes.length;
+                if ((this.i + this.page) < totalEpisodes) {
+                    this.i += this.page;
+                     // Recarga las tarjetas con el nuevo índice
+                }
             numbers[this.numberValue].style.color = "";
             this.numberValue++;
             this.numberIndex();
             this.cardLoad();
-             const reversedEpisodes = [...this.episodes].reverse();
+           
     // Check if there are more episodes to show
          })
+    },
+    LeftButton: function () {
+        let left = document.querySelector('#left')
+        left.addEventListener('click', () => {
+              if (this.i > 0) {
+                    this.i -= this.page;
+                    if (this.i < 0) this.i = 0; // Asegura que 'i' no sea negativo
+                     // Recarga las tarjetas con el nuevo índice
+                }
+            numbers[this.numberValue].style.color = "";
+            this.numberValue--;
+            this.numberIndex();
+            this.cardLoad();
+        })
+         
     }
- 
 }
 
 
@@ -432,4 +464,5 @@ search.addEventListener('input', (e) =>{
     global.cardLoad();
     global.numberIndex();
     global.rightButton();
+    global.LeftButton();
 });
