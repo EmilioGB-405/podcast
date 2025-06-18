@@ -1,38 +1,78 @@
 "use strict"
 
+let currentSlider = 0;
+
+let slides =document.querySelectorAll('.cardNewsContent');
+
+let left =  document.querySelectorAll('.buttonSlider_left');
+
+let right = document.querySelectorAll('.buttonSlider_right')
 
 
-let counterSlider = 1;
-
-slider(counterSlider);
 
 
-function buttonSlider(){
-    slider(counterSlider += 1)
-}
+
 
 function slider(n){
-    let slides =document.querySelectorAll('.cardNewsContent');
-    if(n > slides.length){ counterSlider = 1}
-    if(n < 1){counterSlider = slides.length}
+
    
-    slides.forEach(cards=>{
-        console.log(cards)
-        cards.style.transform = `translate(${n*100})`
-    })
-    
+    slides.forEach((cards, index) =>{
+
+        /* console.log(cards.children) */
+        if(cards.children == true){
+             cards.style.transform = `translate(${n*100})`;
+        }
+
+    });
+
+   
+    currentSlider = n
     
 };
+slider()
+
+left.forEach((buttonleft,index)=>{
+    console.log(buttonleft)
+    console.log(index)
+    buttonleft.addEventListener('click',()=>{
+       slider(currentSlider -= 1)
+    })
+})
+
+right.forEach((buttonright,index)=>{
+    console.log(buttonright)
+    console.log(index)
+    buttonright.addEventListener('click',()=>{
+        slider(currentSlider += 1)
+    })
+})
+
+
+/* slider(counterSlider); */
+
+
+/* function buttonSlide(){
+    slider(counterSlider += 1)
+}; */
+
+
+/*  if(n > slides.length){ counterSlider = 1};
+
+    if(n < 1){counterSlider = slides.length};
+   
+    slides.forEach(cards=>{
+
+        console.log(cards);
+
+        cards.style.transform = `translate(${n*100})`;
+
+    }); */
 
 
 /* 
 function slideBotton(n){
     slider(slideBotton += n)
 } */
-
-
-
-
 
 
 
