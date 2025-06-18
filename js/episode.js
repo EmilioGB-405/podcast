@@ -304,10 +304,11 @@ Array.from(cards).forEach((card, index) => {
  
         });
     },
+    numbers: document.querySelectorAll('.numbers'),
     numberValue: 0,
     numberIndex: function () {
-        let numbers = document.querySelectorAll('.numbers')
-       numbers[this.numberValue].style.color = "#1E90FF"; 
+        
+       this.numbers[this.numberValue].style.color = "#1E90FF"; 
     },
     rightButton: function () {
          let right = document.querySelector('#right');
@@ -317,7 +318,8 @@ Array.from(cards).forEach((card, index) => {
                     this.i += this.page;
                      // Recarga las tarjetas con el nuevo índice
                 }
-            numbers[this.numberValue].style.color = "";
+                
+            this.numbers[this.numberValue].style.color = "";
             this.numberValue++;
             this.numberIndex();
             this.cardLoad();
@@ -333,18 +335,65 @@ Array.from(cards).forEach((card, index) => {
                     if (this.i < 0) this.i = 0; // Asegura que 'i' no sea negativo
                      // Recarga las tarjetas con el nuevo índice
                 }
-            numbers[this.numberValue].style.color = "";
+                
+            this.numbers[this.numberValue].style.color = "";
             this.numberValue--;
-            this.numberIndex();
+            this.numberIndex(); 
             this.cardLoad();
         })
          
-    }
+    },
+    seacrhLoad: function () {
+        let search = document.querySelector('#search')
+        search.addEventListener('input', (e) => {
+            let numberEpisdoe = e.target.value
+           
+        })
+    },
+    seacrhLoad: function () {
+    let search = document.querySelector('#search');
+    search.addEventListener('input', (e) => {
+        let value = e.target.value.trim().toLowerCase();
+
+        const cards = document.querySelectorAll("#episodes .card");
+
+        if (value) {
+            const resultado = this.episodes.filter(ep => 
+                ep.number.toLowerCase().includes(value) ||
+                ep.information.toLowerCase().includes(value)
+            );
+
+            cards.forEach((card, index) => {
+                const episode = resultado[index];
+                if (episode) {
+                    const imagenCell = card.querySelector(".imagenCell");
+                    const imagenCompu = card.querySelector(".imagenCompu");
+                    const img = card.querySelector("img");
+                    const title = card.querySelector(".title");
+                    const text = card.querySelector(".text");
+
+                    img.src = episode.img;
+                    img.alt = episode.tittle || episode.number;
+                    title.textContent = episode.number;
+                    text.textContent = episode.information;
+
+                    if (imagenCell) imagenCell.srcset = episode.imgCell;
+                    if (imagenCompu) imagenCompu.srcset = episode.img;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        } else {
+            // Si el input está vacío, volver a cargar normalmente
+            this.cardLoad();
+        }
+    });
+}
+
 }
 
 
-let numbers = document.querySelectorAll('.numbers');
-console.log(numbers)
+
 
 
 
@@ -465,4 +514,5 @@ search.addEventListener('input', (e) =>{
     global.numberIndex();
     global.rightButton();
     global.LeftButton();
+    global.seacrhLoad()
 });
