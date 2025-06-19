@@ -309,6 +309,7 @@ Array.from(cards).forEach((card, index) => {
     numberIndex: function () {
         
        this.numbers[this.numberValue].style.color = "#1E90FF"; 
+       console.log(this.numbers)
     },
     rightButton: function () {
          let right = document.querySelector('#right');
@@ -318,13 +319,13 @@ Array.from(cards).forEach((card, index) => {
                     this.i += this.page;
                      // Recarga las tarjetas con el nuevo índice
                 }
-                
-            this.numbers[this.numberValue].style.color = "";
-            this.numberValue++;
+                if (this.numberValue < this.numbers.length - 1) {
+                        this.numbers[this.numberValue].style.color = "";
+                        this.numberValue++;
+                    }
+
             this.numberIndex();
             this.cardLoad();
-           
-    // Check if there are more episodes to show
          })
     },
     LeftButton: function () {
@@ -335,20 +336,16 @@ Array.from(cards).forEach((card, index) => {
                     if (this.i < 0) this.i = 0; // Asegura que 'i' no sea negativo
                      // Recarga las tarjetas con el nuevo índice
                 }
+                if (this.numberValue >= 1) {
+                    this.numbers[this.numberValue].style.color = "";
+                    this.numberValue--;
+                    
+                }
                 
-            this.numbers[this.numberValue].style.color = "";
-            this.numberValue--;
             this.numberIndex(); 
             this.cardLoad();
         })
          
-    },
-    seacrhLoad: function () {
-        let search = document.querySelector('#search')
-        search.addEventListener('input', (e) => {
-            let numberEpisdoe = e.target.value
-           
-        })
     },
     seacrhLoad: function () {
     let search = document.querySelector('#search');
@@ -384,8 +381,10 @@ Array.from(cards).forEach((card, index) => {
                 }
             });
         } else {
-            // Si el input está vacío, volver a cargar normalmente
-            this.cardLoad();
+            cards.forEach(card => {
+                card.style.display = "";
+            });
+            this.cardLoad(); 
         }
     });
 }

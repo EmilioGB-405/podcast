@@ -5,7 +5,7 @@ header{
     position: relative;
 }
 
-header p{
+ #firstText, #secondText{
     display: none;
 }
 header .title{
@@ -84,6 +84,9 @@ main{
         grid-column: 1/4;
         padding: 0 0 2.5em 0;
     }
+     #firstText, #secondText{
+    display: block;
+}
     /* header .title{
         font-size: 3.5lvw;
     } */
