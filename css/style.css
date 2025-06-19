@@ -5,8 +5,9 @@ header{
     position: relative;
 }
 
-header p{
-    display: none;
+header #firstText, header #secondText{
+    
+    display:none;
 }
 header .title{
     font-size:clamp(1.5rem, 3vw, 2.5rem)
@@ -73,8 +74,16 @@ main{
     display: none;
 }
 
+#zIndex{
+    z-index:10;
+}
 
 @media(width >= 750px){
+    header #firstText, header #secondText{
+
+        display:block;
+    }
+    
     header {
         height: auto;
         grid-template-columns: repeat(3, auto);
@@ -122,6 +131,7 @@ main{
        justify-self: center;
        align-self: center;
        margin: auto;
+       
     }
     header p{
         display:block;

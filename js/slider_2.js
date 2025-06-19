@@ -1,6 +1,6 @@
 "use strict"
 
-let currentSlider = 0;
+let currentSlider;
 
 let slides =document.querySelectorAll('.cardNewsContent');
 
@@ -9,41 +9,36 @@ let left =  document.querySelectorAll('.buttonSlider_left');
 let right = document.querySelectorAll('.buttonSlider_right')
 
 
+console.log(slides)
 
 
 
-
-function slider(n){
-
+function slider(n = 0){
+    
    
-    slides.forEach((cards, index) =>{
-
-        /* console.log(cards.children) */
-        if(cards.children == true){
-             cards.style.transform = `translate(${n*100})`;
-        }
-
+    slides.forEach((cards, index) =>{   
+        console.log(cards.children.item(n))
+       
     });
 
    
-    currentSlider = n
+    currentSlider = n;
+    console.log(currentSlider)
     
 };
 slider()
 
 left.forEach((buttonleft,index)=>{
     console.log(buttonleft)
-    console.log(index)
     buttonleft.addEventListener('click',()=>{
-       slider(currentSlider -= 1)
+         slider(currentSlider -= 1)
     })
 })
 
 right.forEach((buttonright,index)=>{
     console.log(buttonright)
-    console.log(index)
     buttonright.addEventListener('click',()=>{
-        slider(currentSlider += 1)
+       slider(currentSlider += 1)
     })
 })
 
