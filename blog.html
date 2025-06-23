@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/blog.css">
+    <script src="./js/slider_2.js" type="module"></script>
+    <!-- <script src="js/main.js" async type="module"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav id="nav" class="flex">
+                <a class="logo" href="./index.html"><img src="../img/Podcast.png" alt="Logo de pagina web"></a>
+                <input type="checkbox" name="Menu" id="responsiveMenu" placeholder="menu">
+                <label for="responsiveMenu" id="burgerMenu" class="flex">
+                    <div id="bar"></div>
+                    <div id="bar1"></div>
+                    <div id="bar2"></div>
+                </label>
+                <nav id="nav-responsive" class="flex">
+                    <ul class="flex">
+                        <li><a href="./index.html" class="text">Home</a></li>
+                        <li><a href="#" class="text">Episode</a></li>
+                        <li><a href="#" class="text">About</a></li>
+                        <li><a href="./contact.html" class="text">Contact</a></li>
+                        <li><a href="./blog.html" class="text">Blog</a></li>
+                    </ul>
+                </nav>
+        </nav>
+    </header>
+    <main >
+        <section class="grid" id="News_relevant">
+            <h2 class="title">News relevant</h2>
+            <div id="new_relevant">
+                <div class="card_news  cardSlider">
+                    <picture >
+                        <source srcset="./img/episodeOneCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/episodeOne.jpg" media="(min-width: 950px)">
+                        <img src="./img/episodeOne.jpg" alt="iepisode thirty-two">
+                    </picture>
+                </div>
+                <div class="border border_news" id="boder_news-relevant">
+                    <h3 class="title title_news">Ignacio Gómez</h3>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button type="button" id="left" class="buttonSlider circleButton border button_relevant "><img src="icon/arrow.png" alt="left slider button"></button>
+                    <button id="right" type="button" class="buttonSlider flip-horizontal circleButton border button_relevant "><img src="icon/arrow.png" alt="right slider button"></button>
+                </div>
+                <!--  <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/AiNewOneCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/AiNewOne.jpg" media="(min-width: 950px)">
+                        <img src="./img/AiNewOne.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                 <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="img/cyberSecurityOneCell.jpg" media="(max-width: 900px)">
+                        <source srcset="img/cyberSecurityOne.jpg" media="(min-width: 950px)">
+                        <img src="img/IgnacioGómez.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="img/IgnacioGómezCell.jpg" media="(max-width: 900px)">
+                        <source srcset="img/IgnacioGómez.jpg" media="(min-width: 950px)">
+                        <img src="img/IgnacioGómez.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="img/IgnacioGómezCell.jpg" media="(max-width: 900px)">
+                        <source srcset="img/IgnacioGómez.jpg" media="(min-width: 950px)">
+                        <img src="img/IgnacioGómez.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="img/IgnacioGómezCell.jpg" media="(max-width: 900px)">
+                        <source srcset="img/IgnacioGómez.jpg" media="(min-width: 950px)">
+                        <img src="img/IgnacioGómez.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <!-- relevant news ends here -->
+         <!-- Artificial intenligent section starts here -->
+        <section class="grid">
+            <h2 class="title">Artificial Intenligent</h2>
+             <div class="cardNewsContent_border"></div>
+            <div  class="flex cardNewsContent ">
+                <div class="card_news  cardSlider" >
+                    <picture>
+                        <source srcset="./img/AiNewOneCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/AiNewOne.jpg" media="(min-width: 950px)">
+                        <img src="./img/AiNewOne.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                 <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/AiNewTwoCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/AiNewTwo.jpg" media="(min-width: 950px)">
+                        <img src="./img/AiNewTwo.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                 <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/AiNewThreeCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/AiNewThree.jpg" media="(min-width: 950px)">
+                        <img src="./img/AiNewThree.jpg" alt="iepisode thirty-two">
+                    </picture>
+                    <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/AiNewFourCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/AiNewFour.jpg" media="(min-width: 950px)">
+                        <img src="./img/AiNewFour.jpg" alt="iepisode thirty-two">
+                    </picture>
+                    <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/AiNewFiveCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/AiNewFive.jpg" media="(min-width: 950px)">
+                        <img src="./img/AiNewFive.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/AiNewSixCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/AiNewSix.jpg" media="(min-width: 950px)">
+                        <img src="./img/AiNewSix.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container flex">
+                <button type="button"  class="buttonSlider circleButton border buttonSlider_left "><img src="icon/arrow.png" alt="left slider button"></button>
+                <button type="button" class="buttonSlider flip-horizontal circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button"></button>
+            </div>
+        </section>
+        <!-- Artificial inteligent ends here -->
+         <!-- Cybersecurity section starts here -->
+        <section class="grid">
+            <h2 class="title">Cybersecurity</h2>
+            <div class="cardNewsContent_border"></div>
+           <div  class="flex cardNewsContent ">
+                <div class="card_news  cardSlider" >
+                    <picture>
+                        <source srcset="./img/cyberSecurityOneCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/cyberSecurityOne.jpg" media="(min-width: 950px)">
+                        <img src="./img/cyberSecurityOne.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                 <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/cyberSecurityTwoCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/cyberSecurityTwo.jpg" media="(min-width: 950px)">
+                        <img src="./img/AiNewTwo.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                 <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/cyberSecurityThreeCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/cyberSecurityThree.jpg" media="(min-width: 950px)">
+                        <img src="./img/cyberSecurityThree.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/cyberSecurityFourCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/cyberSecurityFour.jpg" media="(min-width: 950px)">
+                        <img src="./img/cyberSecurityFour.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/cyberSecurityFiveCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/cyberSecurityFive.jpg" media="(min-width: 950px)">
+                        <img src="./img/cyberSecurityFive.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/cyberSecuritySixCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/cyberSecuritySix.jpg" media="(min-width: 950px)">
+                        <img src="./img/cyberSecuritySix.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container flex">
+                <button type="button"  class="buttonSlider circleButton border buttonSlider_left"><img src="icon/arrow.png" alt="left slider button"></button>
+                <button  type="button" class="buttonSlider flip-horizontal circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button"></button>
+            </div>
+        </section>
+        <!-- Cybersecurity section ends here -->
+         <!-- Quantum technology section starts here -->
+        <section class="grid">
+            <h2 class="title">Quantum Technology</h2>
+            <div class="cardNewsContent_border"></div>
+            <div  class="flex cardNewsContent ">
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/quantumOneCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/quantumOne.jpg" media="(min-width: 950px)">
+                        <img src="./img/quantumOne.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                 <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/quantumTwoCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/quantumTwo.jpg" media="(min-width: 950px)">
+                        <img src="./img/quantumTwo.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                 <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/quantumThreeCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/quantumThree.jpg" media="(min-width: 950px)">
+                        <img src="./img/quantumThree.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/quantumFourCell.jpg" media="(max-width: 900px)">
+                        <source srcset="img/quantumFour.jpg" media="(min-width: 950px)">
+                        <img src="./img/quantumFour.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/quantumFiveCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/quantumFive.jpg" media="(min-width: 950px)">
+                        <img src="./img/quantumFive.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/quantumSixCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/quantumSix.jpg" media="(min-width: 950px)">
+                        <img src="./img/quantumSix.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container flex">
+                <button type="button" class="buttonSlider circleButton border buttonSlider_left"><img src="icon/arrow.png" alt="left slider button"></button>
+                <button  type="button" class="buttonSlider flip-horizontal circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button"></button>
+            </div>
+        </section>
+        <!-- Quantum technology section ends here -->
+         <!-- Economy section starts here -->
+        <section class="grid">
+            <h2 class="title">Economy</h2>
+            <div class="cardNewsContent_border"></div>
+            <div  class="flex cardNewsContent ">
+                <div class="card_news   cardSlider">
+                    <picture>
+                        <source srcset="./img/economyOneCellphone.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/economyOne.jpg" media="(min-width: 950px)">
+                        <img src="./img/economyOne.jpg" alt="iepisode thirty-two">
+                    </picture>
+                    <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                 <div class="card_news   cardSlider">
+                    <picture>
+                        <source srcset="./img/economyTwoCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/economyTwo.jpg" media="(min-width: 950px)">
+                        <img src="./img/economyTwo.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                 <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/economyThreeCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/economyThree.jpg" media="(min-width: 950px)">
+                        <img src="./img/economyThree.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news   cardSlide">
+                    <picture>
+                        <source srcset="./img/economyFourCellphone.jpg" media="(max-width: 900px)">
+                        <source srcset=".img/economyFour.jpg" media="(min-width: 950px)">
+                        <img src="./img/economyFour.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/economyFiveCellphone.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/economyFive.jpg" media="(min-width: 950px)">
+                        <img src="./img/economyFive.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card_news  cardSlider">
+                    <picture>
+                        <source srcset="./img/economySixCell.jpg" media="(max-width: 900px)">
+                        <source srcset="./img/economySix.jpg" media="(min-width: 950px)">
+                        <img src="./img/economySix.jpg" alt="iepisode thirty-two">
+                    </picture>
+                   <div class="border border_news">
+                        <h3 class="title title_news">Ignacio Gómez</h3>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container flex">
+                <button type="button"  class="buttonSlider circleButton border buttonSlider_left"><img src="icon/arrow.png" alt="left slider button"></button>
+                <button  type="button" class="buttonSlider flip-horizontal circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button"></button>
+            </div>
+        </section>
+        <!-- Economy section ends here -->
+    </main>
+    <!-- main content finishs here -->
+     <footer class="grid">
+        <a class="logo" href="#"><img src="../img/Podcast.png" alt="Logo de pagina web"></a>
+        <label for="email-podcast"></label>
+        <input type="email" 
+        id="email-podcast" placeholder="Email">
+       <button class="button flex" type="button"> <div class="flex"><p class="text"></p>subcribe</div></button>
+       <div id="img-container">
+            <img src="./icon/facebook.png" alt="icon de la red social facebook" class="icons">
+            <img src="./icon/Reddit.png" alt="icon de la red social Reddit" class="icons">
+            <img src="./icon/Spotify.png" alt="icon de la red social Spotify" class="icons">
+            <img src="./icon/Youtube.png" alt="icon de la red social Youtube" class="icons">
+            <img src="./icon/Discord.png" alt="icon de la red social Discord" class="icons">
+            <img src="./icon/Tiktok.png" alt="icon de la red social Tiktok" class="icons">
+       </div>
+       <ul class="ul-footer">
+                    <li><a href="#" class="text">Home</a></li>
+                    <li><a href="#" class="text">Episode</a></li>
+                    <li><a href="#" class="text">About</a></li>
+                    <li><a href="#" class="text">Contact</a></li>
+                    <li><a href="#" class="text">Blog</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

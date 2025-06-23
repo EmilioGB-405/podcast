@@ -88,6 +88,7 @@ label img{
     color: #ffff;
     font-size: 1em;
     width: 100%;
+    display: block;
 }
 .filtro{
     display: none;

@@ -85,7 +85,7 @@ section{
 
 .flex{
     display:flex;
-    flex-direction: row;
+
 }
 #nav{
     justify-content: space-between;
@@ -94,7 +94,7 @@ section{
     
 }
 
-#responsiveMenu{
+input{
     display:none;
 }
 #burgerMenu{
@@ -240,12 +240,6 @@ footer ul{
     list-style:none;
     text-align: center;
 }
-button{
-    cursor: pointer;
-}
-.blue-wrapper_right, .blue-wrapper{
- display: none;
-}
 
 @media(width >= 750px){
     .card{
@@ -320,7 +314,7 @@ button{
 
     }
 }
-
+/* version desktop */
 @media(width >= 1200px){
     header, main{
         width: 90%;
@@ -334,10 +328,10 @@ button{
         position: static;
     }
     #nav .text{
-        font-size: 1rem;
+        font-size: 1.5831rem;
     }
     .text {
-        font-size: 1.3rem;
+        font-size: 1.6669rem;
     }
     #burgerMenu{
         display: none;
@@ -356,7 +350,7 @@ button{
 }
     .cardContent {
     grid-template-rows: repeat(3, auto);
-       height: 24lvw; 
+       height: 30lvw; 
        width: 100%;
     }
     .line, .lineTwo{
@@ -374,7 +368,7 @@ button{
         
     }
      #episodes .card picture img{
-        height: 26lvw;
+        height: 32lvw;
     }
     #episodes .card .title{
         align-self: end;
@@ -386,6 +380,9 @@ button{
     width: 2.5em;
     height: auto;
 
+    }
+    .title{
+        font-size: 3.6669rem;
     }
    
 }

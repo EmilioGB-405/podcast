@@ -1,0 +1,131 @@
+.cardNewsContent{
+    padding: 1.5em 0;
+    overflow-x: scroll;
+    width:100%;
+    justify-content: start;
+    gap: 1em;
+    scroll-behavior:smooth;
+    position:relative;
+    scroll-snap-align:center;
+    
+}
+
+.border{
+    box-shadow:none;
+}
+
+.blue-wrapper_right{
+    display:none;
+}
+
+.cardNewsContent .card_news .border_news{
+    padding: 1em;
+    min-width: 17em; /* Ancho mínimo de cada elemento */
+}
+.cardNewsContent .card_news .border_news h3{
+    padding: 1.3em  0 0.5em 0;
+}
+.cardNewsContent .card_news p{
+   /*  font-size:clamp(0.8rem, 2vw, 1.3rem); */
+    padding: 0 0 1em 0;
+}
+.cardNewsContent .card_news picture img{
+    height: auto;
+    width:100%;
+}
+
+.circleButton{
+    display:none;
+}
+
+
+@media(width >= 750px){
+    
+
+   #News_relevant{
+    
+    grid-template-columns:repeat(2,30% 40%);
+   } 
+
+   .button_relevant{
+        display:flex;     
+   }
+
+    #boder_news-relevant{
+        grid-column:1/2;
+    }
+
+  section{
+    /* grid-template-rows:repeat(3,auto); */
+    position: relative;
+  }
+  
+
+.cardNewsContent{
+    padding: 2em ;
+}
+
+/* .title{
+    grid-row:1/2;
+} */
+.cardNewsContent_border{
+    position:absolute;
+    grid-row:2/3;
+}
+/* .cardNewsContent{
+    grid-column-start:1;
+   grid-row-start:2;
+   grid-auto-columns:3;
+} */
+
+.cardNewsContent_border{
+  border: 0.5rem var(--electric-blue-color) solid;
+  border-width:0.15em 0 0  0.15em;
+  width:25em;
+  height:10em;
+ 
+}
+
+    
+
+}
+
+@media(width >= 1200px){
+    .circleButton{
+        display:flex;
+    }
+
+    .circleButton:hover{
+        transition:box-shadow 0.5ms;
+        box-shadow: 0px 1px 9px 0px rgba(80, 165, 249, 0.75);
+    }
+    .button-container{
+        place-self:center;
+        gap:2em;
+    }
+
+    .cardNewsContent{
+        scrollbar-width:none;
+       
+       
+    }
+    
+   .sliderAnimation{
+        animation: scrollAnimation 0.5 ease-in-out;
+    }
+
+    @keyframes scrollAnimation {
+        0%{ transform:translateX(0%);}
+
+        25% {transform:translateX(25%);}
+
+        75% {transform: translateX(75%);}
+
+        100%{transform:translateX(100%);}
+    }   
+
+    .cardNewsContent .card_news picture img{
+        width:31rem;
+        
+    }
+}

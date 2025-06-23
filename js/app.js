@@ -28,4 +28,8 @@ window.addEventListener('resize', ()=>{
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-export{camara, scene, renderer};
+export let elements = {
+    camara:camara, 
+    scene:scene,
+    renderer:renderer
+};

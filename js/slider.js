@@ -1,11 +1,11 @@
 
 
 const left = document.querySelector('#left');
-  const right = document.querySelector('#right');
+const right = document.querySelector('#right');
 
   function updateCardClasses() {
     const cards = document.querySelectorAll('.cardSlider');
-
+   
     cards.forEach(card => {
       card.classList.remove('card-left', 'card-center', 'card-right');
     });
@@ -29,4 +29,8 @@ const left = document.querySelector('#left');
     updateCardClasses();
   });
 
-  export{left,right,updateCardClasses};
+/*   export let slideElements = {
+    left:left,
+    right:right,
+    updateCardClasses
+  }; */
