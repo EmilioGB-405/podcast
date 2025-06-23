@@ -97,12 +97,7 @@ label img{
     header .line .cardContent{
         height: 100%;
     }
-    header .card {
-        grid-template-columns: repeat(2, 40% 60%);
-    }
-   header .cardContent{
-    grid-template-rows: 19% 39% 63%;
-   }
+    
    .lineNo{
     border: none;
     box-shadow: none;

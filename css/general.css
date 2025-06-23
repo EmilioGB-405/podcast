@@ -242,6 +242,14 @@ footer ul{
 }
 
 @media(width >= 750px){
+    header .card {
+        grid-template-columns: repeat(2, 40% 60%);
+        
+    }
+   header .cardContent{
+    grid-template-rows: 19% 39% 63%;
+    height: 65lvh;
+   }
     .card{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -383,6 +391,9 @@ footer ul{
     }
     .title{
         font-size: 3.6669rem;
+    }
+    header .card {
+        grid-template-columns: repeat(2, 1fr);
     }
    
 }
