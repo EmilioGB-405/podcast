@@ -17,26 +17,28 @@ function slider(n = 0){
     
    
     slides.forEach((cards, index) =>{   
+      /*   console.log(slides.item(n)) */
         console.log(cards.children.item(n))
        
     });
 
    
     currentSlider = n;
-    console.log(currentSlider)
+    /* console.log(currentSlider) */
     
 };
 slider()
 
 left.forEach((buttonleft,index)=>{
-    console.log(buttonleft)
+  /*   console.log(index)
+    console.log(buttonleft) */
     buttonleft.addEventListener('click',()=>{
-         slider(currentSlider -= 1)
+        slider(currentSlider -= 1)
     })
 })
 
 right.forEach((buttonright,index)=>{
-    console.log(buttonright)
+   /*  console.log(buttonright) */
     buttonright.addEventListener('click',()=>{
        slider(currentSlider += 1)
     })
