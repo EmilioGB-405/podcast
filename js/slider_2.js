@@ -1,48 +1,119 @@
 "use strict"
 
+
+
 let currentSlider;
 
-let slides =document.querySelectorAll('.cardNewsContent');
+let slides =document.querySelectorAll('.card_news');
+
+let slidesContainer = document.querySelectorAll('.cardNewsContent')
 
 let left =  document.querySelectorAll('.buttonSlider_left');
 
 let right = document.querySelectorAll('.buttonSlider_right')
 
 
+/* let slidesChildren = Array(slides)
+
+let slidesFilter = slidesChildren.filter(slidechild => slidechild.slidesContainer) */
+
+/* console.log(slidesFilter)
+
+console.log(slidesChildren) */
+
+console.log(slidesContainer)
+console.log(left)
 console.log(slides)
 
+/* console.log(left)
 
+console.log(slides) */
 
-function slider(n = 0){
+/* left.forEach(buttonleft=>{
+    buttonleft.addEventListener('click',()=>{
+        slides.forEach(cards=>{
+            cards.style.left='50px'
+        })
+    })
+}) */
+
+function slider(l = 0){
     
-   
-    slides.forEach((cards, index) =>{   
-      /*   console.log(slides.item(n)) */
-        console.log(cards.children.item(n))
+
+
+    
+left.forEach((buttonleft)=>{
+
+    slidesContainer.forEach((card,index)=>{
+        /* console.log(card.children.length) */
+        console.log(index)
+        console.log(card)
+
+        buttonleft.addEventListener("click",()=>{
+        if(index == 0 && left.length == 0){
+            card.style.transform = "translate(0%)"
+        }
+            /* if(){
+                    card.children.item(n).style.transform = "translate(0%)"
+             }     */
+        })
+    })
+        
+    
+    
+    
+
+   /*  slidesContainer.forEach((card,n)=>{ 
+    
+       slidesChildren. 
+        
+        buttonleft.addEventListener('click',()=>{
+            if(slidesContainer.length == 0 && left.length == 0 ){
+
+                    card.childNodes.item(n).style.transform = 'translate(0%)'
+                
+                
+            }
+            
        
-    });
+            
+           
+        })
+    }) */
+    
+})
+
+right.forEach((buttonright)=>{
+  /*   console.log(buttonright)
+    slidesContainer.forEach((card,n)=>{
+
+        
+        console.log(card.children)
+        buttonright.addEventListener('click',()=>{
+            if(slidesContainer.length == 0){
+                card.children.item(n).style.transform = 'translate(-20%)'
+            }
+        })
+    })
+    buttonright.addEventListener('click',()=>{
+        slider(currentSlider += 1)
+
+    }) */
+})
+
 
    
-    currentSlider = n;
-    /* console.log(currentSlider) */
+    /* currentSlider = l;
+    console.log(currentSlider) */
     
 };
 slider()
+ /* slider(currentSlider -= 1)  */
+             /* slides.forEach((cards) =>{  
+                 console.log(cards.children.item(n))
+                cards.stye.c
+            });  */    
 
-left.forEach((buttonleft,index)=>{
-  /*   console.log(index)
-    console.log(buttonleft) */
-    buttonleft.addEventListener('click',()=>{
-        slider(currentSlider -= 1)
-    })
-})
-
-right.forEach((buttonright,index)=>{
-   /*  console.log(buttonright) */
-    buttonright.addEventListener('click',()=>{
-       slider(currentSlider += 1)
-    })
-})
 
 
 /* slider(counterSlider); */
