@@ -94,7 +94,7 @@ section{
     
 }
 
-input{
+#responsiveMenu{
     display:none;
 }
 #burgerMenu{
@@ -328,9 +328,6 @@ footer ul{
         width: 90%;
         /* max-width: 1485px; */
         margin: auto;
-    }
-    header{
-    height: 100lvh;
     }
      #nav{
         position: static;

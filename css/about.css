@@ -61,11 +61,11 @@ footer{
 
 @media(width >= 1200px){
     #hosts p{
-        padding: 2em 20em;
+        padding: 2em 6em;
     }
 
      #Objective p:nth-child(2){
-        padding: 0 25em 0 0;
+        padding: 0 8em 0 0;
      }
      header{
         height: auto;
