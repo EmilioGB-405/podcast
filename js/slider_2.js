@@ -43,20 +43,24 @@ function slider(l = 0){
 
     
 left.forEach((buttonleft)=>{
-
-    slidesContainer.forEach((card,index)=>{
-        /* console.log(card.children.length) */
-        console.log(index)
-        console.log(card)
-
-        buttonleft.addEventListener("click",()=>{
-        if(index == 0 && left.length == 0){
-            card.style.transform = "translate(0%)"
-        }
-            /* if(){
-                    card.children.item(n).style.transform = "translate(0%)"
-             }     */
+/* console.log(buttonleft.children.length) */
+/* console.log(left.length) */
+    slidesContainer.forEach((cardContainer,index)=>{
+      
+        slides.forEach(n =>{
+            console.log(cardContainer[1])
+             buttonleft.addEventListener("click",()=>{
+                /*  if(cardContainer[n] == 0 && left.length == 0){
+                     slides.style.transform = "translateX(-40%)"
+                  } */
+              
+            })   
         })
+          
+        
+       
+
+       
     })
         
     
@@ -202,3 +206,14 @@ cards.forEach(card =>{
         console.log(val)
         val.style.transform = `translate(${n * 100})`;
     } */
+
+     /*   slides.forEach((card,n)=>{
+           
+                 if(cardContainer.children.length === 0 && left.length == 0){
+                    cardContainer.children.item(index).style.transform = "translate(0%)"
+                }
+            }) */
+               
+                /* if(){
+                        card.children.item(n).style.transform = "translate(0%)"
+                 }     */
