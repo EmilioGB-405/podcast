@@ -58,12 +58,15 @@
   section{
     /* grid-template-rows:repeat(3,auto); */
     position: relative;
+    
   }
   
 
 .cardNewsContent{
     padding: 2em ;
     gap:2em;
+    
+    
 }
 
 /* .title{
@@ -72,6 +75,8 @@
 .cardNewsContent_border{
     position:absolute;
     grid-row:2/3;
+    z-index: 1;
+    
 }
 /* .cardNewsContent{
     grid-column-start:1;
@@ -120,6 +125,7 @@
 
     .cardNewsContent{
         scrollbar-width:none;
+        
        
        
     }
