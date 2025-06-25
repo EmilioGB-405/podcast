@@ -4,7 +4,7 @@ let global ={
         {
             number: "Episode 1",
             tittle: "",
-            information: "In this very first episode of TechPulse, we dive into the fascinating world of digital connections powering the internet, artificial intelligence, and neural networks. How are these invisible networks built? What role do they play in our everyday lives? Join us as we explore the foundations of the digital age and how technology connects us in ways we never imagined.",
+            information: "In this very first episode of TechPulse, we dive into the fascinating world of digital connections powering the internet, artificial intelligence, and neural networks.",
             img: "img/episodeOne.jpg",
             imgCell: "img/episodeOneCell.jpg",
             year: "2023"

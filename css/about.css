@@ -37,9 +37,7 @@ footer{
         grid-template-rows: repeat(2, auto);
         gap: 2em;
      }
-     #Objective p:nth-child(2){
-        padding: 0 12em 0 0;
-     }
+     
     #history p{
         grid-row: 2/3;
         grid-column: 1/2;
@@ -60,13 +58,12 @@ footer{
 }
 
 @media(width >= 1200px){
+     header{
+        height: 100lvh;
+    }
     #hosts p{
         padding: 2em 6em;
     }
-
-     #Objective p:nth-child(2){
-        padding: 0 8em 0 0;
-     }
      header{
         height: auto;
      }

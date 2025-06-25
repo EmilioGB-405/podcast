@@ -329,6 +329,7 @@ footer ul{
         /* max-width: 1485px; */
         margin: auto;
     }
+   
      #nav{
         position: static;
     }
@@ -355,7 +356,7 @@ footer ul{
 }
     .cardContent {
     grid-template-rows: repeat(3, auto);
-       height: 30lvw; 
+       height: auto; 
        width: 100%;
     }
     .line, .lineTwo{
@@ -373,18 +374,15 @@ footer ul{
         
     }
      #episodes .card picture img{
-        height: 32lvw;
+        height: 100%;
     }
     #episodes .card .title{
         align-self: end;
     }
-    .card img{
-        height: 100%;
-    }
+    
     .circleButton img{
     width: 2.5em;
-    height: auto;
-
+    height: 2.5em;
     }
     .title{
         font-size: 3.6669rem;
