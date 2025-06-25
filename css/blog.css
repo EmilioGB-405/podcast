@@ -133,6 +133,7 @@
    .sliderAnimation{
         display:block;
         animation: scrollAnimation 0.5 ease-in-out;
+        
     }
 
     @keyframes scrollAnimation {
