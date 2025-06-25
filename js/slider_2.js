@@ -4,152 +4,63 @@
 
 
 
+
+
 let currentSlider;
 
-/* let slides =document.querySelectorAll('.card_news'); */
 
-/* let slidesParent = document.querySelectorAll('.cardNewsContent') */
-
-let section =  document.querySelectorAll('section');
+let cards =  document.querySelectorAll('.card_news');
 
 let left =  document.querySelectorAll('.buttonSlider_left')
 
-console.log(section)
+let right = document.querySelectorAll('.buttonSlider_right')
+
+console.log(cards)
 
 console.log(left)
-/* console.log(slidesParent) */
-
-let i = 0;
-
-left.forEach(buttonLeft=>{
-    section.forEach(parent=>{
-       /*  console.log(`\nProcesando padre: <${parent.tagName}>`) */
-
-        const SECTIONCHILDREN = parent.querySelectorAll('.cardNewsContent')
-        
-        SECTIONCHILDREN.forEach(child=>{
-            /* console.log(SECTIONCHILDREN.length) */
-            console.log(child.children.length)
-            
-            if(child.children.length > 0){
-                /* child.firstElementChild.style.backgroundColor = "red"
-                child.children.item(1).style.backgroundColor = "blue"
-                child.children.item(2).style.backgroundColor = "blue"
-                child.lastElementChild.style.backgroundColor = "green" */
-                /* SECTIONCHILDREN.style.backgroundColor = 'red' */
-                child.style.transform = "translateX(-50%))"
-            }
-        })
-
-      /*   console.log(SECTIONCHILDREN.length) */
-        /* if(SECTIONCHILDREN.length == 0 && left.length == 0){
-            SECTIONCHILDREN.forEach(child=>{
-            buttonLeft.addEventListener('click',()=>{
-                 child.style.backgroundColor = "white"
-            })
-             
-
-            })
-        } 
-        else{
-            console.log('este padre no tiene hijos')
-        } */
-    })
-})
-
-
-
-/* slidesParent.forEach(slide=>{
-     console.log(`\nProcesando padre: <${slide.tagName}> con clase "${slide.className}"`)
-     const ChildSliders = slide.querySelectorAll('.')
-}) */
-/* let slides =  */
-
-/* let left =  document.querySelectorAll('.buttonSlider_left');
-
-let right = document.querySelectorAll('.buttonSlider_right') */
-/* let section = document.querySelectorAll('section') */
 
 
 
 
 
-/* console.log(slidesContainer) */
-/* console.log(left)
-console.log(slides) */
-/* console.log(section) */
+
+/*  */
 
 
 
 
-function slider(){
+
+
+
+function slider(n = 0){
     
+if(n > cards.length ){currentSlider = 1}
+if(n < 1){currentSlider = cards.length}
+currentSlider = n;
 
-/* for(let i = 0; i <= slidesContainer.length ; i++){
-    let hijos = slidesContainer[i];
-    let nietos = hijos.children
-    console.log(hijos)
-    for(let j = 0; j<= nietos.length; j++){
-        let nieto =nietos[j]
-        console.log(nieto)
-    }
-    
-} */
-/* left.forEach(buttonLeft=>{
-    
-}) */
-
-
-
-
-
-
-/* slidesContainer.forEach(container=>{
-       
-       
-}) */
-
-
-
-
-
-
-    
-/* left.forEach((buttonleft)=>{
-
-
-
-     slides.forEach(cards =>{
-            buttonleft.addEventListener('click',()=>{
-                 cards.style.transform = "translateX(0%)"
-            })
-    })
-
-
-    
-
-
-  
-})
-
-
-right.forEach((buttonright)=>{
-   
-slides.forEach(cards=>{
-    console.log(cards)
-    buttonright.addEventListener('click',()=>{
-      
-        cards.style.transform = "translateX(-50%)"
-    })
-})  
-}) */
-
-
-   
-    
-    
+console.log(currentSlider)   
 };
 slider()
+
+
+left.forEach(buttonLeft=>{
+   
+    buttonLeft.addEventListener('click',()=>{
+        slider(currentSlider -=1)
+        cards.forEach(card=>{
+            card.style.transform = "translateX(-100%)"
+        })
+    })
+})
+
+
+
+
+
+
+
+
+
  /* slider(currentSlider -= 1)  */
              /* slides.forEach((cards) =>{  
                  console.log(cards.children.item(n))
@@ -301,3 +212,39 @@ cards.forEach(card =>{
         slider(currentSlider += 1)
 
     }) */
+
+      /* child.firstElementChild.style.backgroundColor = "red"
+                    child.children.item(1).style.backgroundColor = "blue"
+                    child.children.item(2).style.backgroundColor = "blue"
+                    child.lastElementChild.style.backgroundColor = "green" */
+                    /* child.style.backgroundColor="white" */
+                /* SECTIONCHILDREN.style.backgroundColor = 'red' */
+
+/* left.forEach(buttonLeft=>{
+    const LEFTCHILDRE = buttonLeft.querySelectorAll('img')
+    
+    console.log(left[0])
+    section.forEach(parent=>{
+       
+
+        const SECTIONCHILDREN = parent.querySelectorAll('.cardNewsContent')
+    
+        SECTIONCHILDREN.forEach(child=>{
+            const CARDCHILDREN = child.querySelectorAll(".card_news")
+            console.log(CARDCHILDREN)
+            CARDCHILDREN.forEach(cards=>{
+                console.log(cards[1])
+                buttonLeft.addEventListener("click",(l)=>{
+                    console.log(l)
+                    if(cards.children.item(l) && buttonLeft.children.item(l) == 0){
+                        cards.children.item(l).style.transform = "translateX(-100%)"
+                    }
+                })
+            })
+            
+            
+        })
+
+     
+    })
+}) */

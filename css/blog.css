@@ -131,15 +131,16 @@
     }
     
    .sliderAnimation{
+        display:block;
         animation: scrollAnimation 0.5 ease-in-out;
     }
 
     @keyframes scrollAnimation {
         0%{ transform:translateX(0%);}
 
-        50%{transform:translateX(50%);}
+        50%{transform:translateX(-50%);}
 
-        100%{transform:translateX(100%);}
+        100%{transform:translateX(-100%);}
 /* 
         75% {transform: translateX(75%);}
 
