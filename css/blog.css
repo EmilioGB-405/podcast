@@ -125,12 +125,15 @@
 
     .cardNewsContent{
         scrollbar-width:none;
-        
+        overflow-x: hidden;
        
        
     }
+    .card_news {
+        transition: 0.5s ease;
+    }
     
-   .sliderAnimation{
+/*    .sliderAnimation{
         display:block;
         animation: scrollAnimation 0.5 ease-in-out;
         
@@ -142,11 +145,11 @@
         50%{transform:translateX(-50%);}
 
         100%{transform:translateX(-100%);}
-/* 
+
         75% {transform: translateX(75%);}
 
-        100%{transform:translateX(100%);} */
-    }   
+        100%{transform:translateX(100%);}
+    }  */  
 
     
 }

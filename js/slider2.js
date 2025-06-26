@@ -2,51 +2,67 @@
 
 let currentSlider = 0;
 
-let slides =document.querySelectorAll('.card_news');
+let  slideContainer =  document.querySelectorAll('.cardNewsContent')
 
 let left =  document.querySelectorAll('.buttonSlider_left');
 
 let right = document.querySelectorAll('.buttonSlider_right')
 
-let slidesLength = slides.length
 
 
-console.log(slidesLength)
-
-console.log(slides)
-
+console.log(slideContainer.length)
 
 
 function slider(x){
     
    
-    slides.forEach((cards, index) =>{   
-        /* console.log(index) */
-        /* console.log(cards.children.item(x)) */
-        cards.style.transform = "translateX(100%)"
-        /* cards.animate() */
+    slideContainer.forEach((cards, index) =>{   
+            
+            console.log(slideContainer.item(length))
+
+           const SLIDECHILDREN = cards.querySelectorAll('.card_news')
+           console.log(SLIDECHILDREN.length)
+          /*   if(x > SLIDECHILDREN.length){currentSlider += 1}
+            if(x < 1){currentSlider =  SLIDECHILDREN.length} */
+           SLIDECHILDREN.forEach(cardsChildern=>{
+                cardsChildern.style.transform = `translateX(${currentSlider * 100}%)`
+              
+           })
+       
+        
+        
     });
 
-
-    
+    console.log(currentSlider);
 };
 
 
 
-left.forEach((buttonleft,index)=>{
-    buttonleft.addEventListener('click',()=>{
-       if(currentSlider < slidesLength ){
-            currentSlider -= 300
-       }
+left.forEach((buttonleft,n)=>{
+    console.log(left.length)
+    buttonleft.addEventListener('click',()=>{  
+     if(currentSlider > slideContainer.length -1){
+            currentSlider +=1 
+     }
+     if(currentSlider < 1){
+        currentSlider = slideContainer.length -4
+     }
+            
+
         slider( currentSlider)
     })
 })
 
-right.forEach((buttonright,index)=>{
-   /*  console.log(buttonright) */
+right.forEach((buttonright)=>{
     buttonright.addEventListener('click',()=>{
-        if(currentSlider < slidesLength)
-        currentSlider += 300
+       if(currentSlider > slideContainer.length -1){
+               currentSlider += 1
+       }
+       if(currentSlider < 1){
+            currentSlider = slideContainer.length - 7
+       }
+             /* currentSlider -= 1 */
+        
         slider( currentSlider)
     })
 })
