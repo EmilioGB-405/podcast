@@ -54,7 +54,8 @@ main{
 }
 #cardContentComments .card{
     padding: 1em;
-    min-width: 17em; /* Ancho mínimo de cada elemento */
+    min-width: 16em;
+    height: auto;
 }
 #cardContentComments .card h3{
     padding: 1.3em  0 0.5em 0;
@@ -165,8 +166,9 @@ main{
         grid-column: 2/3;
          transition: all 0.5s ease;
         transform-style: preserve-3d;
-        
+        width: 100%;
     }
+   
     .cardSlider {
       width: 60%;
       position: absolute;
@@ -297,6 +299,9 @@ main{
     }
     #cardContentComments{
         height: 43lvw;
+    }
+     #cardContentComments .card{
+        min-width: 28em;
     }
     .cardSlider .title {
         font-size: 2.4rem;

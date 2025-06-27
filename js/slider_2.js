@@ -1,26 +1,93 @@
 "use strict"
 
-let slider = document.querySelectorAll('.cardNewsContent');
-let sliderIndex = 0;
-let cardWidth = document.querySelectorAll('.card_news');
+let currentSlider = 0;
 
-let leftButtons = document.querySelectorAll('.buttonSlider_left');
-let rightButtons = document.querySelectorAll('.buttonSlider_right');
+let  slideContainer =  document.querySelectorAll('.cardNewsContent')
 
-function  showMove () {
-    for (let index = 0; index < slider.length; index++) {
+let left =  document.querySelectorAll('.buttonSlider_left');
+
+let right = document.querySelectorAll('.buttonSlider_right')
+
+function slider(){
+    
+   
+    slideContainer.forEach((cards) =>{   
+            
+         
+
+           const SLIDECHILDREN = cards.querySelectorAll('.card_news')
+         
+           SLIDECHILDREN.forEach((cardsChildern)=>{
+            
+                cardsChildern.style.transform = `translateX(${currentSlider * 100}%)`
+    
+                
+              
+           })
+       
         
-        slider.style.transform = "translateX(10px)"
         
-    }
+    });
+
+    console.log(currentSlider);
+};
+
+
+function ButtonL(){
+    
+     if(currentSlider > slideContainer.length -1){
+            currentSlider +=1 
+     }
+     if(currentSlider < 1){
+
+        currentSlider = slideContainer.length - 4
+     }
 }
 
-showMove()
-leftButtons.forEach((left) =>{
-    left.addEventListener('click', () =>{
-        if (sliderIndex < cardWidth.length-1) {
-            sliderIndex++
+
+function ButtonR(){
+     if(currentSlider > slideContainer.length -1){
+
+               currentSlider += 1
+     }
+
+    if(currentSlider < 1){
+
+         currentSlider = slideContainer.length - 7.28
+                
+    } 
+}
+
+
+left.forEach((buttonleft,index)=>{
+    
+ /*    console.log(array) */
+    buttonleft.addEventListener('click',(eve)=>{  
+     
+        
+      
+            ButtonL(currentSlider[index])
+            slider(currentSlider)
+       
+
             
-        }
+       
     })
 })
+
+right.forEach((buttonright,index)=>{
+   /* console.log(`\n${buttonright}, ${index}, ${array}`) */
+    buttonright.addEventListener('click',(eve)=>{
+          
+            ButtonR(currentSlider)
+            slider(currentSlider)
+           
+           
+        
+})
+})
+/* leftButtons.forEach((left, index) => {
+    left.addEventListener('click', () => {
+        
+    });
+}); */
