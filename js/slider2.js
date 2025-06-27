@@ -10,22 +10,22 @@ let right = document.querySelectorAll('.buttonSlider_right')
 
 
 
-console.log(slideContainer.length)
+
 
 
 function slider(x){
     
-   
-    slideContainer.forEach((cards, index) =>{   
-            
-            console.log(slideContainer.item(length))
+    console.log(x)
+
+    slideContainer.forEach((cards) =>{   
+             
 
            const SLIDECHILDREN = cards.querySelectorAll('.card_news')
-           console.log(SLIDECHILDREN.length)
-          /*   if(x > SLIDECHILDREN.length){currentSlider += 1}
-            if(x < 1){currentSlider =  SLIDECHILDREN.length} */
-           SLIDECHILDREN.forEach(cardsChildern=>{
+         
+           SLIDECHILDREN.forEach((cardsChildern)=>{
                 cardsChildern.style.transform = `translateX(${currentSlider * 100}%)`
+    
+                
               
            })
        
@@ -33,37 +33,64 @@ function slider(x){
         
     });
 
-    console.log(currentSlider);
+    /* console.log(currentSlider); */
 };
 
 
-
-left.forEach((buttonleft,n)=>{
-    console.log(left.length)
-    buttonleft.addEventListener('click',()=>{  
+function ButtonL(){
+    
      if(currentSlider > slideContainer.length -1){
+           
             currentSlider +=1 
-     }
-     if(currentSlider < 1){
-        currentSlider = slideContainer.length -4
-     }
-            
 
-        slider( currentSlider)
+     }
+
+     if(currentSlider < 1){
+
+        currentSlider = slideContainer.length - 4
+     }
+}
+
+
+function ButtonR(){
+
+     if(currentSlider > slideContainer.length -1){
+
+               currentSlider += 1
+     }
+
+    if(currentSlider < 1){
+
+         currentSlider = slideContainer.length - 7.28
+                
+    } 
+}
+
+
+
+
+left.forEach((buttonleft,index,array)=>{
+    
+ /*    console.log(array) */
+    buttonleft.addEventListener('click',(eve)=>{  
+        console.log(eve.currentTarget)
+            ButtonL(currentSlider)
+            slider(currentSlider)   
+       
     })
 })
 
-right.forEach((buttonright)=>{
-    buttonright.addEventListener('click',()=>{
-       if(currentSlider > slideContainer.length -1){
-               currentSlider += 1
-       }
-       if(currentSlider < 1){
-            currentSlider = slideContainer.length - 7
-       }
-             /* currentSlider -= 1 */
+right.forEach((buttonright,index,array)=>{
+   /* console.log(`\n${buttonright}, ${index}, ${array}`) */
+    buttonright.addEventListener('click',(eve)=>{
+          
+            console.log(eve.currentTarget)
+            ButtonR(currentSlider)
+            slider(currentSlider)
+            
+     
+               
         
-        slider( currentSlider)
-    })
+})
 })
 

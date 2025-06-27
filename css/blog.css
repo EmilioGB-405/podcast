@@ -1,12 +1,18 @@
+
+header, main{
+    padding:1rem;
+}
+
 .cardNewsContent{
-    padding: 1.5em 0;
+    padding: 1.5em 0.20em;
     overflow-x: scroll;
     width:100%;
-    justify-content: start;
-    gap: 1em;
+    /* justify-content: start; */
+    gap: 0.45rem;
     scroll-behavior:smooth;
     position:relative;
     scroll-snap-align:center;
+
     
 }
 
