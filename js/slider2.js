@@ -1,6 +1,55 @@
 "use strict"
 
-let currentSlider = 0;
+"use strict";
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('section');
+
+  sections.forEach(section => {
+    const sliderContainer = section.querySelector('.cardNewsContent');
+    const btnLeft = section.querySelector('.buttonSlider_left');
+    const btnRight = section.querySelector('.buttonSlider_right');
+
+    if (!sliderContainer || !btnLeft || !btnRight) return;
+
+    btnLeft.addEventListener('click', () => {
+      sliderContainer.scrollBy({
+        left: -sliderContainer.clientWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    btnRight.addEventListener('click', () => {
+      sliderContainer.scrollBy({
+        left: sliderContainer.clientWidth,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Para sección News Relevant
+  const newsSlider = document.querySelector('#new_relevant');
+  const btnLeftNews = document.getElementById('left');
+  const btnRightNews = document.getElementById('right');
+
+  if (newsSlider && btnLeftNews && btnRightNews) {
+    btnLeftNews.addEventListener('click', () => {
+      newsSlider.scrollBy({
+        left: -newsSlider.clientWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    btnRightNews.addEventListener('click', () => {
+      newsSlider.scrollBy({
+        left: newsSlider.clientWidth,
+        behavior: 'smooth'
+      });
+    });
+  }
+});
+
+/* let currentSlider = 0;
 
 let  slideContainer =  document.querySelectorAll('.cardNewsContent')
 
@@ -33,7 +82,7 @@ function slider(x){
         
     });
 
-    /* console.log(currentSlider); */
+    
 };
 
 
@@ -71,7 +120,7 @@ function ButtonR(){
 
 left.forEach((buttonleft,index,array)=>{
     
- /*    console.log(array) */
+
     buttonleft.addEventListener('click',(eve)=>{  
         console.log(eve.currentTarget)
             ButtonL(currentSlider)
@@ -81,7 +130,7 @@ left.forEach((buttonleft,index,array)=>{
 })
 
 right.forEach((buttonright,index,array)=>{
-   /* console.log(`\n${buttonright}, ${index}, ${array}`) */
+   
     buttonright.addEventListener('click',(eve)=>{
           
             console.log(eve.currentTarget)
@@ -92,5 +141,5 @@ right.forEach((buttonright,index,array)=>{
                
         
 })
-})
+}) */
 
