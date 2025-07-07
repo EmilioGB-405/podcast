@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Para sección News Relevant
-  const newsSlider = document.querySelector('#new_relevant');
+ /*  const newsSlider = document.querySelector('#new_relevant');
   const btnLeftNews = document.getElementById('left');
   const btnRightNews = document.getElementById('right');
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         behavior: 'smooth'
       });
     });
-  }
+  } */
 });
 
 /* let currentSlider = 0;
