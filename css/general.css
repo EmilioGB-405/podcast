@@ -22,7 +22,7 @@ html, body{
      font-family: "Orbitron", sans-serif;
      font-weight:500;
      line-height:1.8;
-      font-size:clamp(1.5rem, 3vw, 3rem)
+      font-size: 2rem;
 }
 .flip-horizontal{
     -moz-transform: scaleX(-1);
@@ -52,7 +52,13 @@ header, main{
 
 .grid{
     display:grid;
+    
 }
+section{
+    width: 100%;
+    margin: auto;
+}
+
 
 .button{
 
@@ -88,7 +94,7 @@ header, main{
     
 }
 
- #responsiveMenu{
+input{
     display:none;
 }
 #burgerMenu{
@@ -161,7 +167,7 @@ section{
 }
 .card img{
     width: 100%;
-    height: 59lvw;
+    height: 27lvh;
     object-fit: cover;
 
 }
@@ -176,7 +182,7 @@ section{
     align-self: center;
 }
 .circleButton img{
-    width: 3em;
+    width: 2.5em;
     height: auto;
 }
 footer{
@@ -234,8 +240,16 @@ footer ul{
     list-style:none;
     text-align: center;
 }
-/* version tablet */
+
 @media(width >= 750px){
+    header .card {
+        grid-template-columns: repeat(2, 40% 60%);
+        
+    }
+   header .cardContent{
+    grid-template-rows: 19% 39% 63%;
+    height: 65lvh;
+   }
     .card{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -252,9 +266,7 @@ footer ul{
         gap: 0.3em;
         height: 32lvw;
     }
-    .text {
-        font-size: 13px;
-    }
+    
     footer{
         grid-template-columns: repeat(3, 40% 28% 32%);
         grid-template-rows: repeat(3, 33%);
@@ -301,15 +313,33 @@ footer ul{
         width: 100%;
        /*  gap: 1em; */
     }
+    .card img{
+        height: 100%;
+    }
+    .circleButton img{
+    width: 2.5em;
+    height: auto;
+
+    }
 }
 /* version desktop */
 @media(width >= 1200px){
     header, main{
-        max-width: 1485px;
+        width: 90%;
+        /* max-width: 1485px; */
         margin: auto;
+    }
+    header{
+    height: 100lvh;
     }
      #nav{
         position: static;
+    }
+    #nav .text{
+        font-size: 1.5831rem;
+    }
+    .text {
+        font-size: 1.6669rem;
     }
     #burgerMenu{
         display: none;
@@ -328,7 +358,7 @@ footer ul{
 }
     .cardContent {
     grid-template-rows: repeat(3, auto);
-       height: 24lvw; 
+       height: 30lvw; 
        width: 100%;
     }
     .line, .lineTwo{
@@ -346,9 +376,24 @@ footer ul{
         
     }
      #episodes .card picture img{
-        height: 26lvw;
+        height: 32lvw;
     }
     #episodes .card .title{
         align-self: end;
     }
+    .card img{
+        height: 100%;
+    }
+    .circleButton img{
+    width: 2.5em;
+    height: auto;
+
+    }
+    .title{
+        font-size: 3.6669rem;
+    }
+    header .card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
 }

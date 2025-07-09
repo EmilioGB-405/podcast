@@ -5,12 +5,11 @@ header{
     position: relative;
 }
 
-header #firstText, header #secondText{
-    
-    display:none;
+header p{
+    display: none;
 }
 header .title{
-    font-size:clamp(1.5rem, 3vw, 2.5rem)
+    font-size: 1.5rem;
 }
 h1{
     text-align: center;
@@ -93,6 +92,9 @@ main{
         grid-column: 1/4;
         padding: 0 0 2.5em 0;
     }
+     #firstText, #secondText{
+    display: block;
+}
     /* header .title{
         font-size: 3.5lvw;
     } */
@@ -235,10 +237,7 @@ main{
         z-index: 1;
        
     }
-    /* .button:hover{
-        width:5em;
-    } */
-    .blue-wrapper_vertical{
+     .blue-wrapper_vertical{
         width:2px;
         height:6em;
         background-color: var(--electric-blue-color);
@@ -251,6 +250,9 @@ main{
         background-color: var(--electric-blue-color);
         
     }
+    /* .button:hover{
+        width:5em;
+    } */
 
     h1{
         grid-row:2/3;

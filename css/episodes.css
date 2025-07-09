@@ -1,0 +1,156 @@
+h1{
+    text-align: left;
+    justify-self: left;
+}
+.arrow{
+    background: transparent;
+    border: none;
+}
+.arrow img{
+    width: 2.4em;
+    height: auto;
+}
+#filterButton{
+    display: none;
+}
+#contentNumber{
+    gap: 10px;
+}
+#contentNumber .numbers{
+ font-size: 1.3em;
+ background-color: transparent;
+ border: none;
+}
+#formContent{
+     position: relative;
+     grid-template-rows: repeat(3, auto);
+     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+     width: 100%;
+    
+}
+#filter-container{
+    grid-row: 2;
+    background-color: #0F172A;
+    padding: 3em;
+    justify-items: center;
+    gap: 1em;
+      position: absolute;
+    right: -170%;
+    top: 0;
+    width: 100%;
+    transition-duration: .25s;
+    backdrop-filter: blur(10px);
+    align-items: end;
+    z-index: 2;
+}
+#filterButton:checked ~ #filter-container{
+    right: 0;
+}
+#filter-container select{
+    padding: 1em;
+    width: 100%;
+    background-color: transparent;
+    border: 3px solid #1E90FF;
+}
+#filter-container select option{
+    background-color: #0F172A;
+}
+#filter-btn{
+    justify-self: end;
+    grid-column: 2;
+    grid-row: 1;
+}
+label img{
+    width: 3.4em;
+    object-fit: cover;
+}
+#searchContent{
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 3px solid #1E90FF;
+    grid-column: 1/3;
+}
+#searchContent img{
+    width: 2em;
+    height: 2em;
+    object-fit: cover;
+    align-self: center;
+    justify-self: end;
+    left: 95%;
+}
+#search{
+    border: none;
+    background-color: transparent;
+    color: #ffff;
+    font-size: 1em;
+    width: 100%;
+    display: block;
+}
+.filtro{
+    display: none;
+}
+@media(width >= 750px){
+    header .line .cardContent{
+        height: 100%;
+    }
+    
+   .lineNo{
+    border: none;
+    box-shadow: none;
+   }
+    #searchContent img {
+    
+    left: 94%;
+    }
+}
+@media(width >= 1200px){
+    header .card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #formContent{
+        align-items: center;
+        gap: 1em;
+    }
+    #searchContent{
+        margin: 0;
+        grid-column: 3/6;
+    }
+    #filter-btn{
+        justify-self: start;
+    }
+    #filter-btn img{
+        width: 3em;
+        height: 3em;
+    }
+    .blue-wrapper_right, .blue-wrapper{
+        display: block;
+    }
+    .blue-wrapper_right{
+        transform: scaleX(-1);
+        justify-self: end;
+        grid-row: 6/7;
+    }
+    #filter-container select{
+        font-size: 2em;
+    }
+   #filter-container .blue-wrapper, #filter-container .blue-wrapper_right{
+        position: absolute;
+        padding: 1em;
+    } 
+    .blue-wrapper{
+        justify-self: start;
+        transform: scaleY(-1);
+        align-self: start;
+    }
+    #search{
+        font-size: 2em;
+    }
+     #searchContent img {
+    
+    left: 95%;
+    }
+}
