@@ -129,8 +129,6 @@ header h2 {
     .cardNewsContent{
         scrollbar-width:none;
         overflow-x: hidden;
-       
-       
     }
     .card_news {
         transition: 0.5s ease;
