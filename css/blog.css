@@ -67,7 +67,8 @@ header h2 {
     position: relative;
     
   }
-  
+
+ 
 
 .cardNewsContent{
     padding: 2em ;
@@ -112,9 +113,9 @@ header h2 {
         display:flex;
     }
 
-    .text{
+   /* .card_news .text{
         font-size:1rem;
-    }
+    } */
 
     .circleButton:hover{
         transition:box-shadow 0.5ms;

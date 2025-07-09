@@ -22,7 +22,7 @@ html, body{
      font-family: "Orbitron", sans-serif;
      font-weight:500;
      line-height:1.8;
-      font-size: 2rem;
+      font-size: 1.4rem;
 }
 .flip-horizontal{
     -moz-transform: scaleX(-1);
@@ -47,7 +47,7 @@ body{
     background-color:#010206;
 }
 header, main{
-    padding:2em;
+    padding:1.3em;
 }
 
 .grid{
@@ -94,7 +94,7 @@ section{
     
 }
 
-input{
+#responsiveMenu{
     display:none;
 }
 #burgerMenu{
@@ -180,6 +180,7 @@ section{
     padding: 0.5em;
     justify-self: end;
     align-self: center;
+    margin: 0.7em 0;
 }
 .circleButton img{
     width: 2.5em;
@@ -266,7 +267,9 @@ footer ul{
         gap: 0.3em;
         height: 32lvw;
     }
-    
+    .title{
+        font-size: 2rem;
+    }
     footer{
         grid-template-columns: repeat(3, 40% 28% 32%);
         grid-template-rows: repeat(3, 33%);
@@ -290,6 +293,9 @@ footer ul{
         grid-column: 2/3;
         grid-row: 2/3;
         align-self: start;
+    }
+    .button div .text{
+        font-size: 1em;
     }
     footer #img-container{
         grid-row: 3/4;
@@ -329,9 +335,7 @@ footer ul{
         /* max-width: 1485px; */
         margin: auto;
     }
-    header{
-    height: 100lvh;
-    }
+   
      #nav{
         position: static;
     }
@@ -340,6 +344,9 @@ footer ul{
     }
     .text {
         font-size: 1.6669rem;
+    }
+    .cardSlider .text{
+        font-size: 1rem;
     }
     #burgerMenu{
         display: none;
@@ -358,7 +365,7 @@ footer ul{
 }
     .cardContent {
     grid-template-rows: repeat(3, auto);
-       height: 30lvw; 
+       height: auto; 
        width: 100%;
     }
     .line, .lineTwo{
@@ -376,18 +383,15 @@ footer ul{
         
     }
      #episodes .card picture img{
-        height: 32lvw;
+        height: 100%;
     }
     #episodes .card .title{
         align-self: end;
     }
-    .card img{
-        height: 100%;
-    }
+    
     .circleButton img{
     width: 2.5em;
-    height: auto;
-
+    height: 2.5em;
     }
     .title{
         font-size: 3.6669rem;

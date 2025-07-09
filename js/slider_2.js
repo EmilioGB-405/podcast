@@ -6,67 +6,49 @@
 
 
 
-let currentSlider;
+let currentSlider = 0;
 
-
-let cards =  document.querySelectorAll('.card_news');
+let slides =document.querySelectorAll('.cardNewsContent');
 
 let left =  document.querySelectorAll('.buttonSlider_left')
 
 let right = document.querySelectorAll('.buttonSlider_right')
 
-console.log(cards)
 
-console.log(left)
-
-
-
-
-
-
-/*  */
-
-
-
-
+console.log(slides)
 
 
 
 function slider(n = 0){
     
-if(n > cards.length ){currentSlider = 1}
-if(n < 1){currentSlider = cards.length}
-currentSlider = n;
+   
+    slides.forEach((cards, index) =>{   
+      /*   console.log(slides.item(n)) */
+        console.log(cards.children.item(n))
+       
+    });
 
-console.log(currentSlider)   
+   
+    currentSlider = n;
+    /* console.log(currentSlider) */
+    
 };
 slider()
 
-
-left.forEach(buttonLeft=>{
-   
-    buttonLeft.addEventListener('click',()=>{
-        slider(currentSlider -=1)
-        cards.forEach(card=>{
-            card.style.transform = "translateX(-100%)"
-        })
+left.forEach((buttonleft,index)=>{
+  /*   console.log(index)
+    console.log(buttonleft) */
+    buttonleft.addEventListener('click',()=>{
+        slider(currentSlider -= 1)
     })
 })
 
-
-
-
-
-
-
-
-
- /* slider(currentSlider -= 1)  */
-             /* slides.forEach((cards) =>{  
-                 console.log(cards.children.item(n))
-                cards.stye.c
-            });  */    
-
+right.forEach((buttonright,index)=>{
+   /*  console.log(buttonright) */
+    buttonright.addEventListener('click',()=>{
+       slider(currentSlider += 1)
+    })
+})
 
 
 /* slider(counterSlider); */
@@ -155,96 +137,3 @@ cards.forEach(card =>{
         console.log(val)
         val.style.transform = `translate(${n * 100})`;
     } */
-
-     /*   slides.forEach((card,n)=>{
-           
-                 if(cardContainer.children.length === 0 && left.length == 0){
-                    cardContainer.children.item(index).style.transform = "translate(0%)"
-                }
-            }) */
-               
-                /* if(){
-                        card.children.item(n).style.transform = "translate(0%)"
-                 }     */
-                /* console.log(buttonleft.children.length) */
-/* console.log(left.length) */
-    /* slidesContainer.forEach((cardContainer,index)=>{
-      
-        slides.forEach(n =>{
-            console.log(cardContainer[1])
-             buttonleft.addEventListener("click",()=>{
-                 if(cardContainer[n] == 0 && left.length == 0){
-                     slides.style.transform = "translateX(-40%)"
-                  }
-              
-            })   
-        })       
-    }) */
-        
-    
-    
-    
-/* 
-    slides.forEach((card,n)=>{ 
-        
-        buttonleft.addEventListener('click',()=>{
-            if(slides.length == 0 && left.length == 0 ){
-
-                    card.childNodes.item(n).style.transform = 'translate(50%)'
-                
-                
-            }
-            
-       
-            
-           
-        })
-    }) */
-   /*  slidesContainer.forEach((card,n)=>{
-        console.log(card.children)
-        buttonright.addEventListener('click',()=>{
-            if(slidesContainer.length == 0){
-                card.children.item(n).style.transform = 'translate(-20%)'
-            }
-        })
-    }) */
-    /* buttonright.addEventListener('click',()=>{
-        slider(currentSlider += 1)
-
-    }) */
-
-      /* child.firstElementChild.style.backgroundColor = "red"
-                    child.children.item(1).style.backgroundColor = "blue"
-                    child.children.item(2).style.backgroundColor = "blue"
-                    child.lastElementChild.style.backgroundColor = "green" */
-                    /* child.style.backgroundColor="white" */
-                /* SECTIONCHILDREN.style.backgroundColor = 'red' */
-
-/* left.forEach(buttonLeft=>{
-    const LEFTCHILDRE = buttonLeft.querySelectorAll('img')
-    
-    console.log(left[0])
-    section.forEach(parent=>{
-       
-
-        const SECTIONCHILDREN = parent.querySelectorAll('.cardNewsContent')
-    
-        SECTIONCHILDREN.forEach(child=>{
-            const CARDCHILDREN = child.querySelectorAll(".card_news")
-            console.log(CARDCHILDREN)
-            CARDCHILDREN.forEach(cards=>{
-                console.log(cards[1])
-                buttonLeft.addEventListener("click",(l)=>{
-                    console.log(l)
-                    if(cards.children.item(l) && buttonLeft.children.item(l) == 0){
-                        cards.children.item(l).style.transform = "translateX(-100%)"
-                    }
-                })
-            })
-            
-            
-        })
-
-     
-    })
-}) */
