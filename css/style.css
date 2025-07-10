@@ -1,5 +1,5 @@
 header{
-    height: 65lvh;
+    height: 100lvh;
     grid-template-rows: repeat(4 , auto);
     gap: 1em;
     position: relative;
@@ -30,9 +30,9 @@ header .button{
   position: fixed;
   top: 0;
   left: 0;
-  
   z-index: -1;
   pointer-events: none;
+
 }
 
 main{
@@ -90,7 +90,6 @@ main{
     }
     
     header {
-        height: auto;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(4, auto);
     }
@@ -131,15 +130,6 @@ main{
         justify-self: end;
         align-self: self-start;
     }
-   /*  #myCanvas{
-        grid-row: 4/5;
-        grid-column: 1/4;
-        margin-top: 18em;
-       justify-self: center;
-       align-self: center;
-       margin: auto;
-       
-    } */
     header p{
         display:block;
     }
@@ -265,11 +255,10 @@ main{
         width:5em;
     } */
     #myCanvas {
+        width: 100vw;
+        height: 100vh;
 
-  width: 100vw;
-  height: 100vh;
-
-}
+    }
     h1{
         grid-row:2/4;
         padding: 1em 0 0 1em;
