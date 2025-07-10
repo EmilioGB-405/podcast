@@ -32,4 +32,5 @@ export let elements = {
     camara:camara, 
     scene:scene,
     renderer:renderer
+   
 };

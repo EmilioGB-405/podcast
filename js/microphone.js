@@ -1,4 +1,5 @@
 "use strict"
+import * as THREE from 'three';
 
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
@@ -7,7 +8,14 @@ import { elements } from "./app.js";
 const holograma = new GLTFLoader();
 holograma.load('/img/hologramamicrophone.glb', (gltf)=>{
     const model = gltf.scene;
-    elements.scene.add(model);
+    /* elements.scene.add(model); */
+    // Centrar el modelo automáticamente
+    const box = new THREE.Box3().setFromObject(model);
+
+    const center = box.getCenter(new THREE.Vector3());
+
+    model.position.sub(center); // Lo mueve para que su centro esté en (0, 0, 0)
+    elements.scene.add(model)
 
     model.scale.set(4.5,4.5,4.5);
     model.rotation.y = Math.PI;
