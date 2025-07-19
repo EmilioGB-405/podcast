@@ -26,7 +26,7 @@ header .button{
     align-self: center;
 
 }
-#myCanvas {
+.myCanvas {
   position: fixed;
   /* top:20%; */
   margin: auto;
@@ -35,9 +35,13 @@ header .button{
   z-index: -1;
   pointer-events: none;
   display: block;
+  transition: opacity 0.5s ease-out;
+
 }
 
-
+.MycanvasOp{
+    opacity: 0;
+}
 
 main{
     position: relative;
@@ -258,7 +262,7 @@ main{
     /* .button:hover{
         width:5em;
     } */
-    #myCanvas {
+    .myCanvas {
         width: 100vw;
         height: 100vh;
 
@@ -315,5 +319,8 @@ main{
     }
     .button{
         justify-self: start;
+    }
+    #aboutUs{
+        height: 100lvh;
     }
 }

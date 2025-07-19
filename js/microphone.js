@@ -34,14 +34,11 @@ holograma.load('/img/hologramamicrophone02.glb', (gltf)=>{
     }
 
     // Parte 2: Ocultar micrófono entre header y aboutUs
-    else if (scrollY > headerHeight && scrollY < aboutUsTop - window.innerHeight * 0.5) {
-        model.visible = false;
-    }
 
     // Parte 3: Mostrar micrófono en aboutUs hacia la derecha
     else if (scrollY >= aboutUsTop - window.innerHeight * 0.5) {
         model.visible = true;
-        model.position.set(1.5, 0, 0); // mueve a la derecha
+        model.position.set(3.0, 0, 0); // mueve a la derecha
     }
 
     // Rotación continua opcional
@@ -70,6 +67,34 @@ holograma.load('/img/hologramamicrophone02.glb', (gltf)=>{
 export let helements = {
     modelo:holograma
 }
+
+
+
+window.addEventListener('scroll', () => {
+  const myCanvas = document.querySelector('.myCanvas');
+  const header = document.querySelector('#header');
+  const aboutUs = document.querySelector('#aboutUs');
+
+  const headerRect = header.getBoundingClientRect();
+  const aboutUsRect = aboutUs.getBoundingClientRect();
+  const centroVentana = window.innerHeight / 2;
+
+  // Detectar si el header está visible en pantalla
+  const headerVisible = headerRect.top < window.innerHeight && headerRect.bottom > 0;
+
+  // Detectar si el centro de la pantalla está dentro de aboutUs
+  const centroEnAboutUs = aboutUsRect.top < centroVentana && aboutUsRect.bottom > centroVentana;
+
+  // Mostrar canvas solo si está en header o en aboutUs
+  if (headerVisible || centroEnAboutUs) {
+    myCanvas.classList.remove('MycanvasOp');
+  } else {
+    myCanvas.classList.add('MycanvasOp');
+  }
+});
+
+
+
 
 
 

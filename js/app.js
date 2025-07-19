@@ -19,7 +19,7 @@ camara.position.set(0, 0, 3); // mira directo al centro
 camara.lookAt(0, 0, 0);
 
 const header = document.querySelector("header");
-const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'), alpha: true, antialias: true});
+const renderer = new THREE.WebGLRenderer({canvas: document.querySelector('.myCanvas'), alpha: true, antialias: true});
 renderer.setSize(header.offsetWidth, header.offsetHeight);
 
 /* document.body.appendChild(renderer.domElement) */
