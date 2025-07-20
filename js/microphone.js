@@ -38,7 +38,7 @@ holograma.load('/img/hologramamicrophone02.glb', (gltf)=>{
     // Parte 3: Mostrar micrófono en aboutUs hacia la derecha
     else if (scrollY >= aboutUsTop - window.innerHeight * 0.5) {
         model.visible = true;
-        model.position.set(3.0, 0, 0); // mueve a la derecha
+        /* model.position.set(3.0, 0, 0); */ // mueve a la derecha
     }
 
     // Rotación continua opcional
@@ -91,7 +91,15 @@ window.addEventListener('scroll', () => {
   } else {
     myCanvas.classList.add('MycanvasOp');
   }
+
+  // Cambiar tamaño del canvas solo si el centro está en aboutUs
+  if (centroEnAboutUs) {
+    myCanvas.classList.add('MycanvasAbout');
+  } else {
+    myCanvas.classList.remove('MycanvasAbout');
+  }
 });
+
 
 
 
