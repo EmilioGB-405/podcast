@@ -1,15 +1,16 @@
 "use strict"
+import * as THREE from 'three';
 
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 import {elements} from "./app";
 
-
+let model;
 const holograma = new GLTFLoader()
 
 holograma.load("/img/hologramaface.glb",(gltf)=>{
-    const model = gltf.scene;
-    scene.add(model);
+    model = gltf.scene;
+    elements.scene.add(model);
     model.scale.set(4.5,4.5,4.5)
     model.rotation.y=Math.PI 
     
