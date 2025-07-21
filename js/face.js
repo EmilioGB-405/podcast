@@ -9,8 +9,8 @@ const holograma = new GLTFLoader()
 
 holograma.load("/img/hologramaface.glb",(gltf)=>{
     const model = gltf.scene;
-    scene.add(model);
-    model.scale.set(4.5,4.5,4.5)
+    elements.scene.add(model);
+    model.scale.set(5,5,5)
     model.rotation.y=Math.PI 
     
     const animate =()=>{
