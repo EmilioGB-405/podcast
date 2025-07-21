@@ -11,7 +11,7 @@
   <title>Document</title>
 </head>
 <body>
-    <header class="grid grid-row">
+    <header class="grid grid-row" id="header">
            <nav id="nav" class="flex">
     <a class="logo" href="../index.html">
       <img src="../img/Podcast.png" alt="Logo de pagina web">
@@ -32,7 +32,7 @@
                 </ul>
             </nav>
         </nav>
-        <canvas id="myCanvas" width="400" height="200">
+        <canvas class="myCanvas" width="400" height="200">
         </canvas>
         <div class="blue-wrapper">
             <div class="blue-wrapper_vertical borderWrapper border"></div>
@@ -45,7 +45,7 @@
         <h1 class="title">Technology Ahead of Its Time</h1>
           <p class="text" id="firstText">Join us each week as we dive into the latest trends, tools, and innovations shaping our digital world.</p>
         <p class="text" id="secondText">From AI breakthroughs to tech culture, we decode the future—one episode at a time.</p>
-        <button class="button flex" type="button"> <div class="flex"><p class="text"></p>Listen now</div> </button>
+        <button class="button flex" type="button" id="buttonListenNow" onclick="window.open('https://www.youtube.com/@lexfridman','_blank')"  target="_blank"> <div class="flex"><p class="text"></p>Listen now</div> </button>
     </header>
     <main>
         <section id="episodes" class="grid">
@@ -59,7 +59,7 @@
                     <div class="cardContent border grid">
                         <h3 class="title">Episode 33</h3>
                         <p class="text">This episode delves into the fascinating frontier where artificial intelligence meets consciousness. We explore the blurring lines between silicon and sentience, the implications of self-aware AI, and the ethical challenges we face as technology increasingly mirrors the human mind.</p>
-                        <button class="circleButton border flex" type="button"><img class="flip-horizontal" src="icon/arrow.png" alt="arrow button"></button>
+                        <button class="circleButton border flex" type="button" id="buttonEpisode33" onclick="window.open('https://www.youtube.com/watch?v=anXep8kBOCg','_blank')"><img class="flip-horizontal" src="icon/arrow.png" alt="arrow button"><a href=""></a></button>
                     </div>
                 </div>
             </div>
@@ -73,11 +73,11 @@
                     <div class="cardContent border grid">
                         <h3 class="title">Episode 32</h3>
                         <p class="text">Take a journey inside the complex mind of artificial intelligence. We explore the intricate networks, algorithms, and data that power modern AI, and discuss the implications of these advanced systems for our future. It's an inside look at the technology shaping tomorrow</p>
-                        <button class="circleButton border flex" type="button"><img class="flip-horizontal" src="icon/arrow.png" alt=" arrow button"></button>
+                        <button class="circleButton border flex" type="button" id="buttonEpisode32" onclick="window.open('https://www.youtube.com/watch?v=lVHRs3uTHNI','_blank')"><img class="flip-horizontal" src="icon/arrow.png" alt=" arrow button"></button>
                     </div>
                 </div>
             </div>
-             <button class="button flex" type="button"> <div class="flex"><p class="text">See more</p></div> </button>
+             <button class="button flex" type="button"> <div class="flex" id="buttonSeeMore"><p class="text">See more</p></div> </button>
         </section>
         <section class="grid" id="aboutUs">
             <h2 class="title">What's the podcast about?</h2>
@@ -92,7 +92,7 @@
                         <source srcset="img/IgnacioGómez.jpg" media="(min-width: 950px)">
                         <img src="img/IgnacioGómez.jpg" alt="iepisode thirty-two">
                     </picture>
-                    <h3 class="title">Sarah Thompson</h3>
+                    <h3 class="title">Peter Macallister</h3>
                     <p class="text">I really enjoyed the episode 4! The way they explained artificial intelligence was so clear and easy to understand.</p>
                 </div>
                  <div class="card border cardSlider card-center" id="cardTwo">
@@ -101,7 +101,7 @@
                         <source srcset="img/sarahThompson.jpg" media="(min-width: 950px)">
                         <img src="img/sarahThompson.jpg" alt="iepisode thirty-two">
                     </picture>
-                    <h3 class="title">Ignacio Gómez</h3>
+                    <h3 class="title">Sarah Thompson</h3>
                     <p class="text">This podcast keeps me up to date with the latest tech news. I always learn something new every week.</p>
                 </div>
                  <div class="card border cardSlider card-right" id="cardThree">
@@ -123,7 +123,7 @@
         <label for="email-podcast"></label>
         <input type="email" 
         id="email-podcast" placeholder="Email">
-       <button class="button flex" type="button"> <div class="flex"><p class="text"></p>subcribe</div></button>
+       <button class="button flex" type="button" id="buttonSubscribe"><div class="flex"><p class="text"></p>subcribe</div></button>
        <div id="img-container">
             <img src="icon/facebook.png" alt="icon de la red social facebook" class="icons">
             <img src="icon/Reddit.png" alt="icon de la red social Reddit" class="icons">
