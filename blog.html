@@ -31,7 +31,7 @@
                 </nav>
         </nav>
         <section  class=" grid" id="News_relevant">
-            <h2 class="title">News relevant</h2>
+            <h2 class="title" id="NewsRelevant">News relevant</h2>
                     <div class="card grid flip-img">
                 <picture>
                     <source srcset="../img/episodeOne.jpg" media="(max-width: 900px)">
@@ -39,10 +39,13 @@
                     <img src="../img/episodeOne.jpg" alt="episode one">
                 </picture>
                 <div class="line lineNo ">
-                    <div class="cardContent border grid">
+                    <div class="cardContent border grid" id="card_header">
                         <h3 class="title">Episode 1</h3>
                         <p class="text">In this very first episode of TechPulse, we dive into the fascinating world of digital connections powering the internet, artificial intelligence, and neural networks. How are these invisible networks built? What role do they play in our everyday lives? Join us as we explore the foundations of the digital age and how technology connects us in ways we never imagined.</p>
-                        <button class="circleButton border flex" type="button"><img class="flip-horizontal" src="../icon/arrow.png" alt=" arrow button"></button>
+                        <div class="button-container flex button-header">
+                            <button type="button" id="left"  class="buttonSlider circleButton border buttonSlider_left "><img src="icon/arrow.png" alt="left slider button"></button>
+                            <button type="button" class="buttonSlider flip-horizontal circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button"></button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -43,8 +43,18 @@ header, main{
     display:none;
 }
 
+ .button-header{
+      place-self: inherit;
+        justify-content:space-between;
+        flex-direction: row;
+        
+    }
 
-
+.button-container .circleButton{
+    display: block;
+        place-self:center;
+        gap:2em;
+    }
 
 @media(width >= 750px){
     #News_relevant{
@@ -106,9 +116,16 @@ header h2 {
         min-width: 21.5em; /* Ancho mínimo de cada elemento */
     }
 
+
 }
 
 @media(width >= 1200px){
+        header .card {
+        grid-template-columns:none;
+       
+    }
+
+
     .circleButton{
         display:flex;
     }
@@ -121,10 +138,7 @@ header h2 {
         transition:box-shadow 0.5ms;
         box-shadow: 0px 1px 9px 0px rgba(80, 165, 249, 0.75);
     }
-    .button-container{
-        place-self:center;
-        gap:2em;
-    }
+    
 
     .cardNewsContent{
         scrollbar-width:none;
@@ -144,5 +158,29 @@ header h2 {
         border-left:none;
         box-shadow:none;
     }    
-    
+ #card_header{
+        /* padding:1em; */
+        height: inherit;
+        width: 48lvw;
+    }
+
+    .text{
+        font-size:1em;
+        
+    }
+
+   
+
+    .title{
+        font-size: 3.6669rem;
+    }
+
+    #NewsRelevant{
+        padding:0.15em 0 0.95em 0;
+    }
+
+    .cardContent{
+        height:100%;
+    }
+
 }

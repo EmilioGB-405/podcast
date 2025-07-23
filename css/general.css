@@ -243,12 +243,12 @@ footer ul{
 }
 
 @media(width >= 750px){
-    header .card {
-        grid-template-columns: repeat(2, 40% 60%);
+   /*  header .card {
+        grid-template-columns:50% 50%;
         
-    }
+    } */
    header .cardContent{
-    grid-template-rows: 19% 39% 63%;
+    grid-template-rows: 15% 35% 50%;
     height: 65lvh;
    }
     .card{
