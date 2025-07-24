@@ -223,13 +223,36 @@ main{
   #cardContentComments  #cardTwo .text,  #cardContentComments #cardThree .text{
        font-size: 0.6rem;
     } */
-    .buttonSlider{
-        background-color: transparent;
-        border: none;
-        display: block;
-    }
+    .buttonSlider {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+.buttonSlider {
+    background-color: transparent;
+    border: none;
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+    
+
+.buttonSlider:hover {
+    transform: scale(1.1); /* Zoom suave */
+    filter: brightness(1.2) contrast(1.1); /* Acentúa colores y brillo */
+}
+
     .buttonSlider img{
         width: 5em;
+        
     }
     #left{
         grid-column: 1/2;

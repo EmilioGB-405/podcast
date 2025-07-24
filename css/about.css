@@ -13,13 +13,15 @@ section{
     z-index: 2;
 }
 .myCanvas{
-    position: absolute;
+    position: fixed;
     width: 100% !important;
     height: 100% !important;
-    right: 50%;
+    right: 0;
+    left: 0;
     top: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: -1;
+    object-fit: contain;
 }
 #Objective{
     gap: 2em;
@@ -38,14 +40,13 @@ footer{
         grid-template-rows: repeat(2, auto);
         gap: 2em;
      }
-     .myCanvas{
+   /*   .myCanvas{
     position: fixed;
-    width: 50% !important;
-    /* object-fit: cover; */
+    width: 100% !important;
     right: 0;
-    left: 50% !important;
+    left: 0 !important;
     z-index: 1;
-}
+} */
     #history p{
         grid-row: 2/3;
         grid-column: 1/2;
