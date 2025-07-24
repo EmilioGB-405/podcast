@@ -106,6 +106,13 @@ label img{
     
     left: 94%;
     }
+
+    .circleButton{
+        align-self: end;
+    }
+    .text{
+        padding:2em 0 1em 0;
+    }
 }
 @media(width >= 1200px){
     header .card {

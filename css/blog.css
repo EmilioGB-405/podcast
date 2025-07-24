@@ -24,7 +24,7 @@ header, main{
 }
 
 .cardNewsContent .card_news .border_news{
-    padding: 1em;
+    padding: 0.5em;
     min-width: 17em; /* Ancho mínimo de cada elemento */
 }
 .cardNewsContent .card_news .border_news h3{
@@ -50,13 +50,21 @@ header, main{
         
     }
 
-.button-container .circleButton{
-    display: block;
-        place-self:center;
-        gap:2em;
+
+.card_news > .border_news{
+        height:22.25em;
+        width:10em;
     }
 
+
 @media(width >= 750px){
+  .button-container .circleButton{
+        display: block;
+        place-self:center;
+        align-self:end;
+        gap:2em;
+    }
+  
     #News_relevant{
         padding: 0;
     }
@@ -104,6 +112,7 @@ header h2 {
  
 }
 
+    
  
      .title{
         line-height:normal;
@@ -114,6 +123,20 @@ header h2 {
     .cardNewsContent .card_news .border_news{
         padding:1em 1em 4em 1em;
         min-width: 21.5em; /* Ancho mínimo de cada elemento */
+    }
+    section > .button-container{
+        align-self:center;
+        justify-content:space-evenly;
+        padding:0 20em 0 20em;
+        
+       
+    }
+
+    div>  .text{
+        margin:2em 0 2em 0;
+        font-size:1.15rem;
+        text-align:justify;
+        place-content:center;
     }
 
 
