@@ -271,7 +271,6 @@ page:6,
 cardLoad: function () {
    const reversedEpisodes = [...this.episodes].reverse();
     const cards = document.querySelectorAll("#episodes .card");
-    
 Array.from(cards).forEach((card, index) => {
   const episodeIndexInReversed =   this.i + index;
 

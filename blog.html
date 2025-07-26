@@ -34,18 +34,18 @@
         <section  class=" grid" id="News_relevant">
             <h2 class="title" id="NewsRelevant">News relevant</h2>
                     <div class="card grid flip-img">
-                <picture>
-                    <source srcset="../img/episodeOne.jpg" media="(max-width: 900px)">
-                    <source srcset="../img/episodeOne.jpg" media="(min-width: 950px)">
-                    <img src="../img/episodeOne.jpg" alt="episode one">
+                <picture id="news-img">
+                    <source id="sourceCell" srcset="../img/episodeOne.jpg" media="(max-width: 900px)">
+                    <source id="sourceDesktop" srcset="../img/episodeOne.jpg" media="(min-width: 950px)">
+                    <img  id="news-main-img" src="../img/episodeOne.jpg" alt="episode one">
                 </picture>
                 <div class="line lineNo ">
                     <div class="cardContent border grid" id="card_header">
-                        <h3 class="title">News</h3>
-                        <p class="text">In this very first episode of TechPulse, we dive into the fascinating world of digital connections powering the internet, artificial intelligence, and neural networks. How are these invisible networks built? What role do they play in our everyday lives? Join us as we explore the foundations of the digital age and how technology connects us in ways we never imagined.</p>
+                        <h3 class="title" id="news-title"></h3>
+                        <p class="text" id="news-info"></p>
                         <div class="button-container flex button-header">
                             <button type="button" id="left"  class="buttonSlider circleButton border buttonSlider_left "><img src="icon/arrow.png" alt="left slider button"></button>
-                            <button type="button" class="buttonSlider  circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button" class="flip-horizontal"></button>
+                            <button type="button" id="right" class="buttonSlider  circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button" class="flip-horizontal"></button>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
             <h2 class="title">Artificial Intenligent</h2>
             <div class="cardNewsContent_border"></div>
             <div  class="flex cardNewsContent" id="ai">
-                <div class="card_news  cardSlider" id="aiSilde">
+                <div class="card_news  cardSlider card_index" id="aiSilde">
                     <picture>
                         <source srcset="./img/AiNewOneCell.jpg" media="(max-width: 900px)">
                         <source srcset="./img/AiNewOne.jpg" media="(min-width: 950px)">
@@ -143,7 +143,7 @@ Law firms now use it to draft contracts and research legal cases in record time.
             <h2 class="title">Cybersecurity</h2>
             <div class="cardNewsContent_border"></div>
            <div  class="flex cardNewsContent ">
-                <div class="card_news  cardSlider" >
+                <div class="card_news  cardSlider card_index" >
                     <picture>
                         <source srcset="./img/cyberSecurityOneCell.jpg" media="(max-width: 900px)">
                         <source srcset="./img/cyberSecurityOne.jpg" media="(min-width: 950px)">
@@ -227,7 +227,7 @@ Cybersecurity is now as critical as physical safety in protecting patients.</p>
             <h2 class="title">Quantum Technology</h2>
             <div class="cardNewsContent_border"></div>
             <div  class="flex cardNewsContent ">
-                <div class="card_news  cardSlider">
+                <div class="card_news  cardSlider card_index">
                     <picture>
                         <source srcset="./img/quantumOneCell.jpg" media="(max-width: 900px)">
                         <source srcset="./img/quantumOne.jpg" media="(min-width: 950px)">
@@ -309,7 +309,7 @@ The pilot aims to protect democratic systems from future digital tampering and c
             <h2 class="title">Economy</h2>
             <div class="cardNewsContent_border"></div>
             <div  class="flex cardNewsContent ">
-                <div class="card_news   cardSlider">
+                <div class="card_news   cardSlider card_index">
                     <picture>
                         <source srcset="./img/economyOneCellphone.jpg" media="(max-width: 900px)">
                         <source srcset="./img/economyOne.jpg" media="(min-width: 950px)">

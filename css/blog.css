@@ -7,6 +7,7 @@ header, main{
    /*  padding: 1.5em 0.20em; */
     overflow-x: scroll;
     width:100%;
+    height:100%;
     gap: 0.45rem;
     scroll-behavior:smooth;
     position:relative;
@@ -28,11 +29,11 @@ header, main{
     min-width: 17em; /* Ancho mínimo de cada elemento */
 }
 .cardNewsContent .card_news .border_news h3{
-   padding:1.3em 0 0.5em 0;
+   padding:1em 0 0.5em 0;
    font-size:1.5rem;
 }
 .cardNewsContent .card_news p{
-    padding: 0 0 1em 0;
+    /* padding: 0 0 2.5em 0; */
 }
 .cardNewsContent .card_news picture img{
     height: auto;
@@ -52,7 +53,7 @@ header, main{
 
 
 .card_news > .border_news{
-        height:22.25em;
+        height:23.5rem;
         width:10em;
     }
 
