@@ -193,10 +193,23 @@ header h2 {
         
     }
 
-   
+ /*   div> .text{
+        place-content:end;
+    } */
+/* 
+    div> .button-header{
+        height:30%;
+        justify-content:lex;
+      
+    } */
 
     .title{
-        font-size: 3.6669rem;
+        font-size: 3rem;
+    }
+
+    #news-title{
+         word-break:break-word;
+        margin:0 0 5em 0;
     }
 
     #NewsRelevant{
@@ -206,5 +219,8 @@ header h2 {
     .cardContent{
         height:100%;
     }
+
+    
+    
 
 }
