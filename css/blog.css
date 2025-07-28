@@ -7,6 +7,7 @@ header, main{
    /*  padding: 1.5em 0.20em; */
     overflow-x: scroll;
     width:100%;
+    height:100%;
     gap: 0.45rem;
     scroll-behavior:smooth;
     position:relative;
@@ -24,15 +25,15 @@ header, main{
 }
 
 .cardNewsContent .card_news .border_news{
-    padding: 1em;
+    padding: 0.5em;
     min-width: 17em; /* Ancho mínimo de cada elemento */
 }
 .cardNewsContent .card_news .border_news h3{
-   padding:1.3em 0 0.5em 0;
+   padding:1em 0 0.5em 0;
    font-size:1.5rem;
 }
 .cardNewsContent .card_news p{
-    padding: 0 0 1em 0;
+    /* padding: 0 0 2.5em 0; */
 }
 .cardNewsContent .card_news picture img{
     height: auto;
@@ -43,10 +44,30 @@ header, main{
     display:none;
 }
 
+ .button-header{
+      place-self: inherit;
+        justify-content:space-between;
+        flex-direction: row;
+        
+    }
 
 
+.card_news > .border_news{
+        height:23.5rem;
+        width:10em;
+    }
 
+header .button-container .circleButton{
+    display: block;
+}
 @media(width >= 750px){
+  .button-container .circleButton{
+        display: block;
+        place-self:center;
+        align-self:end;
+        gap:2em;
+    }
+  
     #News_relevant{
         padding: 0;
     }
@@ -94,6 +115,7 @@ header h2 {
  
 }
 
+    
  
      .title{
         line-height:normal;
@@ -105,10 +127,31 @@ header h2 {
         padding:1em 1em 4em 1em;
         min-width: 21.5em; /* Ancho mínimo de cada elemento */
     }
+    section > .button-container{
+        align-self:center;
+        justify-content:space-evenly;
+        padding:0 20em 0 20em;
+        
+       
+    }
+
+    div>  .text{
+        margin:2em 0 2em 0;
+        font-size:1.15rem;
+        text-align:justify;
+        place-content:center;
+    }
+
 
 }
 
 @media(width >= 1200px){
+        header .card {
+        grid-template-columns:none;
+       
+    }
+
+
     .circleButton{
         display:flex;
     }
@@ -121,10 +164,7 @@ header h2 {
         transition:box-shadow 0.5ms;
         box-shadow: 0px 1px 9px 0px rgba(80, 165, 249, 0.75);
     }
-    .button-container{
-        place-self:center;
-        gap:2em;
-    }
+    
 
     .cardNewsContent{
         scrollbar-width:none;
@@ -134,7 +174,55 @@ header h2 {
         transition: 0.5s ease;
     }
 
+    .line, .lineNo{
+        padding:0;
+        height:100%;
+    }
+
+    .line{
+        border-top:none;
+        border-left:none;
+        box-shadow:none;
+    }    
+ #card_header{
+        /* padding:1em; */
+        height: inherit;
+        width: 48lvw;
+    }
+
+    .text{
+        font-size:1em;
+        
+    }
+
+ /*   div> .text{
+        place-content:end;
+    } */
+/* 
+    div> .button-header{
+        height:30%;
+        justify-content:lex;
+      
+    } */
+
+    .title{
+        font-size: 3rem;
+    }
+
+    #news-title{
+         word-break:break-word;
+        margin:0 0 5em 0;
+    }
+
+    #NewsRelevant{
+        padding:0.15em 0 0.95em 0;
+    }
+
+    .cardContent{
+        height:100%;
+    }
 
     
     
+
 }

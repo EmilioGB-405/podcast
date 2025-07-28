@@ -34,8 +34,23 @@ form textarea::placeholder{
      color:var(--sliver-text-color);
 }
 
+input{
+    color:white;
+}
+
+textarea{
+    color:white;
+}
+
 label{
     display:none;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: -1em;
+ font-family: "Rubik", sans-serif;
 }
 
 
@@ -56,6 +71,17 @@ label{
         color:var(--sliver-text-color);
         }
 
+    input{
+        font-size:1rem;
+    }
+
+    textarea{
+        font-size:1rem;
+    }
+
+    #buttonForm{
+    height:9.95em;
+}
 }
 
 @media(width >= 1200px){
@@ -74,4 +100,6 @@ label{
         width:100%;
         
     }
+
+
 }

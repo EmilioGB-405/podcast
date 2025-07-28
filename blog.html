@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore trending news on AI, cybersecurity, quantum tech, and the digital economy in our tech-focused blog.">
+    <meta name="keywords" content="technology news, artificial intelligence, AI updates, cybersecurity trends, quantum computing, tech economy, digital transformation, blog, podcast, tech blog">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/blog.css">
     <script src="./js/slider2.js" type="module"></script>
+    <script src="./js/blog.js" defer></script>
+    <script src="js/footerForm.js" defer></script>
     <!-- <script src="js/main.js" async type="module"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Technology Blog | AI, Cybersecurity, Quantum & Digital Economy News</title>
 </head>
 <body>
     <header>
@@ -31,18 +35,21 @@
                 </nav>
         </nav>
         <section  class=" grid" id="News_relevant">
-            <h2 class="title">News relevant</h2>
-                    <div class="card grid flip-img">
-                <picture>
-                    <source srcset="../img/episodeOne.jpg" media="(max-width: 900px)">
-                    <source srcset="../img/episodeOne.jpg" media="(min-width: 950px)">
-                    <img src="../img/episodeOne.jpg" alt="episode one">
+            <h2 class="title" id="NewsRelevant">News relevant</h2>
+            <div class="card grid flip-img">
+                <picture id="news-img">
+                    <source id="sourceCell" srcset="../img/episodeOne.jpg" media="(max-width: 900px)">
+                    <source id="sourceDesktop" srcset="../img/episodeOne.jpg" media="(min-width: 950px)">
+                    <img  id="news-main-img" src="../img/episodeOne.jpg" alt="episode one">
                 </picture>
                 <div class="line lineNo ">
-                    <div class="cardContent border grid">
-                        <h3 class="title">Episode 1</h3>
-                        <p class="text">In this very first episode of TechPulse, we dive into the fascinating world of digital connections powering the internet, artificial intelligence, and neural networks. How are these invisible networks built? What role do they play in our everyday lives? Join us as we explore the foundations of the digital age and how technology connects us in ways we never imagined.</p>
-                        <button class="circleButton border flex" type="button"><img class="flip-horizontal" src="../icon/arrow.png" alt=" arrow button"></button>
+                    <div class="cardContent border grid" id="card_header">
+                        <h3 class="title" id="news-title"></h3>
+                        <p class="text" id="news-info"></p>
+                        <div class="button-container flex button-header">
+                            <button type="button" id="left"  class="buttonSlider circleButton border buttonSlider_left button-blog "><img src="icon/arrow.png" alt="left slider button"></button>
+                            <button type="button" id="right" class="buttonSlider  circleButton border buttonSlider_right button-blog"><img src="icon/arrow.png" alt="right slider button" class="flip-horizontal"></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -56,15 +63,15 @@
             <h2 class="title">Artificial Intenligent</h2>
             <div class="cardNewsContent_border"></div>
             <div  class="flex cardNewsContent" id="ai">
-                <div class="card_news  cardSlider" id="aiSilde">
+                <div class="card_news  cardSlider card_index" id="aiSilde">
                     <picture>
                         <source srcset="./img/AiNewOneCell.jpg" media="(max-width: 900px)">
                         <source srcset="./img/AiNewOne.jpg" media="(min-width: 950px)">
                         <img src="./img/AiNewOne.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">AI Tutors Transform Virtual Learning</h3>
+                        <p class="text">AI-based tutors now personalize lessons for students, improving scores and attention in remote classrooms across the globe.Teachers report a 30% increase in math and science retention using these adaptive learning systems.</p>
                     </div>
                 </div>
                  <div class="card_news  cardSlider">
@@ -74,8 +81,9 @@
                         <img src="./img/AiNewTwo.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">AI Writes First Feature Film</h3>
+                        <p class="text">Hollywood debuts Dreamloop, a sci-fi film scripted and edited entirely by artificial intelligence.
+The project cut production time by half and raised new debates around creativity and copyright in cinema.</p>
                     </div>
                 </div>
                  <div class="card_news  cardSlider">
@@ -85,8 +93,9 @@
                         <img src="./img/AiNewThree.jpg" alt="iepisode thirty-two">
                     </picture>
                     <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">AI Detects Alzheimer’s in Speech</h3>
+                        <p class="text">Stanford scientists created an AI tool that identifies early signs of Alzheimer’s through voice analysis.
+In trials, the system reached 91% accuracy, offering hope for earlier treatment and intervention.</p>
                     </div>
                 </div>
                 <div class="card_news  cardSlider">
@@ -96,8 +105,9 @@
                         <img src="./img/AiNewFour.jpg" alt="iepisode thirty-two">
                     </picture>
                     <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Chatbots Dominate Retail Support</h3>
+                        <p class="text">Large retail chains now use AI chatbots to manage 80% of customer service interactions.
+These bots handle returns, refunds, and complaints instantly, slashing costs and improving consumer satisfaction.</p>
                     </div>
                 </div>
                 <div class="card_news  cardSlider">
@@ -107,8 +117,9 @@
                         <img src="./img/AiNewFive.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">AI Art Reacts to Human Presence</h3>
+                        <p class="text">An exhibit in London showcases interactive digital art that evolves based on viewer movement and voice.
+The generative AI behind it challenges traditional ideas of authorship and live artistic expression.</p>
                     </div>
                 </div>
                 <div class="card_news  cardSlider">
@@ -118,14 +129,15 @@
                         <img src="./img/AiNewSix.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">AI Passes Bar in Four Countries</h3>
+                        <p class="text">A legal AI tool passed bar exams in the U.S., U.K., Canada, and Australia.
+Law firms now use it to draft contracts and research legal cases in record time.It’s now being used for legal research and document.</p>
                     </div>
                 </div>
             </div>
             <div class="button-container flex">
                 <button type="button" id="left"  class="buttonSlider circleButton border buttonSlider_left "><img src="icon/arrow.png" alt="left slider button"></button>
-                <button type="button" class="buttonSlider flip-horizontal circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button"></button>
+                <button type="button" class="buttonSlider circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button" class=" flip-horizontal "></button>
             </div>
         </section>
         <!-- Artificial inteligent ends here -->
@@ -134,15 +146,16 @@
             <h2 class="title">Cybersecurity</h2>
             <div class="cardNewsContent_border"></div>
            <div  class="flex cardNewsContent ">
-                <div class="card_news  cardSlider" >
+                <div class="card_news  cardSlider card_index" >
                     <picture>
                         <source srcset="./img/cyberSecurityOneCell.jpg" media="(max-width: 900px)">
                         <source srcset="./img/cyberSecurityOne.jpg" media="(min-width: 950px)">
                         <img src="./img/cyberSecurityOne.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Cyberattack on Grid Blocked by AI</h3>
+                        <p class="text">European power grids were targeted by hackers but protected by real-time AI defense systems.
+Authorities credit machine learning models for identifying and stopping the breach before major damage occurred.</p>
                     </div>
                 </div>
                  <div class="card_news  cardSlider">
@@ -152,8 +165,9 @@
                         <img src="./img/AiNewTwo.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Ransomware Hits Global Shipping Firm</h3>
+                        <p class="text">A ransomware attack disrupted servers at a major shipping company, halting logistics for 48 hours.
+Data recovery teams worked nonstop to restore operations and limit the financial and logistical impact.</p>
                     </div>
                 </div>
                  <div class="card_news  cardSlider">
@@ -163,8 +177,9 @@
                         <img src="./img/cyberSecurityThree.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Schools Upgrade Security After Breach</h3>
+                        <p class="text">Several U.S. school districts suffered cyberattacks exposing thousands of student records to hackers.
+Districts are now investing in stronger network protections and staff training to prevent future incidents.</p>
                     </div>
                 </div>
                 <div class="card_news  cardSlider">
@@ -174,8 +189,9 @@
                         <img src="./img/cyberSecurityFour.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Phishing Scams Surge Through Social Media</h3>
+                        <p class="text">Cybercriminals increasingly use fake social media accounts to launch sophisticated phishing attacks on individuals.
+Experts urge users to avoid suspicious links and enable two-factor authentication for better protection.</p>
                     </div>
                 </div>
                 <div class="card_news  cardSlider">
@@ -185,8 +201,9 @@
                         <img src="./img/cyberSecurityFive.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Cyber Insurance Demand Reaches Record High</h3>
+                        <p class="text">Small businesses are purchasing cyber insurance policies at record levels amid rising threats.
+Insurers report a 45% increase in claims tied to ransomware and phishing incidents this year.</p>
                     </div>
                 </div>
                 <div class="card_news  cardSlider">
@@ -196,14 +213,15 @@
                         <img src="./img/cyberSecuritySix.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Hospitals Strengthen Cyber Defenses Nationwide</h3>
+                        <p class="text">Following a wave of ransomware attacks, hospitals are upgrading firewalls, backups, and monitoring systems.
+Cybersecurity is now as critical as physical safety in protecting patients.</p>
                     </div>
                 </div>
             </div>
             <div class="button-container flex">
                 <button type="button"  class="buttonSlider circleButton border buttonSlider_left"><img src="icon/arrow.png" alt="left slider button"></button>
-                <button  type="button" class="buttonSlider flip-horizontal circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button"></button>
+                <button  type="button" class="buttonSlider  circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button" class="flip-horizontal"></button>
             </div>
         </section>
         <!-- Cybersecurity section ends here -->
@@ -212,15 +230,16 @@
             <h2 class="title">Quantum Technology</h2>
             <div class="cardNewsContent_border"></div>
             <div  class="flex cardNewsContent ">
-                <div class="card_news  cardSlider">
+                <div class="card_news  cardSlider card_index">
                     <picture>
                         <source srcset="./img/quantumOneCell.jpg" media="(max-width: 900px)">
                         <source srcset="./img/quantumOne.jpg" media="(min-width: 950px)">
                         <img src="./img/quantumOne.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Quantum Chip Solves Logistics Problem</h3>
+                        <p class="text">A new quantum chip optimized global shipping routes in seconds—far faster than traditional supercomputers.
+Logistics companies are exploring how quantum algorithms can save costs and reduce transit delays worldwide.</p>
                     </div>
                 </div>
                  <div class="card_news  cardSlider">
@@ -230,8 +249,9 @@
                         <img src="./img/quantumTwo.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Quantum Internet Test Succeeds in Japan</h3>
+                        <p class="text">Japanese scientists completed a secure data transfer over a 100-kilometer quantum internet prototype.
+The experiment demonstrates strong potential for unhackable communication networks in the near future.</p>
                     </div>
                 </div>
                  <div class="card_news  cardSlider">
@@ -241,8 +261,8 @@
                         <img src="./img/quantumThree.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Quantum Sensors Break Record</h3>
+                        <p class="text">Researchers developed a quantum battery that charges instantly using entangled states instead of chemical reactions.This breakthrough may reshape energy storage for mobile devices, vehicles, and medical equipment.</p>
                     </div>
                 </div>
                 <div class="card_news  cardSlider">
@@ -252,8 +272,9 @@
                         <img src="./img/quantumFour.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Quantum-AI improving medicine </h3>
+                        <p class="text">A new hybrid platform merges AI with quantum computing to simulate molecular behavior rapidly.
+Scientists identified three antibiotic candidates within hours, a task that previously took weeks.</p>
                     </div>
                 </div>
                 <div class="card_news  cardSlider">
@@ -263,8 +284,9 @@
                         <img src="./img/quantumFive.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Quantum Encryption Used in First Election</h3>
+                        <p class="text">Switzerland used quantum-encrypted channels to secure votes in a small regional election.
+The pilot aims to protect democratic systems from future digital tampering and cyberattacks.</p>
                     </div>
                 </div>
                 <div class="card_news  cardSlider">
@@ -274,14 +296,14 @@
                         <img src="./img/quantumSix.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">China Unveils 1000-Qubit Quantum Processor</h3>
+                        <p class="text">China announced a record-breaking 1000-qubit processor capable of solving complex equations in seconds. Analysts say this leap intensifies the global race toward quantum supremacy.</p>
                     </div>
                 </div>
             </div>
             <div class="button-container flex">
                 <button type="button" class="buttonSlider circleButton border buttonSlider_left"><img src="icon/arrow.png" alt="left slider button"></button>
-                <button  type="button" class="buttonSlider flip-horizontal circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button"></button>
+                <button  type="button" class="buttonSlider  circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button" class="flip-horizontal"></button>
             </div>
         </section>
         <!-- Quantum technology section ends here -->
@@ -290,15 +312,17 @@
             <h2 class="title">Economy</h2>
             <div class="cardNewsContent_border"></div>
             <div  class="flex cardNewsContent ">
-                <div class="card_news   cardSlider">
+                <div class="card_news   cardSlider card_index">
                     <picture>
                         <source srcset="./img/economyOneCellphone.jpg" media="(max-width: 900px)">
                         <source srcset="./img/economyOne.jpg" media="(min-width: 950px)">
                         <img src="./img/economyOne.jpg" alt="iepisode thirty-two">
                     </picture>
                     <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">AI and Jobs</h3>
+                        <p class="text">AI cuts routine jobs but boosts efficiency.
+Workers need digital skills to stay employed.
+Governments must support retraining programs.</p>
                     </div>
                 </div>
                  <div class="card_news   cardSlider">
@@ -308,8 +332,10 @@
                         <img src="./img/economyTwo.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Digital Currency</h3>
+                        <p class="text">Central banks test digital currencies for faster payments.
+They help the unbanked, but raise privacy concerns.
+Global rules are essential.</p>
                     </div>
                 </div>
                  <div class="card_news  cardSlider">
@@ -319,8 +345,10 @@
                         <img src="./img/economyThree.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Big Tech Power</h3>
+                        <p class="text">Tech giants dominate markets and data.
+Competition suffers as startups struggle.
+Antitrust laws may rebalance power.</p>
                     </div>
                 </div>
                 <div class="card_news   cardSlider">
@@ -330,8 +358,10 @@
                         <img src="./img/economyFour.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Remote Work Shift</h3>
+                        <p class="text">Remote work reshapes cities and offices.
+Tech tools grow; urban demand shrinks.
+Policy must adapt to new patterns.</p>
                     </div>
                 </div>
                 <div class="card_news  cardSlider">
@@ -341,8 +371,10 @@
                         <img src="./img/economyFive.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">Green Tech Economy</h3>
+                        <p class="text">Clean tech creates jobs and reduces emissions.
+Solar and wind attract huge investment.
+Green growth drives future economies.</p>
                     </div>
                 </div>
                 <div class="card_news  cardSlider">
@@ -352,14 +384,16 @@
                         <img src="./img/economySix.jpg" alt="iepisode thirty-two">
                     </picture>
                    <div class="border border_news">
-                        <h3 class="title title_news">Ignacio Gómez</h3>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3 class="title title_news">E-Commerce Growth</h3>
+                        <p class="text">Online platforms expand global sales fast.
+Small businesses go international easily.
+Trade rules must catch up.</p>
                     </div>
                 </div>
             </div>
             <div class="button-container flex">
                 <button type="button"  class="buttonSlider circleButton border buttonSlider_left"><img src="icon/arrow.png" alt="left slider button"></button>
-                <button  type="button" class="buttonSlider flip-horizontal circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button"></button>
+                <button  type="button" class="buttonSlider  circleButton border buttonSlider_right"><img src="icon/arrow.png" alt="right slider button" class="flip-horizontal"></button>
             </div>
         </section>
         <!-- Economy section ends here -->

@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Use the contact form to send a message, suggestion, or feedback to the show's host. We'd love to hear from you!">
+    <meta name="keywords" content="contact, message, suggestion, feedback, podcast, show host, reach out, contact form">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/general.css">
-     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <script src="./js/form.js" defer></script>
+    <script src="js/footerForm.js" defer></script>
+    <title>Contact</title>
 </head>
 <body>
 <header>
@@ -32,16 +36,20 @@
 </header>
 <main>
     <form action="#" class="flex">
-        <input type="text" class="border" placeholder="Name">
+        <input type="text" class="border" placeholder="Name" id="name">
         <label for="text" name="text" id="text"></label>
+        <span class="error" id="error-name"></span>
 
-        <input type="email" class="border" placeholder="Email">
+        <input type="email" class="border" placeholder="Email" id="email">
         <label for="email" name="email" id="email"></label>
+        <span class="error" id="error-email"></span>
 
-        <input type="phone" class="border" placeholder="Phone">
+        <input type="phone" class="border" placeholder="Phone" id="phone">
         <label for="phone" name="phone" id="phone"></label>
+        <span class="error" id="error-phone"></span>
 
-        <textarea name="" id="" class="border" placeholder="Message"></textarea>
+        <textarea name="" id="message" class="border" placeholder="Message" ></textarea>
+        <span class="error" id="error-message"></span>
 
         <button class="button flex" type="button" id="buttonForm"> 
             <div class="flex">
@@ -54,8 +62,7 @@
     <footer class="grid">
         <a class="logo" href="#"><img src="../img/Podcast.png" alt="Logo de pagina web"></a>
         <label for="email-podcast"></label>
-        <input type="email" 
-        id="email-podcast" placeholder="Email">
+        <input type="email" id="email-podcast" placeholder="Email">
        <button class="button flex" type="button" id="buttonSubscribe"> <div class="flex"><p class="text"></p>subcribe</div></button>
        <div id="img-container">
             <img src="./icon/facebook.png" alt="icon de la red social facebook" class="icons">
