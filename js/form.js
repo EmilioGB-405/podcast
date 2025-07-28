@@ -1,45 +1,75 @@
 "use strict"
 
 
-document.getElementById("buttonForm").addEventListener("click", function () {
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const message = document.getElementById("message").value.trim();
+document.addEventListener("DOMContentLoaded", () => {
+    const formBtn = document.getElementById("buttonForm");
 
+    formBtn.addEventListener("click", () => {
+        clearErrors();
 
-    if (name.length < 2 || name.length > 50) {
-        return alert("Please enter a valid name (2-50 characters).");
-    }
+        const name = sanitize(document.getElementById("name").value);
+        const email = sanitize(document.getElementById("email").value);
+        const phone = sanitize(document.getElementById("phone").value);
+        const message = sanitize(document.getElementById("message").value);
+
+        let isValid = true;
+
+        if (!isValidName(name)) {
+            showError("error-name", "Please enter a valid name.");
+            isValid = false;
+        }
+
+        if (!isValidEmail(email)) {
+            showError("error-email", "Please enter a valid email.");
+            isValid = false;
+        }
+
+        if (!isValidPhone(phone)) {
+            showError("error-phone", "Phone must be 7–15 digits.");
+            isValid = false;
+        }
+
+        if (message.length < 10) {
+            showError("error-message", "Message must be at least 10 characters.");
+            isValid = false;
+        }
+
+        if (isValid) {
+            
+            alert("Form submitted successfully!");
+
+            
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("message").value = "";
+        }
+    });
 
     
-    if (!validateEmail(email)) {
-        return alert("Please enter a valid email address.");
+
+    function showError(id, message) {
+        document.getElementById(id).textContent = message;
     }
 
-    
-    if (!validatePhone(phone)) {
-        return alert("Please enter a valid phone number (digits only, 7–15 characters).");
+    function clearErrors() {
+        const errors = document.querySelectorAll(".error");
+        errors.forEach(err => err.textContent = "");
     }
 
-
-    if (message.length < 10) {
-        return alert("Message should be at least 10 characters long.");
+    function sanitize(text) {
+        return text.trim().replace(/<[^>]*>?/gm, "").replace(/\s+/g, " ");
     }
 
+    function isValidName(name) {
+        return /^[a-zA-Z\s]{2,50}$/.test(name);
+    }
 
-    alert("Form submitted successfully!");
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
 
+    function isValidPhone(phone) {
+        return /^\d{7,15}$/.test(phone);
+    }
 });
-
-
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
-
-
-function validatePhone(phone) {
-    const re = /^\d{7,15}$/;
-    return re.test(phone);
-}

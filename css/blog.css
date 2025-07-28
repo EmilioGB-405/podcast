@@ -57,7 +57,9 @@ header, main{
         width:10em;
     }
 
-
+header .button-container .circleButton{
+    display: block;
+}
 @media(width >= 750px){
   .button-container .circleButton{
         display: block;
