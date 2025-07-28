@@ -422,5 +422,9 @@ footer ul{
     header .card {
         grid-template-columns: repeat(2, 1fr);
     }
-   
+   li a:hover {
+    color: var(--electric-blue-color);
+    text-shadow: 0 0 5px rgba(30, 144, 255, 0.7), 0 0 10px rgba(30, 144, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
 }
