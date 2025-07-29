@@ -88,7 +88,10 @@ label img{
     color: #ffff;
     font-size: 1em;
     width: 100%;
-    display: block;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .filtro{
     display: none;
@@ -110,7 +113,7 @@ label img{
     .circleButton{
         align-self: end;
     }
-    .text{
+    .line .text{
         padding:2em 0 1em 0;
     }
 }
@@ -125,6 +128,9 @@ label img{
     #searchContent{
         margin: 0;
         grid-column: 3/6;
+        height: 6em;
+        align-items: center;
+        justify-content: center;
     }
     #filter-btn{
         justify-self: start;
