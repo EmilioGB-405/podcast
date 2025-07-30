@@ -293,8 +293,8 @@ let global ={
             number: "Episode 33",
             tittle: "",
             information: "This episode delves into the fascinating frontier where artificial intelligence meets consciousness. We explore the blurring lines between silicon and sentience, the implications of self-aware AI, and the ethical challenges we face as technology increasingly mirrors the human mind.",
-            img: "./img/episodeThirtyThree.jpg",
-            imgCell: "./img/episodeThirtyThreeCell.jpg",
+            img: "/img/episodeThirtyThree.jpg",
+            imgCell: "/img/episodeThirtyThreeCell.jpg",
             url: "https://www.youtube.com/watch?v=anXep8kBOCg&t=4s",
             year: "2025"
         }
