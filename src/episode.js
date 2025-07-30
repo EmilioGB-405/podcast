@@ -441,5 +441,5 @@ Array.from(cards).forEach((card, index) => {
 });
 
 
-import './shared/navbar.js';
-import './shared/utils.js';
+/* import './shared/navbar.js';
+import './shared/utils.js'; */
