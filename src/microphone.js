@@ -64,10 +64,10 @@ holograma.load('/img/hologramamicrophone02.glb', (gltf)=>{
 
 });
 
-export let helements = {
+/* export let helements = {
     modelo:holograma
 }
-
+ */
 
 
 window.addEventListener('scroll', () => {
