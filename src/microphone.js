@@ -8,7 +8,7 @@ import { elements } from "./app.js";
 let model;
 
 const holograma = new GLTFLoader();
-holograma.load('/img/hologramamicrophone02.glb', (gltf)=>{
+holograma.load('/public/img/hologramamicrophone02.glb', (gltf)=>{
     model = gltf.scene;
     elements.scene.add(model);
     
