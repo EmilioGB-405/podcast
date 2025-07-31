@@ -50,7 +50,7 @@ let global ={
             number: "Episode 6",
             tittle: "",
             information: "Get an insider's look at the art and science of software development. This episode dives into the world of coding, discussing the languages, frameworks, and creative problem-solving that bring our digital applications and platforms to life.",
-            img: "/img/episodeSixen.jpg",
+            img: "/img/episodeSixe.jpg",
             imgCell: "/img/episodeSixeCell.jpg",
             url: "https://www.youtube.com/watch?v=ghwaIiE3Nd8",
             year: "2023"
