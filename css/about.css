@@ -9,20 +9,8 @@ header{
 #history{
     padding: 0 ;
 } 
-section{
-    z-index: 2;
-}
-.myCanvas{
-    position: fixed;
-    width: 100% !important;
-    height: 100% !important;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    object-fit: contain;
-}
+
+
 #Objective{
     gap: 2em;
     padding: 0 0 20em 0;
