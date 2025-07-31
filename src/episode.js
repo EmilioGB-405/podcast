@@ -308,37 +308,38 @@ Array.from(cards).forEach((card, index) => {
   const episodeIndexInReversed =   this.i + index;
 
 
-            if (reversedEpisodes[episodeIndexInReversed]) {
-                const episode = reversedEpisodes[episodeIndexInReversed]; 
+           if (reversedEpisodes[episodeIndexInReversed]) {
+    const episode = reversedEpisodes[episodeIndexInReversed]; 
 
-                const imagenCell = card.querySelector(".imagenCell"); 
-                const imagenCompu = card.querySelector(".imagenCompu"); 
-                const img = card.querySelector("img");
-                const title = card.querySelector(".title");
-                const text = card.querySelector(".text");
-                // Get the button within this specific card
-                const watchButton = card.querySelector(".circleButton"); 
-                
-                img.src = episode.img;
-                img.alt = episode.tittle || episode.number;
-                title.textContent = episode.number;
-                text.textContent = episode.information;
-                
-                if (imagenCell) imagenCell.srcset = episode.imgCell;
-                if (imagenCompu) imagenCompu.srcset = episode.img;
+    card.style.display = ''; // <- restaurar visibilidad por si fue ocultada antes
 
-                // Set the data-url on the button and add the click listener
-                if (watchButton) {
-                    watchButton.dataset.url = episode.url; // Set the URL from your data
-                    watchButton.onclick = (event) => {
-                        event.stopPropagation(); // Prevent card click if card also has a listener
-                        window.open(watchButton.dataset.url, '_blank'); 
-                    };
-                }
+    const imagenCell = card.querySelector(".imagenCell"); 
+    const imagenCompu = card.querySelector(".imagenCompu"); 
+    const img = card.querySelector("img");
+    const title = card.querySelector(".title");
+    const text = card.querySelector(".text");
+    const watchButton = card.querySelector(".circleButton"); 
+    
+    img.src = episode.img;
+    img.alt = episode.tittle || episode.number;
+    title.textContent = episode.number;
+    text.textContent = episode.information;
+    
+    if (imagenCell) imagenCell.srcset = episode.imgCell;
+    if (imagenCompu) imagenCompu.srcset = episode.img;
 
-            } else {
-                card.style.display = 'none';
-            }
+    if (watchButton) {
+        watchButton.dataset.url = episode.url;
+        watchButton.onclick = (event) => {
+            event.stopPropagation();
+            window.open(watchButton.dataset.url, '_blank'); 
+        };
+    }
+
+} else {
+    card.style.display = 'none'; // si no hay episodio para esta tarjeta, ocultarla
+}
+
         });
  
     },
