@@ -24,7 +24,7 @@ let global = {
       newsTitle: "AI and Jobs",
       information: "AI cuts routine jobs but boosts efficiency...",
       img: "/img/economyOne.jpg",
-      imgCell: "/img/economyOneCellphone.jpg"
+      imgCell: "/img/economyOneCellPhone.jpg"
     }
   ],
   index: 0,
