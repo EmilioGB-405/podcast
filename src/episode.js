@@ -243,8 +243,8 @@ let global ={
             imgCell: "/public/img/episodeTewntySevenCell.jpg",
             url: "https://www.youtube.com/watch?v=cQ48rP_Rs4g",
             year: "2024"
-        },
-        {
+        }
+        /* {
             number: "Episode 28",
             tittle: "",
             information: "Immerse yourself in the world of data and algorithms that underpin our digital lives. This episode explores the fundamental language of computers, how information is processed, and the ever-increasing flow of data that shapes our modern world.",
@@ -252,8 +252,8 @@ let global ={
             imgCell: "/public/img/episodeTewntyNightEightCell.jpg",
             url: "https://www.youtube.com/watch?v=Tj6NOfdfa4o",
             year: "2024"
-        },
-        {
+        }, */
+        /* {
             number: "Episode 29",
             tittle: "",
             information: "Explore the cutting edge of virtual reality and immersive experiences. This episode delves into how VR technology is creating new realities, transforming entertainment, education, and the way we interact with digital content.",
@@ -261,8 +261,8 @@ let global ={
             imgCell: "/public/img/episodeTewntyNineCell.jpg",
             url: "https://www.youtube.com/watch?v=v-9Mpe7NhkM",
             year: "2025"
-        },
-        {
+        }, */
+        /* {
             number: "Episode 30",
             tittle: "",
             information: "Explore the future of urban living in the age of smart technology. This episode delves into the concept of interconnected cities, examining how data, networks, and automation are transforming infrastructure, transportation, and the very fabric of our urban environments.",
@@ -270,8 +270,8 @@ let global ={
             imgCell: "/public/img/episodeThirtyCell.jpg",
             url: "https://www.youtube.com/watch?v=QDN6xvhAw94",
             year: "2025"
-        },
-        {
+        }, */
+       /*  {
             number: "Episode 31",
             tittle: "",
             information: "Immerse yourself in the next frontier of digital interaction. This episode explores the power of virtual and augmented reality, discussing how these technologies are reshaping industries, revolutionizing work, and redefining how we connect with information and each other.",
@@ -279,8 +279,8 @@ let global ={
             imgCell: "/public/img/episodeThirtyOneCell.jpg",
             url: "https://www.youtube.com/watch?v=iwcYp-XT7UI",
             year: "2025"
-        },
-        {
+        }, */
+        /* {
             number: "Episode 32",
             tittle: "",
             information: "Take a journey inside the complex mind of artificial intelligence. We explore the intricate networks, algorithms, and data that power modern AI, and discuss the implications of these advanced systems for our future. It's an inside look at the technology shaping tomorrow",
@@ -288,8 +288,8 @@ let global ={
             imgCell: "/public/img/episodeThirtyTwoCell.jpg",
             url: "https://www.youtube.com/watch?v=lVHRs3uTHNI",
             year: "2025"
-        },
-        {
+        }, */
+        /* {
             number: "Episode 33",
             tittle: "",
             information: "This episode delves into the fascinating frontier where artificial intelligence meets consciousness. We explore the blurring lines between silicon and sentience, the implications of self-aware AI, and the ethical challenges we face as technology increasingly mirrors the human mind.",
@@ -297,7 +297,7 @@ let global ={
             imgCell: "public/img/episodeThirtyThreeCell.jpg",
             url: "https://www.youtube.com/watch?v=anXep8kBOCg&t=4s",
             year: "2025"
-        }
+        } */
 ],
 i:0,
 page:6,
