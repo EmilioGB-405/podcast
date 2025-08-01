@@ -19,7 +19,11 @@ h1, header .button, .logo, p, main{
     z-index: 1;
 }
 h1, header p {
-    
+      text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black
 }
 
 
