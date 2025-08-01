@@ -11,6 +11,13 @@ header p{
 header .title{
     font-size: 1.5rem;
 }
+header h1, header p{ /* o el color que desees para el texto */
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
 h1{
     text-align: center;
     grid-row:3/4;
