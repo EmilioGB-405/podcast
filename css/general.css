@@ -366,8 +366,11 @@ footer ul{
     #nav .text{
         font-size: 1.5831rem;
     }
-    .text {
+footer .text {
         font-size: 1.6669rem;
+    }
+    .text{
+        font-size: 1.2rem;
     }
     .cardSlider .text{
         font-size: 1rem;
